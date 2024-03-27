@@ -230,30 +230,7 @@ const Dex = (props) => {
     setIsOpen(false);
   }
 
-  function CoinDetails({ coin, history }) {
-    // Prepare the data for the line chart
-    const address = useAddress();
-    const chartData = history.map(dataPoint => ({ date: new Date(dataPoint[0]), price: dataPoint[1] }));
-    const priceChangeColor = coin.price_change_24h < 0 ? 'red' : 'lightgreen';
-  
-    return (
-      <div className="coin-details">
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: 'auto' }} >
-          <span style={{ color: priceChangeColor, fontSize: '0.8em' }}>
-            {coin.price_change_24h > 0 && '+'}{coin.price_change_24h?.toFixed(2)}%
-          </span>
-          <h1 style={{ margin: 0 }}>
-            ${coin.current_price?.toFixed(2)}
-          </h1>
-        </div>
-        <h2>Historical Data</h2>
-        <AreaChart width={500} height={300} data={chartData}  fill="rgba(200, 200, 0, 0.5)" >   
-          <Area type="monotone" dataKey="price"  />
-        </AreaChart>
-      </div>
-    );
-  }
-
+ 
   
   
 
