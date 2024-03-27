@@ -15,7 +15,7 @@ type Props = {
 
 const SendBitcoin = ({ network, address, capabilities }: Props) => {
   const [recipient, setRecipient] = useState("");
-  const [amount, setAmount] = useState(0n);
+  const [amount, setAmount] = useState(0);
 
   const onSendBtcClick = async () => {
     await sendBtcTransaction({
@@ -26,7 +26,7 @@ const SendBitcoin = ({ network, address, capabilities }: Props) => {
         recipients: [
           {
             address: recipient,
-            amountSats: amount,
+            amountSats: BigInt(amount),
           },
           // you can add more recipients here
         ],
@@ -62,7 +62,7 @@ const SendBitcoin = ({ network, address, capabilities }: Props) => {
         }
       }
     } catch (err) {
-      alert(err.error.message);
+      alert(err);
     }
   };
 
@@ -107,7 +107,7 @@ const SendBitcoin = ({ network, address, capabilities }: Props) => {
         <input
           type="number"
           value={amount.toString()}
-          onChange={(e) => setAmount(BigInt(e.target.value))}
+          onChange={(e) => setAmount(Number(e.target.value))}
         />
       </p>
       <button onClick={onSendBtcClick} disabled={sendDisabled}>
