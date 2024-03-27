@@ -57,14 +57,16 @@ function App() {
   const [startDate, setStartDate] = useState(new Date());
   
   const [endDate, setEndDate] = useState(Date.now());
-  const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG'; // replace this with your own API key
+  const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG';
+  const holdings = useMemo(() => holdingsData, []);
+  // replace this with your own API key
   const holdingsData = [
     { id: 'coredaoorg', symbol: 'core', amount: [balance], cost_basis: [balance] },
     { id: 'bitcoin', symbol: 'btc', amount: [], cost_basis: [balance] },
     // replace with actual data
     // add more coins here...
   ];
-  const holdings = useMemo(() => holdingsData, []);
+
 
   const COLORS = ['rgba(200, 150, 0, 0.7)', 'rgba(50, 100, 0, 0.5)', '#FFBB28', '#FF8042']; // add more colors if you have more coins
 
