@@ -8,37 +8,34 @@ import Dex from './dex'
 import Add from './add'
 
 const Nav2 = (props: { rootClassName: any }) => {
-  const [tab, setTab] = useState<"Swap" | "liquididty" >("Swap");
+  const [tab, setTab] = useState<"Swap" | "liquidity" >("Swap" || "");
 
   return (
     <>
       <div className={`nav2-container ${props.rootClassName} `}>
       <div className={styles.tabs}> 
-          <a className="nav2-link">
-            <div id="swap" className="nav2-container1">
+     
+           
             <h1
           className={`${styles.tab} 
         ${tab === "Swap" ? styles.activeTab : ""}`}
           onClick={() => setTab("Swap")}
         >
-          SWAP
+          Swap
         </h1>
-            </div>
-          </a>
-
-           <Link  legacyBehavior  href="/liquidity">
-          <a className="nav2-link1">
-            <div className="nav2-container2">
+         
+          
+       
+        
             <h1
           className={`${styles.tab} 
-        ${tab === "Swap" ? styles.activeTab : ""}`}
-          onClick={() => setTab("Swap")}
+        ${tab === "liquidity" ? styles.activeTab : ""}`}
+          onClick={() => setTab("liquidity")}
         >
-          Liquididty
+          Liquidity
         </h1>
-            </div>
-          </a>
-        </Link>
+       
+       
       </div>
       </div>
       <div
@@ -50,7 +47,7 @@ const Nav2 = (props: { rootClassName: any }) => {
       </div>
       <div
         className={`${
-          tab === "liquididty" ? styles.activeTabContent : styles.tabContent
+          tab === "liquidity" ? styles.activeTabContent : styles.tabContent
         }`}
       >
         <Add />
@@ -72,22 +69,7 @@ const Nav2 = (props: { rootClassName: any }) => {
           .nav2-link {
             display: contents;
           }
-          .nav2-container1 {
-            width: 85px;
-            cursor: pointer;
-            height: 50px;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-          }
-          .nav2-container1:hover {
-            border-bottom: solid 7px #535353;
-          }
-          .nav2-container1:active {
-            border-bottom: solid 7px #535353;
-          }
+       
           .nav2-text {
             color: #c6c6c6;
             font-size: 1.2em;
@@ -95,23 +77,7 @@ const Nav2 = (props: { rootClassName: any }) => {
           .nav2-link1 {
             display: contents;
           }
-          .nav2-container2 {
-            width: 108px;
-            cursor: pointer;
-            height: 50px;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            margin-left: var(--dl-space-space-halfunit);
-            justify-content: center;
-            text-decoration: none;
-          }
-          .nav2-container2:hover {
-            border-bottom: solid 7px #535353;
-          }
-          .nav2-container2:active {
-            border-bottom: solid 7px #535353;
-          }
+
           .nav2-text1 {
             color: #c6c6c6;
             font-size: 1.2em;
