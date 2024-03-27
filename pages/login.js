@@ -28,12 +28,6 @@ const Login = (props) => {
   const { data: nfts } = useOwnedNFTs(contract, address);
   const router = useRouter();
 
-  useEffect(() => {
-    if (nfts?.length) {
-      router.push("/swap");
-    }
-  }, [nfts, router, address]);
-
   return (
     <>
       <div className="welcome1-container">
@@ -60,7 +54,7 @@ const Login = (props) => {
         </Head>
         <div className="welcome1-container01">
           <div className="welcome1-container02">
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href="/swap">
               <a className="welcome1-link">
                 <div className="welcome1-container03">
                   <div className="welcome1-container04">
@@ -106,7 +100,7 @@ const Login = (props) => {
                   <span className="welcome1-text05">FAQ</span>
                 </nav>
                 <div className="welcome1-buttons">
-                  <Link legacyBehavior href="/">
+                  <Link legacyBehavior href="/swap">
                     <a className="welcome1-link05 button">Launch App</a>
                   </Link>
                 </div>

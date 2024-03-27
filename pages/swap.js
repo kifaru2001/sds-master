@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import Nav from '../components/nav'
 import Nav2 from '../components/nav2'
-import Dex from '../components/dex'
 
 const Swap = (props) => {
   return (
@@ -31,9 +30,7 @@ const Swap = (props) => {
         <Nav rootClassName="nav-root-class-name1"></Nav>
         <div className="swap-container1"></div>
         <Nav2 rootClassName="nav2-root-class-name1"></Nav2>
-        <div className="swap-container2">
-          <Dex rootClassName="dex-root-class-name"></Dex>
-        </div>
+       
       </div>
       <style jsx>
         {`

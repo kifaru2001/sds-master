@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Greetings from '../components/greetings'
-import Port from '../components/table'
 import Ap from "../components/App" 
 import Ap2 from "../components/Btc" 
 
@@ -38,7 +37,7 @@ const Portfolio = (props) => {
           <Greetings></Greetings>
           <div className="portfolio-container12">
             <div className="portfolio-container13">
-            <Port />
+           
             
             </div>
             
