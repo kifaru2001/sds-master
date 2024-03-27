@@ -18,8 +18,6 @@ import {
 
 
 import { ChakraProvider } from '@chakra-ui/react'
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from '@vercel/analytics/react';
 import Snowfall from 'react-snowfall'
 import {BannerStrip } from "web3uikit"
 
@@ -68,15 +66,14 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       />
      
       <NextThemesProvider attribute="class" defaultTheme="dark">
-<div  style={{position: "fixed",  zIndex: "-1",  width: "100%", height: "100%", justifyContent: "center", alignItems: "center", display: "flex"}}>
+<div  style={{position: "fixed",  zIndex: "-1",  width: "100%", height: "100%", justifyContent: "start", alignItems: "start", display: "flex"}}>
 <div style={{position: "fixed", zIndex: "-1"}} className={styles.gradient} />
 </div>
-
+<div  style={{position: "fixed",  zIndex: "-1",  width: "100%", height: "100%", justifyContent: "end", alignItems: "end", display: "flex"}}>
+<div style={{position: "fixed", zIndex: "-1"}} className={styles.gradient} />
+</div>
       <Component className="body" {...pageProps} />
-      <div style={{position: "fixed", justifyContent: "end", alignItems: "end", display: "flex", flexDirection: "row"}} className={styles.gradient} />
-      <SpeedInsights/>  
-      <Analytics />
-     
+   
       </NextThemesProvider>
    
    

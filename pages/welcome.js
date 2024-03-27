@@ -31,7 +31,7 @@ const Welcome = (props) => {
         </Head>
         <div className="welcome-container01">
           <div className="welcome-container02">
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href="/swap">
               <a className="welcome-link">
                 <div className="welcome-container03">
                   <div className="welcome-container04">
@@ -77,7 +77,7 @@ const Welcome = (props) => {
                   <span className="welcome-text05">FAQ</span>
                 </nav>
                 <div className="welcome-buttons">
-                  <Link legacyBehavior href="/">
+                  <Link legacyBehavior href="/swap">
                     <a className="welcome-link05 button">Launch App</a>
                   </Link>
                 </div>
@@ -119,9 +119,9 @@ const Welcome = (props) => {
                       <a className="welcome-link11">Mine</a>
                     </Link>
                   </nav>
-                  <Link legacyBehavior href="/">
-                    <a className="welcome-link05 button">Launch App</a>
-                  </Link>
+                  <button className="welcome-register1 button">
+                    Launch App
+                  </button>
                 </div>
               </div>
             </header>
@@ -139,9 +139,9 @@ const Welcome = (props) => {
                   <br></br>
                 </h1>
                 <animate-on-reveal
-                  animation="flash"
-                  duration="1000ms"
-                  delay="2s"
+                  animation="pulse"
+                  duration="3s"
+                  delay="6s"
                   direction="normal"
                   easing="ease"
                   iteration="1"
@@ -333,167 +333,163 @@ const Welcome = (props) => {
               </svg>
               <h1 className="welcome-text22">Trade Volume</h1>
             </div>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="welcome-icon18"
-            >
-              <path d="M502.857 685.714v91.429c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-91.429c0-10.286 8-18.286 18.286-18.286h91.429c10.286 0 18.286 8 18.286 18.286zM649.143 402.286c0 81.143-56.571 113.143-98.286 136.571-29.714 17.143-48 28-48 46.286v18.286c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-38.857c0-70.286 50.286-92.571 90.857-110.857 34.286-16 55.429-26.857 55.429-52.571 0-33.143-41.714-57.714-79.429-57.714-20 0-41.143 6.286-54.286 15.429-12.571 8.571-24.571 21.143-45.714 47.429-3.429 4.571-8.571 6.857-14.286 6.857-4 0-8-1.143-10.857-3.429l-61.714-46.857c-7.429-5.714-9.143-16.571-4-24.571 46.857-73.714 112.571-109.714 199.429-109.714v0c93.714 0 198.857 74.286 198.857 173.714zM438.857 146.286c-201.714 0-365.714 164-365.714 365.714s164 365.714 365.714 365.714 365.714-164 365.714-365.714-164-365.714-365.714-365.714zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857v0c242.286 0 438.857 196.571 438.857 438.857z"></path>
-            </svg>
+            <h1 className="welcome-text23">--</h1>
           </div>
           <div className="welcome-container62">
             <div className="welcome-container63">
               <svg
                 viewBox="0 0 1097.142857142857 1024"
-                className="welcome-icon20"
+                className="welcome-icon18"
               >
                 <path d="M338.857 512c-59.429 1.714-113.143 27.429-151.429 73.143h-76.571c-57.143 0-110.857-27.429-110.857-90.857 0-46.286-1.714-201.714 70.857-201.714 12 0 71.429 48.571 148.571 48.571 26.286 0 51.429-4.571 76-13.143-1.714 12.571-2.857 25.143-2.857 37.714 0 52 16.571 103.429 46.286 146.286zM950.857 876c0 92.571-61.143 148-152.571 148h-499.429c-91.429 0-152.571-55.429-152.571-148 0-129.143 30.286-327.429 197.714-327.429 19.429 0 90.286 79.429 204.571 79.429s185.143-79.429 204.571-79.429c167.429 0 197.714 198.286 197.714 327.429zM365.714 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286zM768 365.714c0 121.143-98.286 219.429-219.429 219.429s-219.429-98.286-219.429-219.429 98.286-219.429 219.429-219.429 219.429 98.286 219.429 219.429zM1097.143 494.286c0 63.429-53.714 90.857-110.857 90.857h-76.571c-38.286-45.714-92-71.429-151.429-73.143 29.714-42.857 46.286-94.286 46.286-146.286 0-12.571-1.143-25.143-2.857-37.714 24.571 8.571 49.714 13.143 76 13.143 77.143 0 136.571-48.571 148.571-48.571 72.571 0 70.857 155.429 70.857 201.714zM1024 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286z"></path>
               </svg>
-              <h1 className="welcome-text23">Members</h1>
+              <h1 className="welcome-text24">Members</h1>
             </div>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="welcome-icon22"
-            >
-              <path d="M502.857 685.714v91.429c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-91.429c0-10.286 8-18.286 18.286-18.286h91.429c10.286 0 18.286 8 18.286 18.286zM649.143 402.286c0 81.143-56.571 113.143-98.286 136.571-29.714 17.143-48 28-48 46.286v18.286c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-38.857c0-70.286 50.286-92.571 90.857-110.857 34.286-16 55.429-26.857 55.429-52.571 0-33.143-41.714-57.714-79.429-57.714-20 0-41.143 6.286-54.286 15.429-12.571 8.571-24.571 21.143-45.714 47.429-3.429 4.571-8.571 6.857-14.286 6.857-4 0-8-1.143-10.857-3.429l-61.714-46.857c-7.429-5.714-9.143-16.571-4-24.571 46.857-73.714 112.571-109.714 199.429-109.714v0c93.714 0 198.857 74.286 198.857 173.714zM438.857 146.286c-201.714 0-365.714 164-365.714 365.714s164 365.714 365.714 365.714 365.714-164 365.714-365.714-164-365.714-365.714-365.714zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857v0c242.286 0 438.857 196.571 438.857 438.857z"></path>
-            </svg>
+            <h1 className="welcome-text25">--</h1>
           </div>
           <div className="welcome-container64">
             <div className="welcome-container65">
-              <svg viewBox="0 0 1024 1024" className="welcome-icon24">
+              <svg viewBox="0 0 1024 1024" className="welcome-icon20">
                 <path d="M426 726l342-342-60-60-282 280-110-110-60 60zM512 42l384 172v256q0 178-110 325t-274 187q-164-40-274-187t-110-325v-256z"></path>
               </svg>
-              <h1 className="welcome-text24">Verified Users</h1>
+              <h1 className="welcome-text26">Verified Users</h1>
             </div>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="welcome-icon26"
-            >
-              <path d="M502.857 685.714v91.429c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-91.429c0-10.286 8-18.286 18.286-18.286h91.429c10.286 0 18.286 8 18.286 18.286zM649.143 402.286c0 81.143-56.571 113.143-98.286 136.571-29.714 17.143-48 28-48 46.286v18.286c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-38.857c0-70.286 50.286-92.571 90.857-110.857 34.286-16 55.429-26.857 55.429-52.571 0-33.143-41.714-57.714-79.429-57.714-20 0-41.143 6.286-54.286 15.429-12.571 8.571-24.571 21.143-45.714 47.429-3.429 4.571-8.571 6.857-14.286 6.857-4 0-8-1.143-10.857-3.429l-61.714-46.857c-7.429-5.714-9.143-16.571-4-24.571 46.857-73.714 112.571-109.714 199.429-109.714v0c93.714 0 198.857 74.286 198.857 173.714zM438.857 146.286c-201.714 0-365.714 164-365.714 365.714s164 365.714 365.714 365.714 365.714-164 365.714-365.714-164-365.714-365.714-365.714zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857v0c242.286 0 438.857 196.571 438.857 438.857z"></path>
-            </svg>
+            <h1 className="welcome-text27">--</h1>
           </div>
           <div className="welcome-container66">
             <div className="welcome-container67">
               <svg
                 viewBox="0 0 1243.4285714285713 1024"
-                className="welcome-icon28"
+                className="welcome-icon22"
               >
                 <path d="M365.714 932.571l219.429-109.714v-179.429l-219.429 93.714v195.429zM329.143 673.143l230.857-98.857-230.857-98.857-230.857 98.857zM950.857 932.571l219.429-109.714v-179.429l-219.429 93.714v195.429zM914.286 673.143l230.857-98.857-230.857-98.857-230.857 98.857zM658.286 505.714l219.429-94.286v-152l-219.429 93.714v152.571zM621.714 289.143l252-108-252-108-252 108zM1243.429 585.143v237.714c0 27.429-15.429 53.143-40.571 65.143l-256 128c-10.286 5.714-21.143 8-32.571 8s-22.286-2.286-32.571-8l-256-128c-1.714-0.571-2.857-1.143-4-2.286-1.143 1.143-2.286 1.714-4 2.286l-256 128c-10.286 5.714-21.143 8-32.571 8s-22.286-2.286-32.571-8l-256-128c-25.143-12-40.571-37.714-40.571-65.143v-237.714c0-29.143 17.714-55.429 44.571-67.429l248-106.286v-228.571c0-29.143 17.714-55.429 44.571-67.429l256-109.714c9.143-4 18.857-5.714 28.571-5.714s19.429 1.714 28.571 5.714l256 109.714c26.857 12 44.571 38.286 44.571 67.429v228.571l248 106.286c27.429 12 44.571 38.286 44.571 67.429z"></path>
               </svg>
-              <h1 className="welcome-text25">Liquidity</h1>
+              <h1 className="welcome-text28">Liquidity</h1>
             </div>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="welcome-icon30"
-            >
-              <path d="M502.857 685.714v91.429c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-91.429c0-10.286 8-18.286 18.286-18.286h91.429c10.286 0 18.286 8 18.286 18.286zM649.143 402.286c0 81.143-56.571 113.143-98.286 136.571-29.714 17.143-48 28-48 46.286v18.286c0 10.286-8 18.286-18.286 18.286h-91.429c-10.286 0-18.286-8-18.286-18.286v-38.857c0-70.286 50.286-92.571 90.857-110.857 34.286-16 55.429-26.857 55.429-52.571 0-33.143-41.714-57.714-79.429-57.714-20 0-41.143 6.286-54.286 15.429-12.571 8.571-24.571 21.143-45.714 47.429-3.429 4.571-8.571 6.857-14.286 6.857-4 0-8-1.143-10.857-3.429l-61.714-46.857c-7.429-5.714-9.143-16.571-4-24.571 46.857-73.714 112.571-109.714 199.429-109.714v0c93.714 0 198.857 74.286 198.857 173.714zM438.857 146.286c-201.714 0-365.714 164-365.714 365.714s164 365.714 365.714 365.714 365.714-164 365.714-365.714-164-365.714-365.714-365.714zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857v0c242.286 0 438.857 196.571 438.857 438.857z"></path>
-            </svg>
+            <h1 className="welcome-text29">--</h1>
           </div>
         </div>
-        <Mine></Mine>
         <div className="welcome-container68">
           <div className="welcome-container69">
             <div className="welcome-container70">
-              <div className="welcome-container71">
-                <div className="welcome-container72">
-                  <div className="welcome-container73">
-                    <div className="welcome-container74">
-                      <svg viewBox="0 0 1024 1024" className="welcome-icon32">
-                        <path d="M746.752 513.408l-180.949-104.875 91.221-218.923c2.816-5.717 4.395-12.16 4.395-18.944 0-23.552-18.987-42.667-42.539-42.667-10.624 0.171-19.499 3.541-26.539 9.131-1.408 1.109-2.261 1.792-2.987 2.56l-320 302.933c-9.771 9.259-14.592 22.571-13.056 35.925 1.536 13.355 9.344 25.216 20.949 32l180.992 104.96-92.288 221.44c-7.808 18.603-1.451 40.107 15.104 51.541 7.381 5.035 15.872 7.509 24.277 7.509 10.581 0 21.163-3.968 29.355-11.691l320-303.019c9.771-9.259 14.592-22.571 13.056-35.925-1.579-13.355-9.387-25.216-20.992-31.957z"></path>
-                      </svg>
-                      <div className="welcome-container75">
-                        <h1 className="welcome-text26">RAREBAY ECOSYSTEM</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="welcome-container76">
+              <Mine rootClassName="mine-root-class-name"></Mine>
+              <animate-on-reveal
+                animation="zoomIn"
+                duration="1s"
+                delay="0s"
+                direction="normal"
+                easing="ease"
+                iteration="1"
+              >
+                <div
+                  data-thq-animate-on-reveal="true"
+                  className="welcome-container71"
+                >
+                  <div className="welcome-container72">
                     <img
                       alt="image"
-                      src="/rar31ones%20(102)-200w.webp"
+                      src="/rar31ones (8)-200w.webp"
                       className="welcome-image1"
                     />
-                    <div className="welcome-container77">
-                      <h1 className="welcome-text27">
-                        NFT Utility - RAR310NES
-                      </h1>
-                      <h1 className="welcome-text28">
-                        3100 PFPs Forever! members can use utility NFT as PFP
-                        for social accounts. RAR31ONES NFT grants members access
-                        to Beta release and testnet version. Ownership also acts
-                        as eligibility for KYC, verified members can Stake NFT
-                        and add new RareCoins into circulation.
-                      </h1>
-                      <button className="welcome-register2 button">
-                        BUY NFT
-                      </button>
-                    </div>
-                  </div>
-                  <div className="welcome-container78">
-                    <img
-                      alt="image"
-                      src="/hgk-200h.webp"
-                      className="welcome-image2"
-                    />
-                    <div className="welcome-container79">
-                      <h1 className="welcome-text29">
-                        Token Utility - RareCoin
-                      </h1>
-                      <h1 className="welcome-text30">
-                        RareCoin is the governance protocol of RareBay.
-                        Unverified members can add new coins into circulation by
-                        interacting with utilities such as Swap and ordinals.
-                        Use RareCoin to vote or delegate to make proposals. RARE
-                        is added into circulation by stake holders, staking of
-                        RAR310NES NFTs earns RareCoin rewards and only verified
-                        members eligible for staking.
-                      </h1>
-                      <button className="welcome-register3 button">
-                        BUY $RARE
-                      </button>
-                    </div>
-                  </div>
-                  <div className="welcome-container80">
-                    <svg viewBox="0 0 1024 1024" className="welcome-icon34">
-                      <path d="M426 726l342-342-60-60-282 280-110-110-60 60zM512 42l384 172v256q0 178-110 325t-274 187q-164-40-274-187t-110-325v-256z"></path>
-                    </svg>
-                    <div className="welcome-container81">
-                      <h1 className="welcome-text31">
-                        KYC Utility - Identity Verification
-                      </h1>
-                      <h1 className="welcome-text32">
-                        Members can optionally verify their identity on RareBay
-                        to gain higher privileges such as staking to earn
-                        RareCoin rewards on weekly basis. Verified members can
-                        also create and list new tokens on RareBay.
-                      </h1>
-                      <button className="welcome-register4 button">
-                        GET VERIFIED
-                      </button>
-                    </div>
+                    <h1 className="welcome-text30">RAR310NES</h1>
+                    <h1 className="welcome-text31">
+                      3100 PFPs Forever! members can use utility NFT as PFP for
+                      social accounts. RAR31ONES NFT grants members access to
+                      Beta release and testnet version. Ownership also acts as
+                      eligibility for KYC, verified members can Stake NFT and
+                      add new RareCoins into circulation.
+                    </h1>
+                    <button className="welcome-register2 button">
+                      BUY NFT
+                    </button>
                   </div>
                 </div>
-              </div>
+              </animate-on-reveal>
+              <animate-on-reveal
+                animation="zoomOut"
+                duration="1000ms"
+                delay="0s"
+                direction="normal"
+                easing="ease"
+                iteration="1"
+              >
+                <div
+                  data-thq-animate-on-reveal="true"
+                  className="welcome-container73"
+                >
+                  <div className="welcome-container74">
+                    <svg viewBox="0 0 1024 1024" className="welcome-icon24">
+                      <path d="M544 98q12-12 30-12 22 0 30 12l212 212q12 12 12 30t-12 30l-272 270q-12 12-30 12t-30-12l-212-210q-12-12-12-30t12-30zM726 340l-152-152-210 212 150 150zM768 554l128 128v172q0 36-25 60t-61 24h-598q-34 0-59-25t-25-59v-172l128-128h36l84 86h-86l-76 86h596l-74-86h-82l84-86h30z"></path>
+                    </svg>
+                    <h1 className="welcome-text32">Governance</h1>
+                    <h1 className="welcome-text33">
+                      RareCoin is the governance protocol of RareBay. Unverified
+                      members can add new coins into circulation by interacting
+                      with utilities such as Swap and ordinals. Use RareCoin to
+                      vote or delegate to make proposals. RARE is added into
+                      circulation by stake holders, staking of RAR310NES NFTs
+                      earns RareCoin rewards and only verified members eligible
+                      for staking.
+                    </h1>
+                    <button className="welcome-register3 button">
+                      BUY $RARE
+                    </button>
+                  </div>
+                </div>
+              </animate-on-reveal>
+              <animate-on-reveal
+                animation="zoomIn"
+                duration="1500ms"
+                delay="0s"
+                direction="normal"
+                easing="ease"
+                iteration="1"
+              >
+                <div
+                  data-thq-animate-on-reveal="true"
+                  className="welcome-container75"
+                >
+                  <div className="welcome-container76">
+                    <svg viewBox="0 0 1024 1024" className="welcome-icon26">
+                      <path d="M426 726l342-342-60-60-282 280-110-110-60 60zM512 42l384 172v256q0 178-110 325t-274 187q-164-40-274-187t-110-325v-256z"></path>
+                    </svg>
+                    <h1 className="welcome-text34">Identity Verification</h1>
+                    <h1 className="welcome-text35">
+                      Members can optionally verify their identity on RareBay to
+                      gain higher privileges such as staking to earn RareCoin
+                      rewards on weekly basis. Verified members can also create
+                      and list new tokens on RareBay.
+                    </h1>
+                    <button className="welcome-register4 button">
+                      GET VERIFIED
+                    </button>
+                  </div>
+                </div>
+              </animate-on-reveal>
             </div>
           </div>
-        </div>
-        <div className="welcome-container82">
-          <div className="welcome-container83">
-            <div className="welcome-container84">
-              <div className="welcome-container85">
-                <div className="welcome-container86">
-                  <div className="welcome-container87">
-                    <h1 className="welcome-text33">
-                      Get latest news about RareBay!
-                    </h1>
-                    <h1 className="welcome-text34">
-                      Join our mailing list to receive latest updates to your
-                      email.
-                    </h1>
-                    <input
-                      type="email"
-                      placeholder="Enter Email"
-                      className="welcome-textinput input"
-                    />
-                    <button className="welcome-register5 button">Submit</button>
+          <div className="welcome-container77">
+            <div className="welcome-container78">
+              <div className="welcome-container79">
+                <div className="welcome-container80">
+                  <div className="welcome-container81">
+                    <div className="welcome-container82">
+                      <h1 className="welcome-text36">
+                        Get latest news about RareBay!
+                      </h1>
+                      <h1 className="welcome-text37">
+                        Join our mailing list to receive latest updates to your
+                        email.
+                      </h1>
+                      <input
+                        type="email"
+                        placeholder="Enter Email"
+                        className="welcome-textinput input"
+                      />
+                      <button className="welcome-register5 button">
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -501,13 +497,13 @@ const Welcome = (props) => {
           </div>
         </div>
         <footer className="welcome-footer">
-          <div className="welcome-container88">
+          <div className="welcome-container83">
             <img
               alt="logo"
               src="/favicon-200h.webp"
-              className="welcome-image3"
+              className="welcome-image2"
             />
-            <span className="welcome-text35">
+            <span className="welcome-text38">
               <span>© 2023-2024</span>
               <br></br>
               <br></br>
@@ -515,39 +511,39 @@ const Welcome = (props) => {
             </span>
           </div>
           <div className="welcome-links-container">
-            <div className="welcome-container89">
-              <div className="welcome-container90">
-                <span className="welcome-text40">Ecosystem</span>
-                <span className="welcome-text41">
+            <div className="welcome-container84">
+              <div className="welcome-container85">
+                <span className="welcome-text43">Ecosystem</span>
+                <span className="welcome-text44">
                   <span>RareCoin</span>
                   <br></br>
                 </span>
-                <span className="welcome-text44">NFTs</span>
-                <span className="welcome-text45">Tokens</span>
+                <span className="welcome-text47">NFTs</span>
+                <span className="welcome-text48">Tokens</span>
                 <span>Members</span>
               </div>
-              <div className="welcome-container91">
-                <span className="welcome-text47">Company</span>
-                <span className="welcome-text48">FAQ</span>
-                <span className="welcome-text49">Docs</span>
-                <span className="welcome-text50">Email</span>
+              <div className="welcome-container86">
+                <span className="welcome-text50">Company</span>
+                <span className="welcome-text51">FAQ</span>
+                <span className="welcome-text52">Docs</span>
+                <span className="welcome-text53">Email</span>
               </div>
             </div>
-            <div className="welcome-container92">
-              <div className="welcome-container93">
-                <span className="welcome-text51">Support</span>
-                <span className="welcome-text52">Terms of service</span>
-                <span className="welcome-text53">Privacy Policy</span>
+            <div className="welcome-container87">
+              <div className="welcome-container88">
+                <span className="welcome-text54">Support</span>
+                <span className="welcome-text55">Terms of service</span>
+                <span className="welcome-text56">Privacy Policy</span>
                 <span>Help center</span>
               </div>
-              <div className="welcome-container94">
-                <span className="welcome-text55">Social</span>
-                <span className="welcome-text56">
+              <div className="welcome-container89">
+                <span className="welcome-text58">Social</span>
+                <span className="welcome-text59">
                   <span>Twitter</span>
                   <br></br>
                 </span>
-                <span className="welcome-text59">Discord</span>
-                <span className="welcome-text60">Telegram</span>
+                <span className="welcome-text62">Discord</span>
+                <span className="welcome-text63">Telegram</span>
                 <span>
                   <span>Github</span>
                   <br></br>
@@ -556,6 +552,7 @@ const Welcome = (props) => {
             </div>
           </div>
         </footer>
+        <div className="welcome-container90"></div>
       </div>
       <style jsx>
         {`
@@ -566,20 +563,27 @@ const Welcome = (props) => {
             overflow-x: hidden;
             align-items: center;
             flex-direction: column;
+            background-size: contain, auto;
             justify-content: flex-start;
-            background: rgba(0, 0, 0, 0.9)
+            background-image: radial-gradient(
+              circle at center,
+              rgb(0, 0, 0) 3%,
+              rgb(4, 5, 13) 98%
+            );
+            background-repeat: fixed;
+            background-position: center, fixed;
           }
           .welcome-container01 {
             width: 100%;
             height: 58px;
             display: flex;
-            z-index: 2;
+            z-index: 200;
             position: fixed;
             align-items: center;
             flex-direction: column;
             backdrop-filter: blur(20px);
             justify-content: center;
-            background-color: rgba(20, 20, 20, 0.8);
+            background-color: rgba(20, 20, 20, 0.38);
           }
           .welcome-container02 {
             width: 100%;
@@ -782,12 +786,19 @@ const Welcome = (props) => {
           }
           .welcome-container05 {
             width: 100%;
-            height: 656px;
+            height: 631px;
             display: flex;
+            z-index: 100;
             overflow: hidden;
             align-items: center;
-            margin-bottom: var(--dl-space-space-twounits);
+            background-size: cover;
             justify-content: center;
+            background-image: linear-gradient(
+              180deg,
+              rgb(0, 0, 0) 1%,
+              rgba(0, 36, 89, 0.16) 99%
+            );
+            background-position: center;
           }
           .welcome-container06 {
             flex: 0 0 auto;
@@ -1546,12 +1557,17 @@ const Welcome = (props) => {
           }
           .welcome-container59 {
             width: 100%;
-            height: 128px;
+            height: 203px;
             display: flex;
-            margin-top: var(--dl-space-space-unit);
+            z-index: 100;
             align-items: center;
-            margin-bottom: var(--dl-space-space-unit);
+            animation-name: fadeInUp;
+            animation-delay: 0s;
             justify-content: center;
+            animation-duration: 300ms;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
           }
           .welcome-container60 {
             flex: 0 0 auto;
@@ -1563,7 +1579,7 @@ const Welcome = (props) => {
             margin-right: var(--dl-space-space-unit);
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
           }
           .welcome-container61 {
             flex: 0 0 auto;
@@ -1586,11 +1602,8 @@ const Welcome = (props) => {
             font-weight: 400;
             margin-left: var(--dl-space-space-unit);
           }
-          .welcome-icon18 {
-            fill: #d9d9d9;
-            width: 57px;
-            height: 44px;
-            margin-top: var(--dl-space-space-unit);
+          .welcome-text23 {
+            color: #c9c9c9;
           }
           .welcome-container62 {
             flex: 0 0 auto;
@@ -1602,7 +1615,7 @@ const Welcome = (props) => {
             margin-right: var(--dl-space-space-unit);
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
           }
           .welcome-container63 {
             flex: 0 0 auto;
@@ -1612,47 +1625,8 @@ const Welcome = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .welcome-icon20 {
+          .welcome-icon18 {
             fill: #d9d9d9;
-            width: 24px;
-            height: 100%;
-          }
-          .welcome-text23 {
-            color: rgb(120, 120, 120);
-            font-size: 1.5em;
-            font-style: normal;
-            margin-top: var(--dl-space-space-halfunit);
-            font-weight: 400;
-            margin-left: var(--dl-space-space-unit);
-          }
-          .welcome-icon22 {
-            fill: #d9d9d9;
-            width: 57px;
-            height: 44px;
-            margin-top: var(--dl-space-space-unit);
-          }
-          .welcome-container64 {
-            flex: 0 0 auto;
-            width: 301px;
-            height: 109px;
-            display: flex;
-            align-items: center;
-            margin-left: var(--dl-space-space-unit);
-            margin-right: var(--dl-space-space-unit);
-            border-radius: var(--dl-radius-radius-radius8);
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .welcome-container65 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .welcome-icon24 {
-            fill: #64ee5a;
             width: 24px;
             height: 100%;
           }
@@ -1664,11 +1638,44 @@ const Welcome = (props) => {
             font-weight: 400;
             margin-left: var(--dl-space-space-unit);
           }
-          .welcome-icon26 {
-            fill: #d9d9d9;
-            width: 57px;
-            height: 44px;
-            margin-top: var(--dl-space-space-unit);
+          .welcome-text25 {
+            color: #c9c9c9;
+          }
+          .welcome-container64 {
+            flex: 0 0 auto;
+            width: 301px;
+            height: 109px;
+            display: flex;
+            align-items: center;
+            margin-left: var(--dl-space-space-unit);
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            flex-direction: column;
+            justify-content: center;
+          }
+          .welcome-container65 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .welcome-icon20 {
+            fill: #64ee5a;
+            width: 24px;
+            height: 100%;
+          }
+          .welcome-text26 {
+            color: rgb(120, 120, 120);
+            font-size: 1.5em;
+            font-style: normal;
+            margin-top: var(--dl-space-space-halfunit);
+            font-weight: 400;
+            margin-left: var(--dl-space-space-unit);
+          }
+          .welcome-text27 {
+            color: #c9c9c9;
           }
           .welcome-container66 {
             flex: 0 0 auto;
@@ -1680,7 +1687,7 @@ const Welcome = (props) => {
             margin-right: var(--dl-space-space-unit);
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
           }
           .welcome-container67 {
             flex: 0 0 auto;
@@ -1690,12 +1697,12 @@ const Welcome = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .welcome-icon28 {
+          .welcome-icon22 {
             fill: #6d6d6d;
             width: 24px;
             height: 100%;
           }
-          .welcome-text25 {
+          .welcome-text28 {
             color: rgb(120, 120, 120);
             font-size: 1.5em;
             font-style: normal;
@@ -1703,123 +1710,69 @@ const Welcome = (props) => {
             font-weight: 400;
             margin-left: var(--dl-space-space-unit);
           }
-          .welcome-icon30 {
-            fill: #d9d9d9;
-            width: 57px;
-            height: 44px;
-            margin-top: var(--dl-space-space-unit);
+          .welcome-text29 {
+            color: #c9c9c9;
           }
           .welcome-container68 {
-            width: 1305px;
-            height: 799px;
+            width: 100%;
+            height: 1450px;
             display: flex;
-            align-items: flex-start;
-            padding-top: 0px;
-            padding-left: var(--dl-space-space-unit);
-            padding-right: var(--dl-space-space-unit);
-            padding-bottom: var(--dl-space-space-unit);
+            z-index: 100;
+            align-items: center;
+            padding-top: var(--dl-space-space-halfunit);
+            flex-direction: column;
+            background-size: cover;
             justify-content: center;
+            background-image: linear-gradient(
+              90deg,
+              rgba(115, 0, 181, 0.07) 0%,
+              rgba(0, 13, 26, 0.32) 98%
+            );
           }
           .welcome-container69 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 336px;
+            width: auto;
+            height: auto;
             display: flex;
             align-items: center;
+            border-radius: 16px;
+            flex-direction: column;
             justify-content: center;
           }
           .welcome-container70 {
             flex: 0 0 auto;
-            width: 100%;
-            height: 265px;
+            width: 1011px;
+            height: auto;
             display: flex;
             align-items: center;
             border-radius: 16px;
             flex-direction: column;
-            background-color: rgba(17, 17, 17, 0.76);
+            justify-content: center;
           }
           .welcome-container71 {
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-self: center;
-            box-shadow: black 0px 0px 50px;
-            align-items: flex-start;
-            border-color: rgba(49, 49, 49, 0.71);
-            border-width: 1px;
-            border-radius: 16px;
-            justify-content: center;
-            border-top-width: 1px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-            border-bottom-width: 0px;
-          }
-          .welcome-container72 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 763px;
-            display: flex;
-            align-items: center;
-            border-radius: 16px;
-            flex-direction: column;
-            backdrop-filter: blur(50px);
-            justify-content: flex-start;
-          }
-          .welcome-container73 {
-            width: 100%;
-            height: 118px;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            justify-content: center;
-          }
-          .welcome-container74 {
-            flex: 0 0 auto;
-            width: auto;
-            height: 73px;
-            display: flex;
-            align-self: center;
-            align-items: center;
-            justify-content: center;
-          }
-          .welcome-icon32 {
-            fill: #d9d9d9;
-            width: 46px;
-            height: 51px;
-          }
-          .welcome-container75 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: var(--dl-space-space-halfunit);
-            justify-content: flex-start;
-          }
-          .welcome-text26 {
-            color: rgb(188, 188, 188);
-            width: auto;
-            height: 24px;
-            align-self: center;
-            text-align: center;
-            font-family: 'Arial';
-            text-shadow: 0px 0px 10px black;
-          }
-          .welcome-container76 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             padding: var(--dl-space-space-unit);
+            box-shadow: 0px 0px 30px 0px #000000;
+            margin-top: var(--dl-space-space-unit);
             align-items: flex-start;
-            border-radius: var(--dl-radius-radius-radius8);
-            animation-name: fadeIn;
-            animation-delay: 0s;
+            border-color: rgba(152, 152, 152, 0.19);
+            border-width: 1px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
             justify-content: flex-start;
-            animation-duration: 1s;
-            animation-direction: normal;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .welcome-container72 {
+            flex: 0 0 auto;
+            width: 993px;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
           }
           .welcome-image1 {
             width: 77px;
@@ -1828,23 +1781,15 @@ const Welcome = (props) => {
             object-fit: cover;
             border-radius: var(--dl-radius-radius-round);
           }
-          .welcome-container77 {
-            flex: 0 0 auto;
-            width: 993px;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .welcome-text27 {
-            color: #bdbdbd;
+          .welcome-text30 {
+            color: rgb(189, 189, 189);
             width: 841px;
             align-self: flex-start;
             text-align: left;
             margin-left: var(--dl-space-space-unit);
             text-shadow: 0px 0px 10px black;
           }
-          .welcome-text28 {
+          .welcome-text31 {
             color: #e2e2e2;
             width: auto;
             font-size: 16px;
@@ -1870,32 +1815,26 @@ const Welcome = (props) => {
             scale: 1.1;
             box-shadow: rgba(200, 200, 200, 0.5) 2px 2px 50px;
           }
-          .welcome-container78 {
+          .welcome-container73 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             padding: var(--dl-space-space-unit);
-            margin-top: var(--dl-space-space-unit);
+            box-shadow: 0px 0px 30px 0px #000000;
+            margin-top: var(--dl-space-space-halfunit);
             align-items: flex-start;
-            border-radius: var(--dl-radius-radius-radius8);
-            margin-bottom: var(--dl-space-space-unit);
-            animation-name: fadeIn;
-            animation-delay: 0s;
+            border-color: rgba(76, 76, 76, 0.57);
+            border-width: 1px;
+            border-radius: 16px;
+            margin-bottom: var(--dl-space-space-halfunit);
+            backdrop-filter: blur(10px);
             justify-content: flex-start;
-            animation-duration: 1000ms;
-            animation-direction: normal;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
           }
-          .welcome-image2 {
-            width: 77px;
-            height: 79px;
-            padding: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .welcome-container79 {
+          .welcome-container74 {
             flex: 0 0 auto;
             width: 993px;
             height: auto;
@@ -1903,7 +1842,12 @@ const Welcome = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .welcome-text29 {
+          .welcome-icon24 {
+            fill: #9b9b9b;
+            width: 80px;
+            height: 83px;
+          }
+          .welcome-text32 {
             color: var(--dl-color-gray-900);
             width: 841px;
             align-self: flex-start;
@@ -1911,7 +1855,7 @@ const Welcome = (props) => {
             margin-left: var(--dl-space-space-unit);
             text-shadow: 0px 0px 10px black;
           }
-          .welcome-text30 {
+          .welcome-text33 {
             color: rgb(226, 226, 226);
             width: auto;
             font-size: 16px;
@@ -1937,31 +1881,24 @@ const Welcome = (props) => {
             scale: 1.1;
             box-shadow: rgba(200, 200, 200, 0.5) 2px 2px 50px;
           }
-          .welcome-container80 {
-            flex: 0 0 auto;
+          .welcome-container75 {
             width: auto;
-            height: auto;
+            height: 263px;
             display: flex;
             padding: var(--dl-space-space-unit);
             position: relative;
-            margin-top: var(--dl-space-space-unit);
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.76);
             align-items: flex-start;
-            border-radius: var(--dl-radius-radius-radius8);
-            margin-bottom: var(--dl-space-space-unit);
-            animation-name: fadeIn;
-            animation-delay: 0s;
+            border-color: rgba(78, 78, 78, 0.46);
+            border-width: 1px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
             justify-content: flex-start;
-            animation-duration: 1500ms;
-            animation-direction: normal;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
           }
-          .welcome-icon34 {
-            fill: #67ff00;
-            width: 53px;
-            height: 49px;
-          }
-          .welcome-container81 {
+          .welcome-container76 {
             flex: 0 0 auto;
             width: 993px;
             height: auto;
@@ -1969,7 +1906,12 @@ const Welcome = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .welcome-text31 {
+          .welcome-icon26 {
+            fill: #a34f00;
+            width: 60px;
+            height: 60px;
+          }
+          .welcome-text34 {
             color: var(--dl-color-gray-900);
             width: 841px;
             align-self: flex-start;
@@ -1977,7 +1919,7 @@ const Welcome = (props) => {
             margin-left: var(--dl-space-space-unit);
             text-shadow: 0px 0px 10px black;
           }
-          .welcome-text32 {
+          .welcome-text35 {
             color: rgb(226, 226, 226);
             width: auto;
             font-size: 16px;
@@ -2003,23 +1945,25 @@ const Welcome = (props) => {
             scale: 1.1;
             box-shadow: rgba(200, 200, 200, 0.5) 2px 2px 50px;
           }
-          .welcome-container82 {
-            width: 1357px;
-            height: 327px;
+          .welcome-container77 {
+            width: 100%;
+            height: 351px;
             display: flex;
             padding: var(--dl-space-space-twounits);
+            z-index: 100;
+            align-items: flex-start;
+            backdrop-filter: blur(10px);
+            justify-content: center;
+          }
+          .welcome-container78 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 252px;
+            display: flex;
             align-items: flex-start;
             justify-content: center;
           }
-          .welcome-container83 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 126px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .welcome-container84 {
+          .welcome-container79 {
             flex: 0 0 auto;
             width: 100%;
             height: 114px;
@@ -2027,31 +1971,30 @@ const Welcome = (props) => {
             align-items: center;
             border-radius: 16px;
             flex-direction: column;
-            background-color: rgba(21, 21, 21, 0.94);
           }
-          .welcome-container85 {
+          .welcome-container80 {
             width: 100%;
-            height: 255px;
+            height: auto;
             display: flex;
             align-self: center;
             box-shadow: black 0px 0px 50px;
             align-items: flex-start;
-            border-color: rgba(0, 0, 0, 0.99);
+            border-color: rgba(61, 61, 61, 0.99);
             border-width: 1px;
             border-radius: 16px;
             justify-content: center;
           }
-          .welcome-container86 {
+          .welcome-container81 {
             flex: 0 0 auto;
             width: 100%;
-            height: 258px;
+            height: 297px;
             display: flex;
+            align-items: center;
             border-radius: 16px;
             flex-direction: column;
-            backdrop-filter: blur(50px);
-            justify-content: flex-start;
+            justify-content: center;
           }
-          .welcome-container87 {
+          .welcome-container82 {
             width: 100%;
             height: 100%;
             display: flex;
@@ -2066,12 +2009,12 @@ const Welcome = (props) => {
             border-right-width: 0px;
             border-bottom-width: 0px;
           }
-          .welcome-text33 {
+          .welcome-text36 {
             color: #b9b9b9;
             align-self: center;
             text-shadow: 0px 0px 10px black;
           }
-          .welcome-text34 {
+          .welcome-text37 {
             color: rgb(189, 189, 189);
             font-size: 1em;
             align-self: center;
@@ -2110,6 +2053,8 @@ const Welcome = (props) => {
             width: 100%;
             height: 345px;
             display: flex;
+            z-index: 100;
+            position: static;
             max-width: 100%;
             align-items: center;
             padding-top: var(--dl-space-space-unit);
@@ -2119,24 +2064,24 @@ const Welcome = (props) => {
             padding-right: var(--dl-space-space-threeunits);
             flex-direction: row;
             padding-bottom: var(--dl-space-space-unit);
+            backdrop-filter: blur(30px);
             justify-content: space-between;
-            background-color: #0c0c0c;
             border-top-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-bottom-width: 0px;
           }
-          .welcome-container88 {
+          .welcome-container83 {
             display: flex;
             max-width: var(--dl-size-size-maxwidth);
             align-items: flex-start;
             flex-direction: column;
           }
-          .welcome-image3 {
+          .welcome-image2 {
             width: 75px;
             height: 78px;
           }
-          .welcome-text35 {
+          .welcome-text38 {
             margin-top: var(--dl-space-space-oneandhalfunits);
           }
           .welcome-links-container {
@@ -2145,13 +2090,13 @@ const Welcome = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .welcome-container89 {
+          .welcome-container84 {
             display: flex;
             align-items: flex-start;
             flex-direction: row;
             justify-content: space-between;
           }
-          .welcome-container90 {
+          .welcome-container85 {
             flex: 0 0 auto;
             display: flex;
             align-items: flex-start;
@@ -2159,47 +2104,20 @@ const Welcome = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .welcome-text40 {
+          .welcome-text43 {
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .welcome-text41 {
-            margin-bottom: var(--dl-space-space-unit);
           }
           .welcome-text44 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .welcome-text45 {
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .welcome-container91 {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            margin-right: var(--dl-space-space-sixunits);
-            flex-direction: column;
-            justify-content: flex-start;
-          }
           .welcome-text47 {
-            font-weight: 700;
-            margin-bottom: var(--dl-space-space-oneandhalfunits);
+            margin-bottom: var(--dl-space-space-unit);
           }
           .welcome-text48 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .welcome-text49 {
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .welcome-text50 {
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .welcome-container92 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: space-between;
-          }
-          .welcome-container93 {
+          .welcome-container86 {
             flex: 0 0 auto;
             display: flex;
             align-items: flex-start;
@@ -2207,9 +2125,12 @@ const Welcome = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .welcome-text51 {
+          .welcome-text50 {
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .welcome-text51 {
+            margin-bottom: var(--dl-space-space-unit);
           }
           .welcome-text52 {
             margin-bottom: var(--dl-space-space-unit);
@@ -2217,32 +2138,67 @@ const Welcome = (props) => {
           .welcome-text53 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .welcome-container94 {
+          .welcome-container87 {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .welcome-container88 {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+            margin-right: var(--dl-space-space-sixunits);
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .welcome-text54 {
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .welcome-text55 {
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .welcome-text56 {
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .welcome-container89 {
             flex: 0 0 auto;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .welcome-text55 {
+          .welcome-text58 {
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .welcome-text56 {
-            margin-bottom: var(--dl-space-space-unit);
           }
           .welcome-text59 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .welcome-text60 {
+          .welcome-text62 {
             margin-bottom: var(--dl-space-space-unit);
+          }
+          .welcome-text63 {
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .welcome-container90 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 0;
+            position: fixed;
+            align-items: flex-start;
+            background-size: contain;
+            background-image: url('https://www.pngmart.com/files/13/Pattern-PNG-Transparent-Image.png');
+            background-position: center;
           }
           @media (max-width: 1200px) {
             .welcome-container03 {
               width: 219px;
             }
             .welcome-container05 {
-              height: 788px;
+              height: 1039px;
             }
             .welcome-container06 {
               height: 438px;
@@ -2254,11 +2210,11 @@ const Welcome = (props) => {
             .welcome-container10 {
               width: auto;
             }
-            .welcome-container68 {
+            .welcome-container69 {
               width: 100%;
             }
-            .welcome-container82 {
-              width: 100%;
+            .welcome-container77 {
+              width: 1039px;
             }
           }
           @media (max-width: 767px) {
@@ -2338,55 +2294,80 @@ const Welcome = (props) => {
               display: none;
             }
             .welcome-container59 {
-              height: 480px;
+              height: 764px;
               align-items: center;
               flex-direction: column;
             }
             .welcome-container68 {
-              height: 1073px;
+              height: 1694px;
             }
-            .welcome-container72 {
-              height: 943px;
+            .welcome-container69 {
+              height: 1508px;
             }
-            .welcome-container76 {
+            .welcome-container70 {
+              height: 431px;
+              align-items: center;
+              justify-content: center;
+            }
+            .welcome-container71 {
               width: 579px;
             }
-            .welcome-container77 {
+            .welcome-container72 {
               width: 407px;
             }
-            .welcome-text28 {
+            .welcome-text31 {
               width: 100%;
             }
-            .welcome-container78 {
+            .welcome-container73 {
               width: 591px;
             }
-            .welcome-container79 {
+            .welcome-container74 {
               width: 484px;
             }
-            .welcome-text30 {
+            .welcome-text33 {
               width: 387px;
             }
-            .welcome-container80 {
+            .welcome-container75 {
               width: 584px;
+              height: 343px;
             }
-            .welcome-container81 {
+            .welcome-container76 {
               width: 469px;
             }
-            .welcome-text31 {
+            .welcome-text34 {
               width: auto;
             }
-            .welcome-text32 {
+            .welcome-text35 {
               width: 473px;
               height: 103px;
+            }
+            .welcome-container77 {
+              width: 100%;
+              height: 262px;
+            }
+            .welcome-container78 {
+              width: 597px;
+              height: 284px;
             }
             .welcome-container82 {
               width: 100%;
             }
+            .welcome-text36 {
+              width: 348px;
+              height: 76px;
+              text-align: center;
+            }
+            .welcome-text37 {
+              width: 435px;
+              padding-left: var(--dl-space-space-halfunit);
+              padding-right: var(--dl-space-space-halfunit);
+            }
             .welcome-footer {
+              height: 443px;
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .welcome-image3 {
+            .welcome-image2 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .welcome-links-container {
@@ -2396,17 +2377,17 @@ const Welcome = (props) => {
               flex-direction: column;
               justify-content: space-between;
             }
-            .welcome-container89 {
+            .welcome-container84 {
               width: 100%;
               justify-content: space-between;
             }
-            .welcome-container91 {
+            .welcome-container86 {
               margin-right: 0px;
             }
-            .welcome-container92 {
+            .welcome-container87 {
               margin-top: var(--dl-space-space-twounits);
             }
-            .welcome-container93 {
+            .welcome-container88 {
               margin-right: var(--dl-space-space-unit);
             }
           }
@@ -2484,14 +2465,14 @@ const Welcome = (props) => {
               width: 100%;
             }
             .welcome-container05 {
-              height: 874px;
+              height: 707px;
             }
             .welcome-container06 {
               height: 445px;
             }
             .welcome-container07 {
               width: 100%;
-              height: 343px;
+              height: 292px;
             }
             .welcome-container08 {
               width: 100%;
@@ -2605,99 +2586,124 @@ const Welcome = (props) => {
               width: 84px;
             }
             .welcome-container59 {
-              height: auto;
-              align-items: center;
+              height: 485px;
+              align-self: flex-start;
+              align-items: flex-start;
+              padding-left: var(--dl-space-space-twounits);
+            }
+            .welcome-container60 {
+              width: 100%;
+              align-items: flex-start;
+            }
+            .welcome-container62 {
+              width: 100%;
+              align-items: flex-start;
+            }
+            .welcome-container64 {
+              width: 100%;
+              align-items: flex-start;
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+            .welcome-container66 {
+              width: 100%;
+              align-items: flex-start;
+              margin-left: 0px;
+              margin-right: 0px;
             }
             .welcome-container68 {
-              height: 1149px;
+              height: 2139px;
+              padding: var(--dl-space-space-unit);
+              margin-bottom: 0px;
             }
             .welcome-container69 {
-              height: 339px;
+              height: 100%;
+            }
+            .welcome-container70 {
+              width: 100%;
+              height: 1523px;
+              padding-left: 0px;
+              margin-bottom: 0px;
             }
             .welcome-container71 {
-              height: 1213px;
+              width: 100%;
+              height: 394px;
             }
             .welcome-container72 {
-              height: 1104px;
-            }
-            .welcome-container73 {
-              height: 84px;
-            }
-            .welcome-icon32 {
-              width: 33px;
-              height: 27px;
-            }
-            .welcome-text26 {
-              height: 12px;
-              font-size: 1em;
-            }
-            .welcome-container76 {
-              width: 100%;
-              height: 303px;
-            }
-            .welcome-image1 {
-              display: none;
-            }
-            .welcome-container77 {
               width: 100%;
               height: 197px;
             }
-            .welcome-text27 {
+            .welcome-image1 {
+              width: 62px;
+              height: 62px;
+            }
+            .welcome-text30 {
               width: auto;
               font-size: 1.3em;
             }
-            .welcome-text28 {
+            .welcome-text31 {
               width: auto;
+            }
+            .welcome-container73 {
+              width: 100%;
+              height: 426px;
+            }
+            .welcome-container74 {
+              width: 100%;
+              height: 283px;
+            }
+            .welcome-text32 {
+              width: auto;
+              font-size: 1.3em;
+            }
+            .welcome-text33 {
+              width: auto;
+            }
+            .welcome-container75 {
+              width: 100%;
+              height: 392px;
+              align-items: center;
+              justify-content: center;
+            }
+            .welcome-container76 {
+              width: 100%;
+              height: 284px;
+            }
+            .welcome-icon26 {
+              width: 94px;
+              height: 94px;
+            }
+            .welcome-text34 {
+              width: auto;
+              font-size: 1.3em;
+            }
+            .welcome-text35 {
+              width: auto;
+              height: 228px;
+            }
+            .welcome-container77 {
+              height: auto;
+              align-items: center;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+              padding-bottom: U0nit;
             }
             .welcome-container78 {
               width: 100%;
               height: 257px;
             }
-            .welcome-image2 {
-              display: none;
-            }
-            .welcome-container79 {
-              width: 100%;
-              height: 283px;
-            }
-            .welcome-text29 {
-              width: auto;
-              font-size: 1.3em;
-            }
-            .welcome-text30 {
-              width: auto;
-            }
-            .welcome-container80 {
-              width: 100%;
-              height: 348px;
-              align-items: center;
-              justify-content: center;
-            }
-            .welcome-icon34 {
-              display: none;
-            }
-            .welcome-container81 {
-              width: 100%;
-              height: 188px;
-            }
-            .welcome-text31 {
-              width: auto;
-              font-size: 1.3em;
-            }
-            .welcome-text32 {
-              width: auto;
-              height: 228px;
-            }
             .welcome-container82 {
-              height: 309px;
-              padding: var(--dl-space-space-unit);
+              height: 100%;
+              padding: var(--dl-space-space-oneandhalfunits);
             }
-            .welcome-text33 {
+            .welcome-text36 {
               width: auto;
+              height: 31px;
               font-size: 1em;
               text-align: center;
             }
-            .welcome-text34 {
+            .welcome-text37 {
               width: 244px;
               text-align: center;
             }
@@ -2709,7 +2715,7 @@ const Welcome = (props) => {
               height: 100%;
               padding: var(--dl-space-space-unit);
             }
-            .welcome-image3 {
+            .welcome-image2 {
               margin-bottom: 0px;
             }
             .welcome-links-container {
@@ -2717,15 +2723,15 @@ const Welcome = (props) => {
               flex-direction: column;
               justify-content: space-between;
             }
-            .welcome-container89 {
+            .welcome-container84 {
               align-items: center;
               margin-right: 0px;
               justify-content: space-between;
             }
-            .welcome-container90 {
+            .welcome-container85 {
               margin-right: var(--dl-space-space-unit);
             }
-            .welcome-container91 {
+            .welcome-container86 {
               align-self: stretch;
             }
           }
