@@ -59,7 +59,7 @@ export const createPSBT = async (
   const p2tr = btc.p2tr(ordinalPublicKey, undefined, network);
 
   // set transfer amount and calculate change
-  const fee = 300n; // set the miner fee amount
+  const fee = BigInt(300); // set the miner fee amount
   const recipient1Amount = BigInt(Math.min(paymentOutput.value, 3000)) - fee;
   const recipient2Amount = BigInt(Math.min(ordinalOutput.value, 3000));
   const total = recipient1Amount + recipient2Amount;
@@ -101,7 +101,7 @@ export const createPSBT = async (
       "DUP",
       new TextEncoder().encode("SP1KSN9GZ21F4B3DZD4TQ9JZXKFTZE3WW5GXREQKX"),
     ]),
-    amount: 0n,
+    amount: BigInt(0),
   });
 
   const psbt = tx.toPSBT(0);
