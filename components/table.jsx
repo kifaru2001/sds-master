@@ -58,7 +58,6 @@ function App() {
   
   const [endDate, setEndDate] = useState(Date.now());
   const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG';
-  const holdings = useMemo(holdingsData);
   // replace this with your own API key
   const holdingsData = [
     { id: 'coredaoorg', symbol: 'core', amount: [balance], cost_basis: [balance] },
