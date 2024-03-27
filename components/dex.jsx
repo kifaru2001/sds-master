@@ -33,15 +33,19 @@ import { useEffect, useState,  useMemo } from "react";
 import SwapInput from "../components/input";
 import { NumericFormat } from 'react-number-format';
 import tokenList from "../token.json";
-import { Popover, Radio, message } from "antd";
-import Modal from 'react-modal';
+import { Popover, Radio, message, Modal } from "antd";
 import axios from "axios";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Ap from "../components/App" 
 import Ap2 from "../components/Btc" 
-
+import {
+  ArrowDownOutlined,
+  DownOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import { ConfigProvider } from "antd";
 
 const customStyles = {
   content: {
@@ -63,8 +67,6 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement();
-
 
 
 
@@ -72,7 +74,8 @@ Modal.setAppElement();
 const Dex = (props) => {
   const address = useAddress();
   const [modalIsOpen, setOpen] = React.useState(false);
-  const { contract: tokenContract } = useContract(TOKEN_ADDRESS, "token");
+  const [tokenOne, setTokenOne] = useState(tokenList[0]);
+  const { contract: tokenContract } = useContract(tokenOne.address, "token");
   const { contract: dexContract } = useContract(DEX_ADDRESS, "custom");
   const { data: symbol } = useContractRead(tokenContract, "symbol");
   const { data: tokenMetadata } = useContractMetadata(tokenContract);
@@ -82,9 +85,7 @@ const Dex = (props) => {
   const [prices, setPrices] = useState(null);
   const [tokenOneAmount, setTokenOneAmount] = useState(null);
   const [tokenTwoAmount, setTokenTwoAmount] = useState(null);
-  const [tokenOne, setTokenOne] = useState(tokenList[0]);
   const [tokenTwo, setTokenTwo] = useState(tokenList[1]);
-
 
   const { data: contractTokenBalance } = useTokenBalance(
     tokenContract,
@@ -202,21 +203,17 @@ const Dex = (props) => {
       setNativeValue(toEther(amountToGet));
     }
   }, [amountToGet]);
+
   function handleSlippageChange(e) {
     setSlippage(e.target.value);
   }
+
   const [isOpen, setIsOpen] = useState(false);
   const [changeToken, setChangeToken] = useState(1);
+
   function openModal(asset) {
     setChangeToken(asset);
     setIsOpen(true);
-  }
-
-  function openModal() {
-    setOpen(true);
-  }
-  function closeModal() {
-    setOpen(false);
   }
 
   function modifyToken(i){
@@ -225,10 +222,10 @@ const Dex = (props) => {
     setTokenTwoAmount(null);
     if (changeToken === 1) {
       setTokenOne(tokenList[i]);
-      fetchPrices(tokenList[i].address, tokenTwo.address)
+      setPrices(tokenList[i].address, tokenTwo.address)
     } else {
       setTokenTwo(tokenList[i]);
-      fetchPrices(tokenOne.address, tokenList[i].address)
+      setPrices(tokenOne.address, tokenList[i].address)
     }
     setIsOpen(false);
   }
@@ -258,12 +255,48 @@ const Dex = (props) => {
   }
 
   
-
-  
   
 
   return (
     <>
+      <ConfigProvider
+    theme={{
+      components: {
+        Modal: {
+          contentBg: "transparent",
+          headerBg:  "transparent",
+          titleColor: "white",
+          colorText: "white",
+          colorIcon: "white",
+          boxShadow: "none",
+        },
+      },
+    }}
+  >
+          <Modal
+       contentBg="black"
+        open={isOpen}
+        footer={null}
+        onCancel={() => setIsOpen(false)}
+      >
+        <div className="modalContent">
+          {tokenList?.map((e, i) => {
+            return (
+              <div
+                className="tokenChoice"
+                key={i}
+                onClick={() => modifyToken(i)}
+              >
+                <img src={e.img} alt={e.ticker} className="tokenLogo" />
+                <div className="tokenChoiceNames">
+                  <div className="tokenName">{e.name}</div>
+                  <div className="tokenTicker">{e.ticker}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Modal>
       <Toaster position="top-center" reverseOrder={false} />
       <div className={`dex-container ${props.rootClassName} `}>
         <div className="dex-container01">
@@ -415,44 +448,12 @@ style={{background: "transparent", textAlign: "end"}}
             <div className="dex-container19">
               <div className="dex-container20">
                 <div className="dex-container21">
-                  <button className="dex-text12"
-      onClick={openModal}            
->{props.text12}
-                  </button>
-                  <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Tokens"
-      >
-      
-        <div style={{height: "auto", position: "relative", display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center", zIndex: "500"}}>
-        <h1 style={{fontSize: "18x",  textShadow: "black 1px 1px 5px" }}>Token List</h1>
-        <button className='button' onClick={closeModal}
-        style={{background: "rgba(0, 0, 0, 0.1)", color: "white", border: "none", borderRadius: "50%"}}
-        >X</button>
-        </div>
-        <div className="modalContent">
-    {tokenList?.map((e, i) => {
-            return (
-              <div
-                className="tokenChoice"
-                key={i}
-                onClick={() => modifyToken(i)}
-              >
-                <img src={e.img} alt={e.ticker} className="tokenLogo" />
-                <div className="tokenChoiceNames">
-                  <div className="tokenName">{e.name}</div>
-                  <div className="tokenTicker">{e.ticker}</div>
-                </div>
-              </div>
-            );
-          })}
-       </div>
-      </Modal>
-                  <svg viewBox="0 0 1024 1024" className="dex-icon06">
-                    <path d="M298 426h428l-214 214z"></path>
-                  </svg>
+                <div style={{display: "flex", alignSelf: "center", justifyContent: "center", cursor: "pointer", gap: "10%"}} onClick={() => openModal(1)}>
+            <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
+            {tokenOne.ticker}
+            <DownOutlined />
+          </div>
+                 
                 </div>
               </div>
             </div>
@@ -550,7 +551,7 @@ style={{background: "transparent", textAlign: "end"}}
 
         </div>
       </div>
-      <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "-2%", boxShadow: "1px 1px 20px initial"}} className='column'>
+      <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "-2%", boxShadow: "1px 1px 20px initial", zIndex: "auto"}} className='column'>
         
       <Ap />
       <Ap2 />
@@ -1250,6 +1251,7 @@ margin-top: 1%;
           }
         `}
       </style>
+      </ConfigProvider>
     </>
   )
 }

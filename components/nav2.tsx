@@ -2,26 +2,61 @@ import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
+import { useState } from 'react'
+import styles from "./nav.module.css"
+import Dex from './dex'
+import Add from './add'
 
-const Nav2 = (props) => {
+const Nav2 = (props: { rootClassName: any }) => {
+  const [tab, setTab] = useState<"Swap" | "liquididty" >("Swap");
+
   return (
     <>
       <div className={`nav2-container ${props.rootClassName} `}>
-           <Link  legacyBehavior  href="/swap">
+      <div className={styles.tabs}> 
           <a className="nav2-link">
             <div id="swap" className="nav2-container1">
-              <h1 className="nav2-text">{props.heading}</h1>
+            <h1
+          className={`${styles.tab} 
+        ${tab === "Swap" ? styles.activeTab : ""}`}
+          onClick={() => setTab("Swap")}
+        >
+          SWAP
+        </h1>
             </div>
           </a>
-        </Link>
+
            <Link  legacyBehavior  href="/liquidity">
           <a className="nav2-link1">
             <div className="nav2-container2">
-              <h1 className="nav2-text1">{props.heading2}</h1>
+            <h1
+          className={`${styles.tab} 
+        ${tab === "Swap" ? styles.activeTab : ""}`}
+          onClick={() => setTab("Swap")}
+        >
+          Liquididty
+        </h1>
             </div>
           </a>
         </Link>
       </div>
+      </div>
+      <div
+        className={`${
+          tab === "Swap" ? styles.activeTabContent : styles.tabContent
+        }`}
+      >
+        <Dex />
+      </div>
+      <div
+        className={`${
+          tab === "liquididty" ? styles.activeTabContent : styles.tabContent
+        }`}
+      >
+        <Add />
+      </div>
+ 
+      
       <style jsx>
         {`
           .nav2-container {
