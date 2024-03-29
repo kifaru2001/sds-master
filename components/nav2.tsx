@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import styles from "./nav.module.css"
 import Dex from './dex'
-import Add from './add'
+import Add from '../pages/liquidity'
 
 const Nav2 = (props: { rootClassName: any }) => {
   const [tab, setTab] = useState<"Swap" | "liquidity" >("Swap" || "");
