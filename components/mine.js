@@ -102,7 +102,7 @@ const Mine = (props) => {
           .mine-container {
             gap: var(--dl-space-space-halfunit);
             width: 100%;
-            height: 252px;
+            height: auto;
             display: flex;
             position: relative;
             align-items: center;
@@ -110,7 +110,7 @@ const Mine = (props) => {
           }
           .mine-container01 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             padding: 0px;
             align-items: flex-start;
@@ -120,7 +120,7 @@ const Mine = (props) => {
           .mine-container02 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -128,7 +128,7 @@ const Mine = (props) => {
           .mine-container03 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             border-radius: 16px;
@@ -136,7 +136,7 @@ const Mine = (props) => {
           }
           .mine-container04 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-self: center;
             box-shadow: black 0px 0px 50px;
@@ -152,7 +152,7 @@ const Mine = (props) => {
           .mine-container05 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             padding: var(--dl-space-space-halfunit);
             align-items: center;
@@ -170,7 +170,6 @@ const Mine = (props) => {
           }
           .mine-container06 {
             width: 100%;
-            height: 54px;
             display: flex;
             padding: var(--dl-space-space-halfunit);
             align-self: center;
@@ -220,7 +219,7 @@ const Mine = (props) => {
           }
           .mine-container08 {
             width: auto;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: flex-start;
             margin-left: 1px;
@@ -229,7 +228,7 @@ const Mine = (props) => {
           .mine-container09 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -237,7 +236,7 @@ const Mine = (props) => {
           .mine-container10 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             border-radius: 16px;
@@ -245,7 +244,7 @@ const Mine = (props) => {
           }
           .mine-container11 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-self: center;
             box-shadow: black 0px 0px 50px;
@@ -261,7 +260,7 @@ const Mine = (props) => {
           .mine-container12 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             border-color: rgba(81, 81, 81, 0.43);
             border-width: 1px;

@@ -110,8 +110,9 @@ const Component1 = (props) => {
             border-width: 2px;
             border-radius: 16px;
             flex-direction: column;
+            backdrop-filter: blur(20px);
             justify-content: flex-start;
-            background-color: rgba(177, 177, 177, 0.92);
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .component1-container02 {
             width: 100%;
@@ -211,6 +212,7 @@ const Component1 = (props) => {
             justify-content: center;
           }
           .component1-text3 {
+            color: #9f9f9f;
             width: 100%;
             font-size: 20px;
             font-style: italic;
@@ -237,7 +239,7 @@ const Component1 = (props) => {
             justify-content: space-between;
           }
           .component1-icon04 {
-            fill: #2b2b2b;
+            fill: #cbcbcb;
             width: 24px;
             height: 24px;
             margin-right: var(--dl-space-space-unit);
@@ -249,7 +251,7 @@ const Component1 = (props) => {
             text-align: left;
           }
           .component1-text5 {
-            color: #383838;
+            color: #a7a7a7;
             width: 100%;
             margin-top: var(--dl-space-space-halfunit);
             font-family: 'Courier New';
@@ -317,13 +319,18 @@ const Component1 = (props) => {
             margin: auto;
             position: absolute;
           }
+          .component1-root-class-name {
+            top: 66px;
+            left: 0px;
+            position: absolute;
+          }
           @media (max-width: 767px) {
             .component1-container {
               height: 1088px;
             }
             .component1-container01 {
               width: 410px;
-              height: 428px;
+              height: 584px;
               margin-right: 0px;
             }
             .component1-container06 {
@@ -368,7 +375,7 @@ const Component1 = (props) => {
 }
 
 Component1.defaultProps = {
-  text3: 'Buy',
+  text3: 'Collection',
   rootClassName: '',
   heading12: 'Testnet',
   heading2: 'Announcement',

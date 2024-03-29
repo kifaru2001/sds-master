@@ -25,7 +25,6 @@ import { ACTIVE_CHAIN, DEX_ADDRESS, TOKEN_ADDRESS } from "../const/details";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 import tokenList from "../token.json";
-import { BigNumber } from 'ethers';
 
 const Add = (props, {coin}) => {
   const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG';
@@ -34,20 +33,12 @@ const Add = (props, {coin}) => {
   const [coins, setCoins] = useState([]);
   const { contract: tokenContract } = useContract(TOKEN_ADDRESS, "token");
   const { contract } = useContract("0x4BeE778f80A4d9AC989C471E0018370ff0fe9946");
-  const holdingsData = [
-    { id: 'coredaoorg', symbol: 'core'},
-  ];
-
-  const holdings = useMemo(() => holdingsData, []);
-  const [selectedCoin, setSelectedCoin] = useState(null);
-  const [_amt, setAmount] = useState(Number());
- const _amount = BigInt(_amt)
- const amount =  BigInt(_amount)
+  const [amount, setAmount] = useState(Number());
 
   const {
       mutate: transferNativeToken,
       error,
-    } = useTransferNativeToken({ to: contract, amount: [_amt / 1000] });
+    } = useTransferNativeToken({ to: contract, amount: [amount] });
   
     if (error) {
    alert(error)
@@ -70,12 +61,12 @@ const Add = (props, {coin}) => {
 
   const call = async () => {
     try {
-      const data = await approve({ args: [address, BigInt(_amount) / 1000000000000000000n]})
+      const data = await approve({ args: [address, BigInt(amount) / 1000000000000000000n]})
     } catch (err) {
       alert(err)
     }
     try {
-      const data1 = await addLiquidity({ args: [BigInt(_amount)]});
+      const data1 = await addLiquidity({ args: [BigInt(amount)]});
     } catch (err) {
       alert(err)
     }
@@ -210,7 +201,7 @@ name: coin.name
               type="number"
               placeholder={props.textinputPlaceholder}
               className="add-textinput1 input"
-              value={_amt/1000}
+              value={amount}
               step="1"
             />
             <span className="add-text10">
@@ -236,7 +227,7 @@ name: coin.name
                         max={1000}
             onChange={e => setAmount(e.target.value)}
               type="number"
-              value={_amt}
+              value={amount}
               placeholder={props.textinputPlaceholder1}
               className="add-textinput2 input"
             />
@@ -746,12 +737,12 @@ name: coin.name
             margin-top: var(--dl-space-space-twounits);
             transition: 0.3s;
             align-items: center;
-            border-color: #404040;
-            border-width: 1px;
+            border-color: none;
+            border-width: 0px;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-twounits);
             justify-content: center;
-            background-color: rgba(30, 30, 30, 0.75);
+            background-color: rgba(0, 0, 0, 0.5);
           }
           .add-container15:hover {
             background: rgba(35, 41, 41, 0.7);

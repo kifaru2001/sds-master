@@ -51,5 +51,15 @@
     flex-wrap: wrap;
     gap: 1px;
     width: 100%;
-    margin-top: 1%;
+    margin-top: 2%;
+  }
+  @media only screen and (max-width: 600px) {
+    .activeTabContent {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1px;
+      width: 100%;
+      margin-top: 5%;
+    }
   }

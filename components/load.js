@@ -27,6 +27,7 @@ const AppComponent = (props) => {
             backdrop-filter: blur(100px);
             justify-content: center;
             min-height: 100vh;
+            background: rgba(0, 0, 0, 0.3);
           }
           .app-component-image {
             width: auto;
@@ -40,7 +41,7 @@ const AppComponent = (props) => {
             animation-timing-function: ease;
           }
           .app-component-text {
-            color: white;
+            color: initial;
             font-size: 1em;
             animation-name: pulse;
             animation-delay: 0s;

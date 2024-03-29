@@ -33,7 +33,6 @@ const Pair = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name7"></Nav>
-        <Nav2 rootClassName="nav2-root-class-name3"></Nav2>
         <div className="pair-container1"></div>
         <Add rootClassName="add-root-class-name"></Add>
         <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "-2%", boxShadow: "1px 1px 20px initial"}} className='column'>

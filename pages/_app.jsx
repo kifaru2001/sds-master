@@ -33,15 +33,16 @@ import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
 
   return (
+    <QueryClientProvider client={queryClient}>
     <ChakraProvider theme={"dark"}>
       
     <ThirdwebProvider
     clientId="678d5b0199cde588796872ea22804505"
+    activeChain={NETWORK}
     authConfig={{
-      domain: "rarebay.xyz",
+      domain: ["rarebay.xyz", "127.0.0.1:3000"],
       authUrl: "/api/auth",
     }}
-    activeChain={NETWORK}
     supportedWallets={
       [
         metamaskWallet(),
@@ -80,7 +81,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
   </ThirdwebProvider>
 
   </ChakraProvider>
-
+  </QueryClientProvider>
   
   )
 }

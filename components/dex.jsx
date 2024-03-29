@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+import { useQuery } from "react-query";
 import PropTypes from 'prop-types'
 import { ConnectWallet } from '@thirdweb-dev/react'
 import {
@@ -46,6 +46,7 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { ConfigProvider } from "antd";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const customStyles = {
   content: {
@@ -71,10 +72,39 @@ const customStyles = {
 
 
 
-const Dex = (props) => {
+const Dex = (props, coin) => {
+
   const address = useAddress();
+  const [coins, setCoins] = useState([]);
+  const axios = require('axios');
+  const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG'
+  const Data = [
+    { id: 'coredaoorg', symbolbol: 'core' },
+  ];
+  const price = useMemo(() => Data, []);
+  useEffect(() => {
+    axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${price.map(price => price.id).join(',')}`, {
+      headers: {
+        'X-CoinAPI-Key': api_key
+      }
+    })
+    .then(response => {
+      const updatedData = price.map(price => {
+        const coin = response.data.find(coin => coin.id === price.id);
+      return {
+        ...price,
+        current_price: coin.current_price,
+      }
+    })
+    setCoins(updatedData);
+    })
+    .catch(error => {
+      console.error('Error fetching data', error);
+    });
+    }, [price])
+
   const [modalIsOpen, setOpen] = React.useState(false);
-  const [tokenOne, setTokenOne] = useState(tokenList[0]);
+  const [tokenOne, setTokenOne] = useState(tokenList[1]);
   const { contract: tokenContract } = useContract(tokenOne.address, "token");
   const { contract: dexContract } = useContract(DEX_ADDRESS, "custom");
   const { data: symbol } = useContractRead(tokenContract, "symbol");
@@ -236,6 +266,7 @@ const Dex = (props) => {
 
   return (
     <>
+  
       <ConfigProvider
     theme={{
       components: {
@@ -336,7 +367,7 @@ const Dex = (props) => {
 
           <Flex
           direction={currentFrom === "native" ? "column" : "column-reverse"}
-         
+         style={{padding: "0px", width: "100%"}}
         >
           
           <div id="native" className="dex-container10">
@@ -375,23 +406,10 @@ style={{background: "transparent", textAlign: "end"}}
             tokenImage={tokenMetadata?.image}
             className="dex-textinput1"
           />
-              <span className="dex-text08"   style={{background: "transprent"}}>
-              <NumericFormat
-
-              style={{background: "transparent", textAlign: "end"}}
-  value={nativeBalance?.displayValue}
-  displayType="text"
-  thousandSeparator={true}
-  prefix="$"
-  decimalScale={3}
-  className="dex-text08"
-  renderText={(value, props) =>  <span className="dex-text08"
-  {...props}>{value}</span>}
-/>
-
-               
-                 
-                </span>
+              <span className="dex-text08"   style={{background: "transprent"}} cryptoName = "coredaoorg">
+              {coins.map((coin, index) => (
+                <>${Number(coin.current_price * nativeBalance?.displayValue)?.toFixed(2)}</>
+              ))}</span>
               </div>
            
             </div>
@@ -425,11 +443,11 @@ style={{background: "transparent", textAlign: "end"}}
             <div className="dex-container19">
               <div className="dex-container20">
                 <div className="dex-container21">
-                <div style={{display: "flex", alignSelf: "center", justifyContent: "center", cursor: "pointer", gap: "10%"}} onClick={() => openModal(1)}>
+                <button disabled style={{display: "flex", alignSelf: "center", justifyContent: "center", cursor: "pointer", gap: "10%"}} onClick={() => openModal(1)}>
             <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
             {tokenOne.ticker}
             <DownOutlined />
-          </div>
+          </button>
                  
                 </div>
               </div>
@@ -457,16 +475,7 @@ style={{background: "transparent", textAlign: "end"}}
             className="dex-textinput1"
           />
            <div className="dex-text08">
-                <NumericFormat
-  value={tokenBalance?.displayValue}
-  displayType="text"
-  thousandSeparator={true}
-prefix="$"
-  decimalScale={3}
-style={{background: "transparent", textAlign: "end"}}
-  renderText={(value, props) =>  <span className="dex-text08"
-  {...props}> {value}</span>}
-/>
+              {Number(tokenBalance?.displayValue)?.toFixed(3)} {tokenBalance?.symbol}
                 </div>
               </div>
             </div>
@@ -877,6 +886,7 @@ style={{background: "transparent", textAlign: "end"}}
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 1;
           }
           .dex-container17 {
             width: 40px;
@@ -997,6 +1007,7 @@ margin-top: 1%;
           }
           .dex-container24 {
             width: 100%;
+            min-width: 80%;
             height: 77px;
             display: flex;
             align-items: center;
@@ -1011,8 +1022,6 @@ margin-top: 1%;
             margin-top: var(--dl-space-space-twounits);
             transition: 0.3s;
             align-items: center;
-            border-color: #404040;
-            border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-twounits);
             justify-content: center;
@@ -1093,7 +1102,7 @@ margin-top: 1%;
               width: 131px;
             }
             .dex-textinput1 {
-              width: 237px;
+              width: 100%;
             }
             .dex-container22 {
               width: 132px;
@@ -1113,7 +1122,7 @@ margin-top: 1%;
               width: auto;
             }
             .dex-textinput1 {
-              width: 252px;
+              width: 100%px;
               height: 38px;
             }
             .dex-container17 {

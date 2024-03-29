@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Nav2 from '../components/nav2'
+
 
 const Liquidity = (props) => {
   return (
@@ -32,7 +32,6 @@ const Liquidity = (props) => {
         </Head>
         <Nav rootClassName="nav-root-class-name2"></Nav>
         <div className="liquidity-container01"></div>
-        <Nav2 rootClassName="nav2-root-class-name2"></Nav2>
         <div className="liquidity-container02">
           <div className="liquidity-container03">
             <div className="liquidity-container04">

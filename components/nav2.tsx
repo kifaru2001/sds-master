@@ -56,6 +56,10 @@ const Nav2 = (props: { rootClassName: any }) => {
       
       <style jsx>
         {`
+        @font-face {
+          font-family: Pixel_NES;
+          src: url("../public/fonts/pixel_nes.otf");
+        }        
           .nav2-container {
             width: 100%;
             height: 51px;
@@ -65,6 +69,7 @@ const Nav2 = (props: { rootClassName: any }) => {
             flex-direction: row;
             justify-content: center;
             background-color: #010101;
+            font-family: Pixel Nes
           }
           .nav2-link {
             display: contents;

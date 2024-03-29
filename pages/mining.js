@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Nav2 from '../components/nav2'
+
 
 const Mining = (props) => {
   return (
@@ -30,7 +30,6 @@ const Mining = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name10"></Nav>
-        <Nav2 rootClassName="nav2-root-class-name5"></Nav2>
         <div className="mining-container01"></div>
         <div className="mining-container02">
           <div className="mining-container03">

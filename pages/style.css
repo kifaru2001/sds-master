@@ -34,6 +34,11 @@
   --dl-space-space-threeunits: 48px;
   --dl-space-space-oneandhalfunits: 24px;
 }
+@font-face {
+  font-family: Pixel_NES;
+  src: url("../public/fonts/pixel_nes.otf");
+}
+
 .button {
   color: var(--dl-color-gray-black);
   display: inline-block;
@@ -407,10 +412,6 @@ button {
   outline: none;
 }
 
-.chart-actions button:hover,
-.chart-actions button:focus {
-}
-
 .chart-actions .active {
   background: var(--white);
   color: orange;
@@ -570,6 +571,7 @@ button {
 .assetLogo {
   height: 22px;
   margin-left: 5px;
+  border-radius: 50%;
 }
 
 .swapButton {

@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Nav2 from '../components/nav2'
 import Remove from '../components/remove'
 
 const PairRemove = (props) => {
@@ -31,7 +30,6 @@ const PairRemove = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name9"></Nav>
-        <Nav2 rootClassName="nav2-root-class-name4"></Nav2>
         <div className="pair-remove-container1"></div>
         <Remove rootClassName="remove-root-class-name"></Remove>
       </div>
