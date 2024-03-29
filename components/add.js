@@ -310,8 +310,8 @@ name: coin.name
             min-height: 100vh;
             display: flex;
             position: relative;
-            margin-top: 5%;
-            overflow: auto;
+            margin-top: 2%;
+            overflow-x: hidden;
             align-items: center;
             flex-direction: column;
             justify-content: center;

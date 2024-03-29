@@ -57,7 +57,7 @@ const Nav2 = (props: { rootClassName: any }) => {
       <style jsx>
         {`
         @font-face {
-          font-family: Pixel_NES;
+          font-family: consolas;
           src: url("../public/fonts/pixel_nes.otf");
         }        
           .nav2-container {
