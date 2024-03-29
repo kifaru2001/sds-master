@@ -307,11 +307,11 @@ name: coin.name
           .add-container {
             color: var(--dl-color-gray-900);
             width: 100%;
-            max-height: 100vh;
+            min-height: 100vh;
             display: flex;
             position: relative;
-            margin-top: 10px;
-            overflow: hidden;
+            margin-top: 5%;
+            overflow: auto;
             align-items: center;
             flex-direction: column;
             justify-content: center;
