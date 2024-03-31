@@ -138,7 +138,7 @@ const NFTs = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: #202020;
+            background-color: rgba(0, 0, 0, 0.7);
           }
           .nf-ts-container1 {
             width: 100%;

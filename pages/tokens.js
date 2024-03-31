@@ -285,9 +285,8 @@ const Tokens = (props) => {
             color: #c6c6c6;
             font-size: 28px;
             text-align: center;
-            font-family: 'Arial Black';
-            font-weight: 800;
             margin-right: var(--dl-space-space-twounits);
+            margin-left: 1%;
           }
           .tokens-icon {
             fill: #d9d9d9;
