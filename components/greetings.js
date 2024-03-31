@@ -17,10 +17,62 @@ import {
 } from "@thirdweb-dev/react";
 import { ethers } from 'ethers';
 import truncateEthAddress from 'truncate-eth-address';
+import { useEffect, useState,  useMemo } from "react";
+import { Blockie } from 'web3uikit';
+import { ACTIVE_CHAIN, DEX_ADDRESS, TOKEN_ADDRESS } from "../const/details";
+import Greetings1 from './greetings1';
 
-
-const Greetings = (props) => {
+const Greetings = (props, coin) => {
+  let timeOfDay;
+  const date = new Date();
+  const hours = date.getHours();
+  const styles = {
+    fontSize: 35,
+  }
+  if (hours < 12) {
+    timeOfDay = 'GM';
+    styles.color = "#D90000";
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = 'Good afternoon';
+    styles.color = "#04733F";
+  } else {
+  timeOfDay ="GN";
+    styles.color = "#04756F";
+  }
   const address = useAddress();
+  const [coins, setCoins] = useState([]);
+  const axios = require('axios');
+  const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG'
+  const Data = [
+    { id: 'coredaoorg', symbolbol: 'core' },
+  ];
+  const price = useMemo(() => Data, []);
+  useEffect(() => {
+    axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${price.map(price => price.id).join(',')}`, {
+      headers: {
+        'X-CoinAPI-Key': api_key
+      }
+    })
+    .then(response => {
+      const updatedData = price.map(price => {
+        const coin = response.data.find(coin => coin.id === price.id);
+      return {
+        ...price,
+        current_price: coin.current_price,
+      }
+    })
+    setCoins(updatedData);
+    })
+    .catch(error => {
+      console.error('Error fetching data', error);
+    });
+    }, [price])
+    const { contract: tokenContract } = useContract(TOKEN_ADDRESS, "token");
+    const { contract: dexContract } = useContract(DEX_ADDRESS, "custom");
+    const { data: symbol } = useContractRead(tokenContract, "symbol");
+    const { data: tokenMetadata } = useContractMetadata(tokenContract);
+    const { data: tokenBalance } = useTokenBalance(tokenContract, address);
+    const { data: nativeBalance } = useBalance();
   
   return (
     <>
@@ -32,11 +84,7 @@ const Greetings = (props) => {
                 <path d="M810 896v-598h-468v598h468zM810 214q34 0 60 25t26 59v598q0 34-26 60t-60 26h-468q-34 0-60-26t-26-60v-598q0-34 26-59t60-25h468zM682 42v86h-512v598h-84v-598q0-34 25-60t59-26h512z"></path>
               </svg>
               <div className="greetings-container4">
-                <img
-                  alt={props.imageAlt}
-                  src={props.imageSrc}
-                  className="greetings-image"
-                />
+                <Blockie seed={address} scale={10} />
                 <div className="greetings-container5">
                   <svg viewBox="0 0 1024 1024" className="greetings-icon2">
                     <path d="M1024 657.542c0-82.090-56.678-150.9-132.996-169.48-3.242-128.7-108.458-232.062-237.862-232.062-75.792 0-143.266 35.494-186.854 90.732-24.442-31.598-62.69-51.96-105.708-51.96-73.81 0-133.642 59.874-133.642 133.722 0 6.436 0.48 12.76 1.364 18.954-11.222-2.024-22.766-3.138-34.57-3.138-106.998-0.002-193.732 86.786-193.732 193.842 0 107.062 86.734 193.848 193.73 193.848l656.262-0.012c96.138-0.184 174.008-78.212 174.008-174.446z"></path>
@@ -47,14 +95,19 @@ const Greetings = (props) => {
                   </svg>
                 </div>
                 <div className="greetings-container6">
-                  <h1 className="greetings-text">GM</h1>
+                  <h1 className="greetings-text">
+{timeOfDay}
+                  </h1>
                   <h1 className="greetings-text1">{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</h1>
                 </div>
               </div>
             </div>
             <div className="greetings-container7">
               <h1 className="greetings-text2">{props.heading}</h1>
-              <h1 className="greetings-text3">{props.heading1}</h1>
+              <h1 className="greetings-text3">  
+               {coins.map((coin, index) => (
+                <>${Number(coin.current_price * nativeBalance?.displayValue)?.toFixed(2) || 0.0}</>
+              ))}</h1>
             </div>
           </div>
           <svg
@@ -183,7 +236,7 @@ const Greetings = (props) => {
           }
           .greetings-text1 {
             color: gray;
-            font-size: 24px;
+            font-size: 20px;
             align-self: flex-start;
           }
           .greetings-container7 {
@@ -321,7 +374,7 @@ Greetings.defaultProps = {
   heading3: 'Welcome to your portfolio',
   imageSrc:
     'https://images.unsplash.com/photo-1614854262340-ab1ca7d079c7?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fGJsdWUlMjBncmFkaWVudHxlbnwwfHx8fDE3MTAzNTU0NTd8MA&ixlib=rb-4.0.3&w=200',
-  heading2: 'GM, 0x00..000',
+  heading2: 'GM,0x00..000',
   heading1: '$0.0',
   heading: 'Your Balance',
   imageAlt: 'image',

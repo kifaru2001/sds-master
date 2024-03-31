@@ -47,7 +47,7 @@ const Pair = (props) => {
             width: 100%;
             display: flex;
             overflow: auto;
-            min-height: 100vh;
+            max-height: 100vh;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;

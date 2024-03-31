@@ -82,7 +82,7 @@ const Mining = (props) => {
                   <div className="mining-container13">
                     <div className="mining-container14">
                       <div className="mining-container15">
-                 
+                        <Link href="/mining">
                           <a className="mining-link1">
                             <div className="mining-container16">
                               <div className="mining-container17">
@@ -94,13 +94,11 @@ const Mining = (props) => {
                                     <path d="M682 576q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 682v-340h426v340h-426zM896 768v42q0 34-26 60t-60 26h-596q-36 0-61-25t-25-61v-596q0-36 25-61t61-25h596q34 0 60 26t26 60v42h-384q-36 0-61 25t-25 61v340q0 36 25 61t61 25h384z"></path>
                                   </svg>
                                   <h1 className="mining-text02">Balance</h1>
-                              
                                 </div>
-                                <p>0.00000002323</p>
                               </div>
                             </div>
                           </a>
-                     
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -121,7 +119,7 @@ const Mining = (props) => {
                   <div className="mining-container20">
                     <div className="mining-container21">
                       <div className="mining-container22">
-                
+                        <Link href="/mining">
                           <a className="mining-link2">
                             <div className="mining-container23">
                               <div className="mining-container24">
@@ -134,11 +132,10 @@ const Mining = (props) => {
                                   </svg>
                                   <h1 className="mining-text03">Mined</h1>
                                 </div>
-                                <p>0.00000002323</p>
                               </div>
                             </div>
                           </a>
-                       
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -146,7 +143,7 @@ const Mining = (props) => {
               </animate-on-reveal>
             </div>
             <div className="mining-container26">
-              <span className="mining-text04">CONNECT WALLET</span>
+              <span className="mining-text04">CONNECT CORE WALLET</span>
             </div>
             <div className="mining-container27">
               <span className="mining-text05">Withdraw funds</span>
@@ -319,7 +316,7 @@ const Mining = (props) => {
           }
           .mining-container10 {
             gap: var(--dl-space-space-halfunit);
-            width: auto;
+            width: 50%;
             height: 423px;
             display: flex;
             align-items: flex-end;
@@ -337,7 +334,7 @@ const Mining = (props) => {
             justify-content: center;
           }
           .mining-container12 {
-            width: auto;
+            width: 50%;
             height: 100%;
             display: flex;
             padding: 0px;
@@ -377,7 +374,7 @@ const Mining = (props) => {
           .mining-container16 {
             flex: 0 0 auto;
             width: 100%;
-            height: 50%;
+            height: 100%;
             display: flex;
             padding: var(--dl-space-space-unit);
             align-items: center;
@@ -395,8 +392,9 @@ const Mining = (props) => {
           }
           .mining-container17 {
             width: 100%;
-            height: auto;
+            height: 54px;
             display: flex;
+            padding: var(--dl-space-space-halfunit);
             align-self: center;
             align-items: center;
             flex-direction: column;
@@ -409,21 +407,26 @@ const Mining = (props) => {
             display: flex;
             align-self: center;
             align-items: flex-start;
+            margin-left: var(--dl-space-space-unit);
             justify-content: flex-start;
           }
           .mining-icon {
             fill: #d9d9d9;
-            width: 20px;
-            height: 20px;
+            width: 38px;
+            height: 74px;
           }
           .mining-text02 {
             color: rgb(255, 255, 255);
-            font-size: 20px;
-            font-weight: 400;
+            height: 56px;
+            padding: var(--dl-space-space-halfunit);
+            font-size: 1.7em;
+            margin-top: var(--dl-space-space-halfunit);
+            text-align: left;
             text-shadow: 0px 0px 10px black;
+            padding-bottom: 8px;
           }
           .mining-container19 {
-            width: auto;
+            width: 50%;
             height: 100%;
             display: flex;
             padding: 0px;
@@ -463,7 +466,7 @@ const Mining = (props) => {
           .mining-container23 {
             flex: 0 0 auto;
             width: 100%;
-            height: 50%;
+            height: 100%;
             display: flex;
             padding: var(--dl-space-space-unit);
             align-items: center;
@@ -481,7 +484,9 @@ const Mining = (props) => {
           }
           .mining-container24 {
             width: 100%;
+            height: 54px;
             display: flex;
+            padding: var(--dl-space-space-halfunit);
             align-self: center;
             align-items: center;
             flex-direction: column;
@@ -489,30 +494,30 @@ const Mining = (props) => {
           }
           .mining-container25 {
             flex: 0 0 auto;
-            width: 100%;
+            width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: flex-start;
-
+            margin-left: var(--dl-space-space-unit);
             justify-content: flex-start;
           }
           .mining-icon2 {
             fill: #d9d9d9;
-            width: 20px;
-            height: 20px;
+            width: 37px;
+            height: 65px;
           }
           .mining-text03 {
             color: rgb(255, 255, 255);
+            height: 56px;
+            padding: var(--dl-space-space-halfunit);
+            margin-top: var(--dl-space-space-halfunit);
             text-align: left;
             text-shadow: 0px 0px 10px black;
-            font-weight: 400;
-            font-size: 20px;
           }
           .mining-container26 {
             width: 100%;
             cursor: pointer;
-            padding: 2%;
             height: 62px;
             display: flex;
             transition: 0.3s;
@@ -528,7 +533,6 @@ const Mining = (props) => {
           .mining-text04 {
             color: rgb(224, 224, 224);
             font-size: 20px;
-            font-weight: 400;
             text-align: center;
             font-family: 'Exo 2';
             font-weight: 300;
@@ -541,6 +545,7 @@ const Mining = (props) => {
             height: 62px;
             display: flex;
             align-self: center;
+            margin-top: var(--dl-space-space-twounits);
             transition: 0.3s;
             align-items: center;
             margin-left: 0px;
@@ -557,7 +562,6 @@ const Mining = (props) => {
           .mining-text05 {
             color: rgb(224, 224, 224);
             font-size: 20px;
-            font-weight: 400;
             text-align: center;
             font-family: 'Exo 2';
             font-weight: 400;
@@ -784,8 +788,7 @@ const Mining = (props) => {
             .mining-text02 {
               width: auto;
               height: 38px;
-              font-size: 20px;
-              font-weight: 400;
+              font-size: 1.3em;
               margin-top: 0px;
             }
             .mining-container19 {
@@ -812,6 +815,7 @@ const Mining = (props) => {
             }
             .mining-container25 {
               width: 100%;
+              height: 56px;
               align-items: center;
               justify-content: center;
             }

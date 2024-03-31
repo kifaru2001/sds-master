@@ -38,7 +38,7 @@ const Ecosystem = (props) => {
                 <div className="ecosystem-container06">
                   <div className="ecosystem-container07">
                     <div className="ecosystem-container08">
-                      <Link  legacyBehavior href="/mining">
+                      <Link legacyBehavior href="/mining">
                         <a className="ecosystem-link">
                           <div className="ecosystem-container09">
                             <div className="ecosystem-container10">
@@ -63,7 +63,7 @@ const Ecosystem = (props) => {
                 <div className="ecosystem-container13">
                   <div className="ecosystem-container14">
                     <div className="ecosystem-container15">
-                      <Link  legacyBehavior href="/mining">
+                      <Link legacyBehavior href="/mining">
                         <a className="ecosystem-link1">
                           <div className="ecosystem-container16">
                             <div className="ecosystem-container17">
