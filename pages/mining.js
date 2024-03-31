@@ -1,8 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-
 
 const Mining = (props) => {
   return (
@@ -30,28 +30,27 @@ const Mining = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name10"></Nav>
-        <div className="mining-container01"></div>
-        <div className="mining-container02">
-          <div className="mining-container03">
-            <div className="mining-container04">
-              <div className="mining-container05"></div>
-              <div className="mining-container06">
-                <div className="mining-container07">
-                  <div className="mining-container08">
+        <div className="mining-container01">
+          <div className="mining-container02">
+            <div className="mining-container03">
+              <div className="mining-container04"></div>
+              <div className="mining-container05">
+                <div className="mining-container06">
+                  <div className="mining-container07">
                     <a
                       href="https://#"
                       target="_blank"
                       rel="noreferrer noopener"
                       className="mining-link"
                     >
-                      <div className="mining-container09"></div>
+                      <div className="mining-container08"></div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="mining-container10">
+          <div className="mining-container09">
             <animate-on-reveal
               animation="flash"
               duration="30s"
@@ -60,85 +59,116 @@ const Mining = (props) => {
               easing="ease"
               iteration="84000"
             >
-              <h1 className="mining-text">
+              <h1 data-thq-animate-on-reveal="true" className="mining-text">
                 🟢Mining...
               </h1>
             </animate-on-reveal>
             <h1 className="mining-text01">0.001 RC/Hr</h1>
           </div>
-          <div className="mining-container11">
-            <div className="mining-container12">
-              <div className="mining-container13">
-                <div className="mining-container14">
-                  <div className="mining-container15">
-                    <div className="mining-container16">
-                      <div className="mining-container17">
-                        <div className="mining-container18">
-                          <svg viewBox="0 0 1024 1024" className="mining-icon">
-                            <path d="M682 576q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 682v-340h426v340h-426zM896 768v42q0 34-26 60t-60 26h-596q-36 0-61-25t-25-61v-596q0-36 25-61t61-25h596q34 0 60 26t26 60v42h-384q-36 0-61 25t-25 61v340q0 36 25 61t61 25h384z"></path>
-                          </svg>
-                          <h1 className="mining-text02">Your Balance</h1>
-                        </div>
-                      </div>
-                      <div className="mining-container19">
-                        <div className="mining-container20">
-                          <h1 className="mining-text03">$0.0</h1>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mining-container21">
-              <div className="mining-container22">
-                <div className="mining-container23">
-                  <div className="mining-container24">
-                    <div className="mining-container25">
-                      <div className="mining-container26">
-                        <div className="mining-container27">
-                          <svg viewBox="0 0 1024 1024" className="mining-icon2">
-                            <path d="M1009.996 828.976l-301.544-301.544c-18.668-18.668-49.214-18.668-67.882 0l-22.626 22.626-184-184 302.056-302.058h-320l-142.058 142.058-14.060-14.058h-67.882v67.882l14.058 14.058-206.058 206.060 160 160 206.058-206.058 184 184-22.626 22.626c-18.668 18.668-18.668 49.214 0 67.882l301.544 301.544c18.668 18.668 49.214 18.668 67.882 0l113.136-113.136c18.67-18.666 18.67-49.214 0.002-67.882z"></path>
-                          </svg>
-                          <h1 className="mining-text04">Mined Coins</h1>
-                        </div>
-                      </div>
-                      <div className="mining-container28">
-                        <div className="mining-container29">
-                          <h1 className="mining-text05">$0.0</h1>
-                        </div>
+          <div className="mining-container10">
+            <div className="mining-container11">
+              <animate-on-reveal
+                animation="slideInLeft"
+                duration="1000ms"
+                delay="nulls"
+                direction="normal"
+                easing="ease"
+                iteration="1"
+              >
+                <div
+                  data-thq-animate-on-reveal="true"
+                  className="mining-container12"
+                >
+                  <div className="mining-container13">
+                    <div className="mining-container14">
+                      <div className="mining-container15">
+                 
+                          <a className="mining-link1">
+                            <div className="mining-container16">
+                              <div className="mining-container17">
+                                <div className="mining-container18">
+                                  <svg
+                                    viewBox="0 0 1024 1024"
+                                    className="mining-icon"
+                                  >
+                                    <path d="M682 576q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 682v-340h426v340h-426zM896 768v42q0 34-26 60t-60 26h-596q-36 0-61-25t-25-61v-596q0-36 25-61t61-25h596q34 0 60 26t26 60v42h-384q-36 0-61 25t-25 61v340q0 36 25 61t61 25h384z"></path>
+                                  </svg>
+                                  <h1 className="mining-text02">Balance</h1>
+                              
+                                </div>
+                                <p>0.00000002323</p>
+                              </div>
+                            </div>
+                          </a>
+                     
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </animate-on-reveal>
+              <animate-on-reveal
+                animation="slideInRight"
+                duration="1000ms"
+                delay="nulls"
+                direction="normal"
+                easing="ease"
+                iteration="1"
+              >
+                <div
+                  data-thq-animate-on-reveal="true"
+                  className="mining-container19"
+                >
+                  <div className="mining-container20">
+                    <div className="mining-container21">
+                      <div className="mining-container22">
+                
+                          <a className="mining-link2">
+                            <div className="mining-container23">
+                              <div className="mining-container24">
+                                <div className="mining-container25">
+                                  <svg
+                                    viewBox="0 0 1024 1024"
+                                    className="mining-icon2"
+                                  >
+                                    <path d="M1009.996 828.976l-301.544-301.544c-18.668-18.668-49.214-18.668-67.882 0l-22.626 22.626-184-184 302.056-302.058h-320l-142.058 142.058-14.060-14.058h-67.882v67.882l14.058 14.058-206.058 206.060 160 160 206.058-206.058 184 184-22.626 22.626c-18.668 18.668-18.668 49.214 0 67.882l301.544 301.544c18.668 18.668 49.214 18.668 67.882 0l113.136-113.136c18.67-18.666 18.67-49.214 0.002-67.882z"></path>
+                                  </svg>
+                                  <h1 className="mining-text03">Mined</h1>
+                                </div>
+                                <p>0.00000002323</p>
+                              </div>
+                            </div>
+                          </a>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </animate-on-reveal>
+            </div>
+            <div className="mining-container26">
+              <span className="mining-text04">CONNECT WALLET</span>
+            </div>
+            <div className="mining-container27">
+              <span className="mining-text05">Withdraw funds</span>
             </div>
           </div>
-          <div className="mining-container30">
-            <div className="mining-container31">
-              <span className="mining-text06">CONNECT WALLET</span>
-            </div>
-            <div className="mining-container32">
-              <span className="mining-text07">Withdraw funds</span>
-            </div>
-          </div>
-          <div className="mining-container33">
-            <div className="mining-container34">
-              <div className="mining-container35">
-                <h1 className="mining-text08">RareCoin mining!</h1>
+          <div className="mining-container28">
+            <div className="mining-container29">
+              <div className="mining-container30">
+                <h1 className="mining-text06">RareCoin mining!</h1>
               </div>
-              <span className="mining-text09">
+              <span className="mining-text07">
                 Unverified members can earn RareCoin by interacting with RareBay
                 utility.
               </span>
-              <span className="mining-text10">
+              <span className="mining-text08">
                 Mined rewards can be withdrawn anytime!
               </span>
-              <div className="mining-container36">
+              <div className="mining-container31">
                 <svg viewBox="0 0 1024 1024" className="mining-icon4">
                   <path d="M298.667 341.333h323.669l-353.835 353.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l353.835-353.835v323.669c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-426.667c0-5.803-1.152-11.307-3.243-16.341s-5.163-9.728-9.216-13.781c-0.043-0.043-0.043-0.043-0.085-0.085-3.925-3.925-8.619-7.083-13.781-9.216-5.035-2.091-10.539-3.243-16.341-3.243h-426.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                 </svg>
-                <span className="mining-text11">Learn more about RareCoin</span>
+                <span className="mining-text09">Learn more about RareCoin</span>
               </div>
             </div>
           </div>
@@ -154,29 +184,24 @@ const Mining = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-color: #181818;
           }
           .mining-container01 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: flex-start;
-          }
-          .mining-container02 {
             color: var(--dl-color-gray-900);
             width: 100%;
-            height: 1161px;
+            height: auto;
             display: flex;
             position: relative;
             align-self: center;
+            max-height: auto;
             overflow-x: hidden;
             align-items: center;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
           }
-          .mining-container03 {
+          .mining-container02 {
             width: 100%;
-            height: 460px;
+            height: 314px;
             display: flex;
             padding: var(--dl-space-space-halfunit);
             z-index: 0;
@@ -187,7 +212,7 @@ const Mining = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .mining-container04 {
+          .mining-container03 {
             width: 304px;
             height: 257px;
             display: flex;
@@ -195,18 +220,18 @@ const Mining = (props) => {
             align-items: center;
             justify-content: center;
           }
-          .mining-container05 {
-            top: 39px;
-            left: 59px;
+          .mining-container04 {
+            top: 35px;
+            left: 60px;
             width: 185px;
             border: 2px dashed rgba(120, 120, 120, 0.4);
             height: 185px;
             display: flex;
             position: absolute;
             align-items: center;
-            border-color: rgba(247, 247, 247, 0.88);
+            border-color: rgba(164, 233, 255, 0.48);
             border-style: dotted;
-            border-width: 10px;
+            border-width: 8px;
             border-radius: 100%;
             animation-name: rotateIn;
             animation-delay: 0s;
@@ -216,14 +241,14 @@ const Mining = (props) => {
             animation-iteration-count: 84000;
             animation-timing-function: ease;
           }
-          .mining-container06 {
-            width: 250px;
-            height: 250px;
+          .mining-container05 {
+            width: 223px;
+            height: 215px;
             display: flex;
             align-items: center;
-            border-color: white;
-            border-style: dotted;
-            border-width: 10px;
+            border-color: #c1feff;
+            border-style: dashed;
+            border-width: 8px;
             border-radius: 100%;
             animation-name: rotateOut;
             animation-delay: 0s;
@@ -233,7 +258,7 @@ const Mining = (props) => {
             animation-iteration-count: 84000;
             animation-timing-function: ease;
           }
-          .mining-container07 {
+          .mining-container06 {
             width: 120px;
             height: 120px;
             display: flex;
@@ -246,12 +271,12 @@ const Mining = (props) => {
             animation-name: rotateIn;
             animation-delay: 0s;
             justify-content: center;
-            animation-duration: 2s;
+            animation-duration: 5s;
             animation-direction: normal;
             animation-iteration-count: 100;
-            animation-timing-function: linear;
+            animation-timing-function: ease;
           }
-          .mining-container08 {
+          .mining-container07 {
             width: 99px;
             height: 99px;
             display: flex;
@@ -266,7 +291,7 @@ const Mining = (props) => {
           .mining-link {
             display: contents;
           }
-          .mining-container09 {
+          .mining-container08 {
             width: 100%;
             height: 100%;
             display: flex;
@@ -276,7 +301,7 @@ const Mining = (props) => {
             justify-content: center;
             text-decoration: none;
           }
-          .mining-container10 {
+          .mining-container09 {
             flex: 0 0 auto;
             width: 225px;
             height: 18px;
@@ -292,29 +317,38 @@ const Mining = (props) => {
             color: #f7efef;
             font-size: 1em;
           }
+          .mining-container10 {
+            gap: var(--dl-space-space-halfunit);
+            width: auto;
+            height: 423px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+          }
           .mining-container11 {
+            gap: var(--dl-space-space-halfunit);
             width: 100%;
-            height: 262px;
+            height: 184px;
             display: flex;
             position: relative;
+            margin-top: var(--dl-space-space-halfunit);
             align-items: center;
             justify-content: center;
           }
           .mining-container12 {
-            width: 498px;
+            width: auto;
             height: 100%;
             display: flex;
+            padding: 0px;
             align-items: flex-start;
-            padding-top: var(--dl-space-space-unit);
-            padding-left: var(--dl-space-space-unit);
-            padding-right: var(--dl-space-space-halfunit);
-            padding-bottom: var(--dl-space-space-unit);
+            margin-right: 1px;
             justify-content: center;
           }
           .mining-container13 {
             flex: 0 0 auto;
             width: 100%;
-            height: 126px;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -322,42 +356,46 @@ const Mining = (props) => {
           .mining-container14 {
             flex: 0 0 auto;
             width: 100%;
-            height: 110px;
+            height: 100%;
             display: flex;
             align-items: center;
             border-radius: 16px;
             flex-direction: column;
-            background-color: rgba(13, 13, 13, 0.94);
           }
           .mining-container15 {
             width: 100%;
-            height: 122px;
+            height: 100%;
             display: flex;
             align-self: center;
-            box-shadow: black 0px 0px 50px;
             align-items: flex-start;
-            border-color: rgba(109, 109, 109, 0.99);
-            border-width: 1px;
             border-radius: 16px;
             justify-content: center;
-            border-left-width: 0px;
-            border-right-width: 0px;
-            border-bottom-width: 0px;
+          }
+          .mining-link1 {
+            display: contents;
           }
           .mining-container16 {
             flex: 0 0 auto;
             width: 100%;
-            height: 200px;
+            height: 50%;
             display: flex;
+            padding: var(--dl-space-space-unit);
             align-items: center;
+            border-color: rgba(51, 51, 51, 0.43);
+            border-width: 1px;
             border-radius: 16px;
             flex-direction: column;
-            backdrop-filter: blur(50px);
-            justify-content: center;
+            backdrop-filter: blur(40px);
+            justify-content: flex-start;
+            text-decoration: none;
+            border-top-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
           }
           .mining-container17 {
             width: 100%;
-            height: 68px;
+            height: auto;
             display: flex;
             align-self: center;
             align-items: center;
@@ -371,240 +409,169 @@ const Mining = (props) => {
             display: flex;
             align-self: center;
             align-items: flex-start;
-            margin-left: var(--dl-space-space-unit);
             justify-content: flex-start;
           }
           .mining-icon {
             fill: #d9d9d9;
-            width: 38px;
-            height: 100%;
+            width: 20px;
+            height: 20px;
           }
           .mining-text02 {
-            color: rgb(161, 161, 161);
-            width: 200px;
-            height: 46px;
-            padding: var(--dl-space-space-halfunit);
-            font-size: 1.5em;
-            margin-top: var(--dl-space-space-halfunit);
-            text-align: left;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: 400;
             text-shadow: 0px 0px 10px black;
           }
           .mining-container19 {
-            width: 100%;
-            height: 68px;
+            width: auto;
+            height: 100%;
             display: flex;
-            align-self: center;
-            align-items: center;
-            flex-direction: column;
+            padding: 0px;
+            align-items: flex-start;
+            margin-right: 1px;
             justify-content: center;
           }
           .mining-container20 {
             flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-unit);
-            justify-content: flex-start;
-          }
-          .mining-text03 {
-            color: rgb(161, 161, 161);
-            height: 56px;
-            padding: var(--dl-space-space-halfunit);
-            margin-top: var(--dl-space-space-halfunit);
-            text-align: left;
-            text-shadow: 0px 0px 10px black;
-          }
-          .mining-container21 {
-            width: 506px;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: 36px;
-            padding-left: var(--dl-space-space-halfunit);
-            padding-right: var(--dl-space-space-twounits);
-            padding-bottom: 36px;
-            justify-content: center;
-          }
-          .mining-container22 {
-            flex: 0 0 auto;
             width: 100%;
-            height: 126px;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+          }
+          .mining-container21 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            flex-direction: column;
+          }
+          .mining-container22 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-self: center;
+            align-items: flex-start;
+            border-radius: 16px;
+            justify-content: center;
+          }
+          .mining-link2 {
+            display: contents;
           }
           .mining-container23 {
             flex: 0 0 auto;
             width: 100%;
-            height: 151px;
+            height: 50%;
             display: flex;
+            padding: var(--dl-space-space-unit);
             align-items: center;
+            border-color: rgba(50, 50, 50, 0.43);
+            border-width: 1px;
             border-radius: 16px;
             flex-direction: column;
-            background-color: rgba(13, 13, 13, 0.94);
+            backdrop-filter: blur(30px);
+            justify-content: flex-start;
+            text-decoration: none;
+            border-top-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
           }
           .mining-container24 {
             width: 100%;
-            height: 122px;
             display: flex;
             align-self: center;
-            box-shadow: black 0px 0px 50px;
-            align-items: flex-start;
-            border-color: rgba(97, 97, 97, 0.99);
-            border-width: 1px;
-            border-radius: 16px;
+            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            border-left-width: 0px;
-            border-right-width: 0px;
-            border-bottom-width: 0px;
           }
           .mining-container25 {
             flex: 0 0 auto;
             width: 100%;
-            height: 210px;
-            display: flex;
-            align-items: center;
-            border-radius: 16px;
-            flex-direction: column;
-            backdrop-filter: blur(50px);
-            justify-content: center;
-          }
-          .mining-container26 {
-            width: 100%;
-            height: 68px;
-            display: flex;
-            align-self: center;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mining-container27 {
-            flex: 0 0 auto;
-            width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: flex-start;
-            margin-left: var(--dl-space-space-unit);
+
             justify-content: flex-start;
           }
           .mining-icon2 {
-            fill: #ffffff;
-            width: 34px;
-            height: 41px;
-            margin-top: var(--dl-space-space-unit);
+            fill: #d9d9d9;
+            width: 20px;
+            height: 20px;
           }
-          .mining-text04 {
-            color: rgb(161, 161, 161);
-            height: 56px;
-            padding: var(--dl-space-space-halfunit);
-            font-size: 1.5em;
-            margin-top: var(--dl-space-space-halfunit);
+          .mining-text03 {
+            color: rgb(255, 255, 255);
             text-align: left;
             text-shadow: 0px 0px 10px black;
+            font-weight: 400;
+            font-size: 20px;
           }
-          .mining-container28 {
-            width: 100%;
-            height: 68px;
-            display: flex;
-            align-self: center;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mining-container29 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-unit);
-            justify-content: flex-start;
-          }
-          .mining-text05 {
-            color: rgb(161, 161, 161);
-            height: 56px;
-            padding: var(--dl-space-space-halfunit);
-            margin-top: var(--dl-space-space-halfunit);
-            text-align: left;
-            text-shadow: 0px 0px 10px black;
-          }
-          .mining-container30 {
-            width: 406px;
-            height: 198px;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mining-container31 {
+          .mining-container26 {
             width: 100%;
             cursor: pointer;
+            padding: 2%;
             height: 62px;
             display: flex;
-            box-shadow: 5px 5px 10px 0px #0a0a0a;
             transition: 0.3s;
             align-items: center;
-            border-color: #181818;
+            border-color: rgba(58, 58, 58, 0.16);
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
             justify-content: center;
-            background-color: rgba(8, 8, 8, 0.75);
           }
-          .mining-container31:hover {
+          .mining-container26:hover {
             background: rgba(35, 41, 41, 0.7);
           }
-          .mining-text06 {
+          .mining-text04 {
             color: rgb(224, 224, 224);
             font-size: 20px;
+            font-weight: 400;
             text-align: center;
             font-family: 'Exo 2';
             font-weight: 300;
             text-shadow: 0px 0px 10px;
             letter-spacing: 2px;
           }
-          .mining-container32 {
+          .mining-container27 {
             width: 100%;
             cursor: pointer;
             height: 62px;
             display: flex;
             align-self: center;
-            box-shadow: 5px 5px 10px 0px #0a0a0a;
-            margin-top: var(--dl-space-space-twounits);
             transition: 0.3s;
             align-items: center;
             margin-left: 0px;
-            border-color: #161616;
+            border-color: rgba(91, 91, 91, 0.19);
             border-width: 1px;
             margin-right: 0px;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-twounits);
             justify-content: center;
-            background-color: rgba(8, 8, 8, 0.75);
           }
-          .mining-container32:hover {
+          .mining-container27:hover {
             background: rgba(35, 41, 41, 0.7);
           }
-          .mining-text07 {
+          .mining-text05 {
             color: rgb(224, 224, 224);
             font-size: 20px;
+            font-weight: 400;
             text-align: center;
             font-family: 'Exo 2';
             font-weight: 400;
             text-shadow: 0px 0px 10px;
             letter-spacing: 2px;
           }
-          .mining-container33 {
+          .mining-container28 {
             width: 100%;
             height: 165px;
             display: flex;
             align-items: center;
             justify-content: center;
           }
-          .mining-container34 {
+          .mining-container29 {
             flex: 0 0 auto;
             width: 966px;
             height: 100%;
@@ -612,14 +579,11 @@ const Mining = (props) => {
             padding: var(--dl-space-space-twounits);
             z-index: 1;
             align-self: center;
-            box-shadow: 0px 0px 20px 0px #1b1b1b;
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            background-size: cover;
             justify-content: center;
-            background-image: url('/nnnoise3.svg');
           }
-          .mining-container35 {
+          .mining-container30 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -627,14 +591,14 @@ const Mining = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .mining-text08 {
+          .mining-text06 {
             color: rgb(158, 158, 158);
             width: 756px;
             height: auto;
             padding: var(--dl-space-space-halfunit);
             align-self: flex-start;
           }
-          .mining-text09 {
+          .mining-text07 {
             color: rgb(175, 175, 175);
             width: 100%;
             padding-top: 0px;
@@ -642,7 +606,7 @@ const Mining = (props) => {
             padding-right: var(--dl-space-space-unit);
             padding-bottom: 0px;
           }
-          .mining-text10 {
+          .mining-text08 {
             color: rgb(181, 181, 181);
             width: 100%;
             padding-top: 0px;
@@ -650,7 +614,7 @@ const Mining = (props) => {
             padding-right: var(--dl-space-space-unit);
             padding-bottom: 0px;
           }
-          .mining-container36 {
+          .mining-container31 {
             flex: 0 0 auto;
             width: auto;
             height: 24px;
@@ -665,7 +629,7 @@ const Mining = (props) => {
             height: 24px;
             margin-left: var(--dl-space-space-unit);
           }
-          .mining-text11 {
+          .mining-text09 {
             color: #717171;
             width: 100%;
             padding-top: 0px;
@@ -674,38 +638,38 @@ const Mining = (props) => {
             padding-bottom: 0px;
           }
           @media (max-width: 767px) {
-            .mining-container02 {
+            .mining-container01 {
               height: 1439px;
             }
-            .mining-container03 {
-              height: 1031px;
+            .mining-container02 {
+              height: 534px;
+            }
+            .mining-container10 {
+              align-items: center;
             }
             .mining-container11 {
-              height: 892px;
+              width: 100%;
+              height: 524px;
               flex-direction: column;
             }
             .mining-container12 {
               width: 100%;
-              height: 421px;
-              padding-left: var(--dl-space-space-twounits);
-              padding-right: var(--dl-space-space-twounits);
             }
-            .mining-container21 {
+            .mining-container19 {
               width: 100%;
-              padding-left: var(--dl-space-space-twounits);
             }
-            .mining-container33 {
+            .mining-container28 {
               height: 603px;
             }
-            .mining-container34 {
+            .mining-container29 {
               width: 734px;
               height: 164px;
               padding: var(--dl-space-space-unit);
             }
-            .mining-container35 {
+            .mining-container30 {
               height: auto;
             }
-            .mining-text08 {
+            .mining-text06 {
               width: 100%;
               height: 44px;
             }
@@ -714,22 +678,22 @@ const Mining = (props) => {
             .mining-container {
               max-width: 80vh;
             }
-            .mining-container02 {
+            .mining-container01 {
               width: 100%;
               height: 100%;
             }
-            .mining-container03 {
+            .mining-container02 {
               width: 100%;
-              height: 311px;
+              height: 543px;
               position: relative;
               margin-bottom: var(--dl-space-space-unit);
               justify-content: center;
             }
-            .mining-container04 {
+            .mining-container03 {
               width: auto;
               height: auto;
             }
-            .mining-container05 {
+            .mining-container04 {
               top: 36px;
               left: 0px;
               right: 0px;
@@ -741,7 +705,7 @@ const Mining = (props) => {
               border-style: dotted;
               border-width: 10px;
             }
-            .mining-container06 {
+            .mining-container05 {
               top: 60px;
               right: -35px;
               width: 240px;
@@ -749,24 +713,24 @@ const Mining = (props) => {
               margin: auto;
               z-index: 100;
             }
-            .mining-container07 {
+            .mining-container06 {
               width: 120px;
               height: 120px;
               z-index: 100;
               border-width: 10px;
             }
-            .mining-container08 {
+            .mining-container07 {
               width: var(--dl-size-size-medium);
               height: var(--dl-size-size-medium);
               z-index: 100;
               border-color: #222222;
             }
-            .mining-container09 {
+            .mining-container08 {
               width: 100%;
               height: 155px;
               z-index: 100;
             }
-            .mining-container10 {
+            .mining-container09 {
               width: auto;
             }
             .mining-text {
@@ -778,29 +742,38 @@ const Mining = (props) => {
               font-size: 1em;
               font-family: Courier New;
             }
+            .mining-container10 {
+              width: 100%;
+              height: 734px;
+              align-items: center;
+              padding-left: var(--dl-space-space-twounits);
+              padding-right: var(--dl-space-space-twounits);
+            }
             .mining-container11 {
-              height: 404px;
-              padding: var(--dl-space-space-unit);
+              width: 100%;
+              height: 518px;
             }
             .mining-container12 {
               width: 100%;
-              height: 210px;
+              height: 300px;
               padding: var(--dl-space-space-halfunit);
             }
             .mining-container13 {
-              height: 135px;
-              align-items: center;
-              flex-direction: column;
-              justify-content: center;
+              height: 178px;
             }
             .mining-container15 {
               height: 100%;
+              border-color: rgba(105, 105, 105, 0.99);
+              border-top-width: 1px;
+              border-left-width: 0px;
+              border-right-width: 0px;
+              border-bottom-width: 0px;
             }
             .mining-container16 {
-              height: 152px;
+              height: 244px;
             }
             .mining-container17 {
-              height: 66px;
+              height: 92px;
             }
             .mining-container18 {
               width: 100%;
@@ -811,84 +784,66 @@ const Mining = (props) => {
             .mining-text02 {
               width: auto;
               height: 38px;
-              font-size: 1.3em;
+              font-size: 20px;
+              font-weight: 400;
               margin-top: 0px;
             }
             .mining-container19 {
-              height: 64px;
+              width: 100%;
+              height: 300px;
+              padding: var(--dl-space-space-halfunit);
             }
             .mining-container20 {
+              height: 178px;
+            }
+            .mining-container22 {
+              height: 100%;
+              border-color: rgba(105, 105, 105, 0.99);
+              border-top-width: 1px;
+              border-left-width: 0px;
+              border-right-width: 0px;
+              border-bottom-width: 0px;
+            }
+            .mining-container23 {
+              height: 244px;
+            }
+            .mining-container24 {
+              height: 92px;
+            }
+            .mining-container25 {
               width: 100%;
-              height: 56px;
               align-items: center;
               justify-content: center;
             }
             .mining-text03 {
               width: auto;
               height: 38px;
-              font-size: 1.5em;
+              font-size: 1.3em;
               margin-top: 0px;
-            }
-            .mining-container21 {
-              width: 100%;
-              height: 191px;
-              padding: var(--dl-space-space-halfunit);
-            }
-            .mining-container25 {
-              height: 191px;
             }
             .mining-container26 {
-              height: 55px;
+              width: 100%;
             }
             .mining-text04 {
-              width: 139px;
-              font-size: 1.2em;
-              text-align: center;
-            }
-            .mining-container28 {
-              height: 50px;
-            }
-            .mining-container29 {
-              width: 100%;
-              height: 56px;
-              align-items: center;
-              justify-content: center;
-            }
-            .mining-text05 {
-              width: auto;
-              height: 38px;
-              font-size: 1.5em;
-              margin-top: 0px;
-            }
-            .mining-container30 {
-              width: 100%;
-              height: 309px;
-              padding-left: var(--dl-space-space-twounits);
-              padding-right: var(--dl-space-space-twounits);
-            }
-            .mining-container31 {
-              width: 100%;
-            }
-            .mining-text06 {
               font-style: normal;
               font-family: Arial;
               font-weight: 400;
             }
-            .mining-container32 {
+            .mining-container27 {
               width: 100%;
             }
-            .mining-text07 {
+            .mining-text05 {
               font-size: 24px;
               font-style: normal;
               font-family: Exo 2;
               font-weight: 300;
             }
-            .mining-container33 {
+            .mining-container28 {
               width: 100%;
               height: 252px;
               padding: var(--dl-space-space-unit);
             }
-            .mining-container34 {
+            .mining-container29 {
               width: 100%;
               height: 202px;
               padding: var(--dl-space-space-unit);
@@ -899,15 +854,15 @@ const Mining = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               justify-content: center;
             }
-            .mining-container35 {
+            .mining-container30 {
               height: 70px;
             }
-            .mining-text08 {
+            .mining-text06 {
               color: rgb(158, 158, 158);
               height: 46px;
               font-size: 1.5em;
             }
-            .mining-text11 {
+            .mining-text09 {
               color: rgb(113, 113, 113);
             }
           }

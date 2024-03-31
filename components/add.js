@@ -310,7 +310,7 @@ name: coin.name
             min-height: 100vh;
             display: flex;
             position: relative;
-            margin-top: 2%;
+            height: auto;
             overflow-x: hidden;
             align-items: center;
             flex-direction: column;
@@ -327,7 +327,7 @@ name: coin.name
           .add-container02 {
             flex: 0 0 auto;
             width: 50%;
-            height: 203px;
+            height: auto;
             display: flex;
             padding: var(--dl-space-space-twounits);
             z-index: 1;
@@ -336,7 +336,6 @@ name: coin.name
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url('/nnnoise3.svg');
           }
           .add-container03 {
             flex: 0 0 auto;
