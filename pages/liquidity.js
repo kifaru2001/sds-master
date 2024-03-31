@@ -31,7 +31,7 @@ const Liquidity = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/570fd2b2-89a0-4703-b4a7-3e4f1651829b/fb5a79b8-3e32-4626-b82b-b7d8be5392f1?org_if_sml=1&amp;force_format=original"
           />
         </Head>
-        <Nav rootClassName="nav-root-class-name9"></Nav>
+        
         <div className="liquidity-container01"></div>
         <div className="liquidity-container02">
           <div className="liquidity-container03">
@@ -215,7 +215,7 @@ const Liquidity = (props) => {
             width: 100%;
             display: flex;
             overflow: auto;
-            min-height: 100vh;
+            max-height: 100vh;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;

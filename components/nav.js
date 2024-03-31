@@ -159,7 +159,7 @@ useEffect(() => {
                 data-thq="thq-dropdown"
                 className="nav-thq-dropdown1 list-item"
               >
-                              <Blockie seed={address} />
+                         
                 <div
                   data-thq="thq-dropdown-toggle"
                   className="nav-dropdown-toggle06"
@@ -242,6 +242,7 @@ useEffect(() => {
               </div>
             </div>
             <div id="menu" className="nav-container13">
+           
               <div
                 data-thq="thq-dropdown"
                 className="nav-thq-dropdown2 list-item"
@@ -256,8 +257,12 @@ useEffect(() => {
                   <div
                     data-thq="thq-dropdown-arrow"
                     className="nav-dropdown-arrow"
-                  ></div>
+                  >
+                       
+                  </div>
+                
                 </div>
+                
                 <ul
                   data-thq="thq-dropdown-list"
                   className="nav-dropdown-list03"
@@ -854,9 +859,12 @@ useEffect(() => {
                         </div>
                       </ul>
                     </div>
+                    <Blockie seed={address} />
                   </div>
+                  
                 </a>
               </Link>
+              
             </div>
           </div>
         </div>
