@@ -83,7 +83,7 @@ await wallet.connectUI();
       });
       const { transactionHash } = await sendTransaction({ 
         transaction, 
-        account 
+        wallet
       })
       
     } catch (err) {
