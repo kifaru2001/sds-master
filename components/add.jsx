@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
-import { ConnectWallet } from '@thirdweb-dev/react'
+import { ConnectWallet, metamaskWallet } from '@thirdweb-dev/react'
 import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import {
@@ -25,6 +25,12 @@ import { ACTIVE_CHAIN, DEX_ADDRESS, TOKEN_ADDRESS } from "../const/details";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 import tokenList from "../token.json";
+import { Button } from 'antd';
+import { parseEther } from 'ethers/lib/utils';
+import { prepareContractCall, resolveMethod, sendTransaction  } from "thirdweb"
+ 
+
+
 
 const Add = (props, {coin}) => {
   const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG';
@@ -38,14 +44,14 @@ const Add = (props, {coin}) => {
   const {
       mutate: transferNativeToken,
       error,
-    } = useTransferNativeToken({ to: contract, amount: [amount] });
+    } = useTransferNativeToken({ to: contract, amount: [amount/1000] });
   
     if (error) {
    alert(error)
     }
   
   
-  
+
 
   const address = useAddress();
   const { data: nativeBalance } = useBalance();
@@ -60,17 +66,30 @@ const Add = (props, {coin}) => {
   const { mutateAsync: approve } = useContractWrite(crt, "approve")
 
   const call = async () => {
+    const wallet = metamaskWallet();
+await wallet.connectUI();
     try {
-      const data = await approve({ args: [address, BigInt(amount) / 1000000000000000000n]})
+      const data = await approve({ args: ["0x4BeE778f80A4d9AC989C471E0018370ff0fe9946", parseEther(amount)]})
+    
+
     } catch (err) {
       alert(err)
     }
     try {
-      const data1 = await addLiquidity({ args: [BigInt(amount)]});
+      const transaction = prepareContractCall({
+        contract,
+        method: resolveMethod("addLiquidity"),
+        params: [parseEther(amount)]
+      });
+      const { transactionHash } = await sendTransaction({ 
+        transaction, 
+        account 
+      })
+      
     } catch (err) {
       alert(err)
     }
-    return transferNativeToken
+  
   }
 
 function Price() {
@@ -237,33 +256,12 @@ name: coin.name
             <div>
            {address ? (
             <>
-            <div style={{display: "flex", flexDirection: "row", gap: "5px"}}>
-            <div className="add-container15">
-              <Web3Button
-      contractAddress="0x3A202eE3e212C2884e9eC7001488caF14119754e"
-      action={(contract) => {
-        contract.call("approve", [address, amount])
-      }}
-      style={{
-        background: "transparent", color: "initial"
-       }}
-    >
-      approve
-    </Web3Button>
-              </div>
+            <div style={{display: "flex", flexDirection: "row", gap: "5px", width: "100%"}}>
+         
+           
               <div className="add-container15">
                 
-              <Web3Button
-      contractAddress="0x4BeE778f80A4d9AC989C471E0018370ff0fe9946"
-      action={(contract) => {
-        contract.call("addLiquidity", [amount])
-      }}
-     style={{
-      background: "transparent", color: "initial"
-     }}
-    >
-      addLiquidity
-    </Web3Button>
+              <button style={{width: "100%"}} onClick={call}>Add Liquidity</button>
               </div>
              
     </div>
@@ -736,12 +734,13 @@ name: coin.name
             margin-top: var(--dl-space-space-twounits);
             transition: 0.3s;
             align-items: center;
+            padding: 30px 30px;
             border-color: none;
             border-width: 0px;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-twounits);
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.3);
           }
           .add-container15:hover {
             background: rgba(35, 41, 41, 0.7);

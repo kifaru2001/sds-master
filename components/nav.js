@@ -9,8 +9,8 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 import { Blockie } from 'web3uikit';
 
-const light = { background: "white" };
-const dark = { background: "black" };
+const dark = { background: "white" };
+const light = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
 .body{
@@ -1826,7 +1826,6 @@ useEffect(() => {
             border-radius: var(--dl-radius-radius-radius4);
             flex-direction: column;
             list-style-type: none;
-            background-color: #080808;
             list-style-position: inside;
           }
           .nav-dropdown21 {

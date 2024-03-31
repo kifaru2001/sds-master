@@ -82,7 +82,7 @@ const Mining = (props) => {
                   <div className="mining-container13">
                     <div className="mining-container14">
                       <div className="mining-container15">
-                        <Link href="/mining">
+                        <Link legacyBehavior href="/mining">
                           <a className="mining-link1">
                             <div className="mining-container16">
                               <div className="mining-container17">
@@ -119,7 +119,7 @@ const Mining = (props) => {
                   <div className="mining-container20">
                     <div className="mining-container21">
                       <div className="mining-container22">
-                        <Link href="/mining">
+                        <Link legacyBehavior href="/mining">
                           <a className="mining-link2">
                             <div className="mining-container23">
                               <div className="mining-container24">
@@ -181,7 +181,7 @@ const Mining = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: #181818;
+            background-color: rgba(0, 0, 0, 0.8);
           }
           .mining-container01 {
             color: var(--dl-color-gray-900);
@@ -326,7 +326,7 @@ const Mining = (props) => {
           .mining-container11 {
             gap: var(--dl-space-space-halfunit);
             width: 100%;
-            height: 184px;
+            height: 100%;
             display: flex;
             position: relative;
             margin-top: var(--dl-space-space-halfunit);
@@ -334,7 +334,7 @@ const Mining = (props) => {
             justify-content: center;
           }
           .mining-container12 {
-            width: 50%;
+            width: 100%%;
             height: 100%;
             display: flex;
             padding: 0px;
@@ -402,7 +402,7 @@ const Mining = (props) => {
           }
           .mining-container18 {
             flex: 0 0 auto;
-            width: auto;
+            width: 100%;
             height: auto;
             display: flex;
             align-self: center;
@@ -426,7 +426,7 @@ const Mining = (props) => {
             padding-bottom: 8px;
           }
           .mining-container19 {
-            width: 50%;
+            width: 100%;
             height: 100%;
             display: flex;
             padding: 0px;

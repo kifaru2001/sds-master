@@ -107,7 +107,7 @@ const Ecosystem = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: #1a1a1a;
+            background-color: rgba(0, 0, 0, 0.7);
           }
           .ecosystem-container01 {
             width: 100%;

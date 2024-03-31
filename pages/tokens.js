@@ -67,7 +67,7 @@ const Tokens = (props) => {
                 data-thq-animate-on-reveal="true"
                 className="tokens-container04"
               >
-                <span className="tokens-text7">Swap Now</span>
+                <Link href='/swap' className="tokens-text7">Swap Now</Link>
                 <svg viewBox="0 0 1024 1024" className="tokens-icon">
                   <path d="M889.68 166.32c-93.608-102.216-228.154-166.32-377.68-166.32-282.77 0-512 229.23-512 512h96c0-229.75 186.25-416 416-416 123.020 0 233.542 53.418 309.696 138.306l-149.696 149.694h352v-352l-134.32 134.32z"></path>
                   <path d="M928 512c0 229.75-186.25 416-416 416-123.020 0-233.542-53.418-309.694-138.306l149.694-149.694h-352v352l134.32-134.32c93.608 102.216 228.154 166.32 377.68 166.32 282.77 0 512-229.23 512-512h-96z"></path>
@@ -209,7 +209,7 @@ const Tokens = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: #161616;
+            background-color: rgba(0, 0, 0, 0.7);
           }
           .tokens-container01 {
             width: 100%;
