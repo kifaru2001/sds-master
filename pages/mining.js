@@ -129,7 +129,7 @@ const Mining = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.88);
+            background-color: rgba(0, 0, 0, 0.68);
           }
           .mining-container01 {
             color: var(--dl-color-gray-900);
