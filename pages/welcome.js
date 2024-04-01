@@ -12,7 +12,7 @@ const Welcome = (props) => {
       <div className="welcome-container">
         <Head>
           <title>
-            Welcome - Fast! secure! Rare! Decentralized Exchange
+            Welcome - Fast! secure! Rare! & Decentralized.
           </title>
           <meta
             name="description"

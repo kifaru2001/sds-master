@@ -208,7 +208,6 @@ const Tokens = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: #161616;
           }
           .tokens-container01 {
             width: 100%;
