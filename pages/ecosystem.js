@@ -10,7 +10,7 @@ const Ecosystem = (props) => {
       <div className="ecosystem-container">
         <Head>
           <title>
-            Ecosystem - Crazy-Fast! secure! Rare! Decentralized Exchange
+            Ecosystem - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -86,15 +86,14 @@ const Ecosystem = (props) => {
               </div>
             </div>
           </div>
-          <div id="table" className="ecosystem-container19">
-            <div className="ecosystem-container20">
-              <svg viewBox="0 0 1024 1024" className="ecosystem-icon4">
-                <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
-                <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
-                <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
-              </svg>
-            </div>
-          </div>
+        </div>
+        <div className="ecosystem-container19">
+          <svg viewBox="0 0 1024 1024" className="ecosystem-icon4">
+            <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
+            <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
+            <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
+          </svg>
+          <span className="ecosystem-text2">Oops! No Items!</span>
         </div>
       </div>
       <style jsx>
@@ -107,7 +106,7 @@ const Ecosystem = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #1a1a1a;
           }
           .ecosystem-container01 {
             width: 100%;
@@ -135,7 +134,7 @@ const Ecosystem = (props) => {
           }
           .ecosystem-container04 {
             gap: var(--dl-space-space-halfunit);
-            width: 100%;
+            width: 70%;
             height: 184px;
             display: flex;
             position: relative;
@@ -227,11 +226,12 @@ const Ecosystem = (props) => {
           }
           .ecosystem-text {
             color: #b3b3b3;
-            height: 56px;
-            padding: var(--dl-space-space-halfunit);
-            font-size: 1.7em;
-            margin-top: var(--dl-space-space-halfunit);
+            height: auto;
+            font-size: 2em;
+            font-style: normal;
             text-align: left;
+            font-family: 'Exo 2';
+            font-weight: 400;
             text-shadow: 0px 0px 10px black;
           }
           .ecosystem-container12 {
@@ -302,6 +302,7 @@ const Ecosystem = (props) => {
             justify-content: center;
           }
           .ecosystem-container18 {
+            gap: var(--dl-space-space-halfunit);
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -309,7 +310,7 @@ const Ecosystem = (props) => {
             align-self: center;
             align-items: flex-start;
             margin-left: var(--dl-space-space-unit);
-            justify-content: flex-start;
+            justify-content: center;
           }
           .ecosystem-icon2 {
             fill: #292929;
@@ -318,28 +319,22 @@ const Ecosystem = (props) => {
           }
           .ecosystem-text1 {
             color: #989898;
-            height: 56px;
-            padding: var(--dl-space-space-halfunit);
-            margin-top: var(--dl-space-space-halfunit);
-            text-align: left;
+            height: auto;
+            align-self: center;
+            font-style: normal;
+            text-align: center;
+            font-family: 'Exo 2';
+            font-weight: 400;
             text-shadow: 0px 0px 10px black;
           }
           .ecosystem-container19 {
+            flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: center;
-          }
-          .ecosystem-container20 {
-            flex: 0 0 auto;
-            width: 213px;
-            height: 100px;
-            display: flex;
-            align-items: center;
             justify-content: center;
           }
           .ecosystem-icon4 {
@@ -348,10 +343,8 @@ const Ecosystem = (props) => {
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
           }
-          @media (max-width: 1200px) {
-            .ecosystem-container19 {
-              width: 100%;
-            }
+          .ecosystem-text2 {
+            color: rgb(214, 214, 214);
           }
           @media (max-width: 767px) {
             .ecosystem-container02 {
@@ -367,10 +360,6 @@ const Ecosystem = (props) => {
             }
             .ecosystem-container12 {
               width: 100%;
-            }
-            .ecosystem-container19 {
-              width: 100%;
-              height: 569px;
             }
           }
           @media (max-width: 479px) {
@@ -453,10 +442,6 @@ const Ecosystem = (props) => {
               height: 38px;
               font-size: 1.3em;
               margin-top: 0px;
-            }
-            .ecosystem-container19 {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
             }
           }
         `}

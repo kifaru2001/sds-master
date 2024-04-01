@@ -461,7 +461,7 @@ const Welcome = (props) => {
                 <div className="welcome-container65">
                   <img
                     alt="image"
-                    src="/external/rar31ones%20(102)-200w-200w.webp"
+                    src="/rar31ones (9)-200w.webp"
                     className="welcome-image2"
                   />
                   <h1 className="welcome-text060">RAR310NES</h1>

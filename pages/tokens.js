@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Link from "next/link"
 
 const Tokens = (props) => {
   return (
@@ -10,7 +9,7 @@ const Tokens = (props) => {
       <div className="tokens-container">
         <Head>
           <title>
-            Tokens - Fast! secure! Rare! Decentralized Exchange
+            Tokens - Crazy-Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -18,7 +17,7 @@ const Tokens = (props) => {
           />
           <meta
             property="og:title"
-            content="Tokens - Fast! secure! Rare! Decentralized Exchange"
+            content="Tokens - Crazy-Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"
@@ -68,7 +67,7 @@ const Tokens = (props) => {
                 data-thq-animate-on-reveal="true"
                 className="tokens-container04"
               >
-                <Link href='/swap' style={{display: "flex", flexDirection: "row", color: "white", fontSize: "30px", fontWeight: "900", marginRight: "5%"}}>Swap Now</Link>
+                <span className="tokens-text7">Swap Now</span>
                 <svg viewBox="0 0 1024 1024" className="tokens-icon">
                   <path d="M889.68 166.32c-93.608-102.216-228.154-166.32-377.68-166.32-282.77 0-512 229.23-512 512h96c0-229.75 186.25-416 416-416 123.020 0 233.542 53.418 309.696 138.306l-149.696 149.694h352v-352l-134.32 134.32z"></path>
                   <path d="M928 512c0 229.75-186.25 416-416 416-123.020 0-233.542-53.418-309.694-138.306l149.694-149.694h-352v352l134.32-134.32c93.608 102.216 228.154 166.32 377.68 166.32 282.77 0 512-229.23 512-512h-96z"></path>
@@ -190,14 +189,13 @@ const Tokens = (props) => {
             </div>
           </div>
         </div>
-        <div id="table" className="tokens-container12">
-          <div className="tokens-container13">
-            <svg viewBox="0 0 1024 1024" className="tokens-icon3">
-              <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
-              <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
-              <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
-            </svg>
-          </div>
+        <div className="tokens-container12">
+          <svg viewBox="0 0 1024 1024" className="tokens-icon3">
+            <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
+            <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
+            <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
+          </svg>
+          <span className="tokens-text8">Oops! No Items!</span>
         </div>
       </div>
       <style jsx>
@@ -210,7 +208,7 @@ const Tokens = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #161616;
           }
           .tokens-container01 {
             width: 100%;
@@ -285,7 +283,9 @@ const Tokens = (props) => {
             color: #c6c6c6;
             font-size: 28px;
             text-align: center;
-            width: 100%;
+            font-family: 'Arial Black';
+            font-weight: 800;
+            margin-right: var(--dl-space-space-twounits);
           }
           .tokens-icon {
             fill: #d9d9d9;
@@ -463,21 +463,13 @@ const Tokens = (props) => {
             display: none;
           }
           .tokens-container12 {
+            flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: center;
-          }
-          .tokens-container13 {
-            flex: 0 0 auto;
-            width: 213px;
-            height: 100px;
-            display: flex;
-            align-items: center;
             justify-content: center;
           }
           .tokens-icon3 {
@@ -485,6 +477,9 @@ const Tokens = (props) => {
             width: 257px;
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
+          }
+          .tokens-text8 {
+            color: rgb(214, 214, 214);
           }
           @media (max-width: 1200px) {
             .tokens-container02 {
@@ -497,9 +492,6 @@ const Tokens = (props) => {
             }
             .tokens-container05 {
               width: auto;
-            }
-            .tokens-container12 {
-              width: 100%;
             }
           }
           @media (max-width: 767px) {
@@ -523,10 +515,6 @@ const Tokens = (props) => {
             }
             .tokens-container04 {
               width: 100%;
-            }
-            .tokens-container12 {
-              width: 100%;
-              height: 569px;
             }
           }
           @media (max-width: 479px) {
@@ -631,10 +619,6 @@ const Tokens = (props) => {
             }
             .tokens-image11 {
               height: var(--dl-size-size-small);
-            }
-            .tokens-container12 {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
             }
           }
         `}

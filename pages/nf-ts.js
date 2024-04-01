@@ -8,14 +8,14 @@ const NFTs = (props) => {
     <>
       <div className="nf-ts-container">
         <Head>
-          <title>NFTs - Fast! secure! Rare! Decentralized Exchange</title>
+          <title>NFTs - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
           <meta
             name="description"
             content="Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm, Earn, Borrow, Lend, play! faster than ever, seamlessly anywhere anytime. "
           />
           <meta
             property="og:title"
-            content="NFTs - Fast! secure! Rare! Decentralized Exchange"
+            content="NFTs - Crazy-Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"
@@ -43,14 +43,14 @@ const NFTs = (props) => {
                   Ready Sell NFTs
                 </h1>
               </animate-on-reveal>
-              <h1 className="nf-ts-text1">
-                <span className="nf-ts-text2">
+              <h1 className="nf-ts-text01">
+                <span className="nf-ts-text02">
                   Never worry about Floor Price. with NFT! Liquidity
                 </span>
                 <br></br>
                 <br></br>
               </h1>
-              <h1 className="nf-ts-text5">
+              <h1 className="nf-ts-text05">
                 <span>
                   RareBay implements a new kind of NFT that can be sold directly
                   at a fixed price.
@@ -58,7 +58,7 @@ const NFTs = (props) => {
                 <br></br>
               </h1>
               <div className="nf-ts-container5">
-                <span className="nf-ts-text8">Coming Soon</span>
+                <span className="nf-ts-text08">Coming Soon</span>
                 <animate-on-reveal
                   animation="shakeX"
                   duration="1000ms"
@@ -117,14 +117,13 @@ const NFTs = (props) => {
               </div>
             </div>
           </div>
-          <div id="table" className="nf-ts-container7">
-            <div className="nf-ts-container8">
-              <svg viewBox="0 0 1024 1024" className="nf-ts-icon2">
-                <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
-                <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
-                <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
-              </svg>
-            </div>
+          <div className="nf-ts-container7">
+            <svg viewBox="0 0 1024 1024" className="nf-ts-icon2">
+              <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
+              <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
+              <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
+            </svg>
+            <span className="nf-ts-text09">Oops! No Items!</span>
           </div>
         </div>
       </div>
@@ -138,7 +137,7 @@ const NFTs = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #202020;
           }
           .nf-ts-container1 {
             width: 100%;
@@ -149,7 +148,7 @@ const NFTs = (props) => {
           }
           .nf-ts-container2 {
             width: 100%;
-            height: 601px;
+            height: 100%;
             display: flex;
             padding: var(--dl-space-space-unit);
             align-items: center;
@@ -183,7 +182,7 @@ const NFTs = (props) => {
             align-self: center;
             text-align: left;
           }
-          .nf-ts-text1 {
+          .nf-ts-text01 {
             color: rgb(161, 161, 161);
             width: 661px;
             height: 90px;
@@ -191,7 +190,7 @@ const NFTs = (props) => {
             align-self: center;
             text-align: left;
           }
-          .nf-ts-text5 {
+          .nf-ts-text05 {
             color: rgb(208, 208, 208);
             width: 661px;
             height: 90px;
@@ -225,7 +224,7 @@ const NFTs = (props) => {
             justify-content: center;
             background-color: rgba(34, 34, 34, 0.5);
           }
-          .nf-ts-text8 {
+          .nf-ts-text08 {
             color: rgb(188, 188, 188);
             font-size: 30px;
             text-align: center;
@@ -281,21 +280,13 @@ const NFTs = (props) => {
             display: none;
           }
           .nf-ts-container7 {
+            flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: center;
-          }
-          .nf-ts-container8 {
-            flex: 0 0 auto;
-            width: 213px;
-            height: 100px;
-            display: flex;
-            align-items: center;
             justify-content: center;
           }
           .nf-ts-icon2 {
@@ -303,6 +294,9 @@ const NFTs = (props) => {
             width: 257px;
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
+          }
+          .nf-ts-text09 {
+            color: rgb(214, 214, 214);
           }
           @media (max-width: 1200px) {
             .nf-ts-container3 {
@@ -313,9 +307,6 @@ const NFTs = (props) => {
             }
             .nf-ts-container6 {
               width: auto;
-            }
-            .nf-ts-container7 {
-              width: 100%;
             }
           }
           @media (max-width: 767px) {
@@ -333,10 +324,10 @@ const NFTs = (props) => {
             .nf-ts-text {
               width: 100%;
             }
-            .nf-ts-text1 {
+            .nf-ts-text01 {
               width: 100%;
             }
-            .nf-ts-text5 {
+            .nf-ts-text05 {
               width: 100%;
             }
             .nf-ts-container5 {
@@ -360,10 +351,6 @@ const NFTs = (props) => {
               align-items: center;
               justify-content: center;
             }
-            .nf-ts-container7 {
-              width: 100%;
-              height: 569px;
-            }
           }
           @media (max-width: 479px) {
             .nf-ts-container2 {
@@ -383,20 +370,20 @@ const NFTs = (props) => {
               width: 100%;
               height: 174px;
             }
-            .nf-ts-text1 {
+            .nf-ts-text01 {
               width: 100%;
               height: 206px;
             }
-            .nf-ts-text2 {
+            .nf-ts-text02 {
               width: 100%;
             }
-            .nf-ts-text5 {
+            .nf-ts-text05 {
               width: 100%;
             }
             .nf-ts-container5 {
               width: 100%;
             }
-            .nf-ts-text8 {
+            .nf-ts-text08 {
               font-size: 25px;
             }
             .nf-ts-container6 {
@@ -409,10 +396,6 @@ const NFTs = (props) => {
             }
             .nf-ts-slider-slide {
               width: 100%;
-            }
-            .nf-ts-container7 {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
             }
           }
         `}

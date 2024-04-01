@@ -33,14 +33,13 @@ const Portfolio = (props) => {
         <div className="portfolio-container1"></div>
         <div className="portfolio-container2">
           <Greetings></Greetings>
-        </div>
-        <div id="table" className="portfolio-container3">
-          <div className="portfolio-container4">
+          <div className="portfolio-container3">
             <svg viewBox="0 0 1024 1024" className="portfolio-icon">
               <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
               <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
               <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
             </svg>
+            <span className="portfolio-text">Oops! No Items!</span>
           </div>
         </div>
       </div>
@@ -55,7 +54,6 @@ const Portfolio = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-           
           }
           .portfolio-container1 {
             width: 100%;
@@ -74,21 +72,13 @@ const Portfolio = (props) => {
             justify-content: flex-start;
           }
           .portfolio-container3 {
+            flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             align-self: center;
             align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: center;
-          }
-          .portfolio-container4 {
-            flex: 0 0 auto;
-            width: 213px;
-            height: 100px;
-            display: flex;
-            align-items: center;
             justify-content: center;
           }
           .portfolio-icon {
@@ -97,22 +87,18 @@ const Portfolio = (props) => {
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
           }
+          .portfolio-text {
+            color: rgb(214, 214, 214);
+          }
           @media (max-width: 1200px) {
             .portfolio-container2 {
               width: 100%;
               height: auto;
             }
-            .portfolio-container3 {
-              width: 100%;
-            }
           }
           @media (max-width: 767px) {
             .portfolio-container2 {
               height: 1600px;
-            }
-            .portfolio-container3 {
-              width: 100%;
-              height: 569px;
             }
           }
           @media (max-width: 479px) {
@@ -123,10 +109,6 @@ const Portfolio = (props) => {
               width: 100%;
               height: auto;
               padding: 0px;
-            }
-            .portfolio-container3 {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
             }
           }
         `}
