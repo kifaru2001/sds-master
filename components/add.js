@@ -325,14 +325,14 @@ name: coin.name
             justify-content: flex-start;
           }
           .add-text {
-            color: #9e9e9e;
+            color: white;
             width: 756px;
             height: 63px;
             padding: var(--dl-space-space-unit);
             align-self: flex-start;
           }
           .add-text01 {
-            color: #afafaf;
+            color: gray;
             width: 100%;
             padding-top: 0px;
             padding-left: var(--dl-space-space-unit);
