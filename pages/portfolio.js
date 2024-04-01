@@ -10,7 +10,7 @@ const Portfolio = (props) => {
       <div className="portfolio-container">
         <Head>
           <title>
-            portfolio - Crazy-Fast! secure! Rare! Decentralized Exchange
+            portfolio - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"

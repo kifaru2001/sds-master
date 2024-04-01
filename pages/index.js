@@ -41,14 +41,14 @@ const Home = (props) => {
      <Intro />
       <div className="home-container">
         <Head>
-          <title>RareBay - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
+          <title>RareBay - Fast! secure! Rare! Decentralized Exchange</title>
           <meta
             name="description"
             content="Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm, Earn, Borrow, Lend, play! faster than ever, seamlessly anywhere anytime. "
           />
           <meta
             property="og:title"
-            content="Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

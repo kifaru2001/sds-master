@@ -14,14 +14,14 @@ const Pair = (props) => {
     <>
       <div className="pair-container">
         <Head>
-          <title>pair - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
+          <title>pair - Fast! secure! Rare! Decentralized Exchange</title>
           <meta
             name="description"
             content="Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm, Earn, Borrow, Lend, play! faster than ever, seamlessly anywhere anytime. "
           />
           <meta
             property="og:title"
-            content="pair - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="pair - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

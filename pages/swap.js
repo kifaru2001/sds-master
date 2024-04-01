@@ -9,14 +9,14 @@ const Swap = (props) => {
     <>
       <div className="swap-container">
         <Head>
-          <title>Swap - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
+          <title>Swap - Fast! secure! Rare! Decentralized Exchange</title>
           <meta
             name="description"
             content="Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm, Earn, Borrow, Lend, play! faster than ever, seamlessly anywhere anytime. "
           />
           <meta
             property="og:title"
-            content="Swap - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="Swap - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

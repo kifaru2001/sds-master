@@ -10,7 +10,7 @@ const Tokens = (props) => {
       <div className="tokens-container">
         <Head>
           <title>
-            Tokens - Crazy-Fast! secure! Rare! Decentralized Exchange
+            Tokens - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -18,7 +18,7 @@ const Tokens = (props) => {
           />
           <meta
             property="og:title"
-            content="Tokens - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="Tokens - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

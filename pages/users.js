@@ -17,7 +17,7 @@ const Users = (props) => {
           />
           <meta
             property="og:title"
-            content="Users - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="Users - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

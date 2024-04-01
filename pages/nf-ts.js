@@ -8,14 +8,14 @@ const NFTs = (props) => {
     <>
       <div className="nf-ts-container">
         <Head>
-          <title>NFTs - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
+          <title>NFTs - Fast! secure! Rare! Decentralized Exchange</title>
           <meta
             name="description"
             content="Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm, Earn, Borrow, Lend, play! faster than ever, seamlessly anywhere anytime. "
           />
           <meta
             property="og:title"
-            content="NFTs - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="NFTs - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

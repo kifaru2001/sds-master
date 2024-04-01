@@ -12,7 +12,7 @@ const Liquidity = (props) => {
       <div className="liquidity-container">
         <Head>
           <title>
-            Liquidity - Crazy-Fast! secure! Rare! Decentralized Exchange
+            Liquidity - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -20,7 +20,7 @@ const Liquidity = (props) => {
           />
           <meta
             property="og:title"
-            content="Liquidity - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="Liquidity - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

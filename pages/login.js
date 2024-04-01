@@ -10,7 +10,7 @@ const Login = (props) => {
       <div className="login-container">
         <Head>
           <title>
-            login - Crazy-Fast! secure! Rare! Decentralized Exchange
+            login - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -18,7 +18,7 @@ const Login = (props) => {
           />
           <meta
             property="og:title"
-            content="login - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="login - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"

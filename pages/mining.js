@@ -9,7 +9,7 @@ const Mining = (props) => {
       <div className="mining-container">
         <Head>
           <title>
-            mining - Crazy-Fast! secure! Rare! Decentralized Exchange
+            mining - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -17,7 +17,7 @@ const Mining = (props) => {
           />
           <meta
             property="og:title"
-            content="mining - Crazy-Fast! secure! Rare! Decentralized Exchange"
+            content="mining - Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"
