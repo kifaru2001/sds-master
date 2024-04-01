@@ -51,6 +51,7 @@ const Pair = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-color: rgba(0, 0, 0, 0.68);
           }
           .pair-container1 {
             flex: 0 0 auto;

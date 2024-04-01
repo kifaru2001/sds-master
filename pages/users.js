@@ -102,11 +102,6 @@ const Users = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-image: radial-gradient(
-              circle at center,
-              rgba(21, 21, 21, 0.98) 3%,
-              rgba(0, 0, 0, 0.97) 83%
-            );
           }
           .users-container01 {
             width: 100%;

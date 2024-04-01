@@ -1517,7 +1517,7 @@ useEffect(() => {
             border-radius: var(--dl-radius-radius-radius4);
             flex-direction: column;
             list-style-type: none;
-            background-color: #1b1b1b;
+            background-color: transparent;
             list-style-position: inside;
           }
           .nav-dropdown12 {

@@ -325,7 +325,7 @@ name: coin.name
             justify-content: flex-start;
           }
           .add-text {
-            color: white;
+            color: gray;
             width: 756px;
             height: 63px;
             padding: var(--dl-space-space-unit);

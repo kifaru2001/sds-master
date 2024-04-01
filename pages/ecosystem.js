@@ -224,7 +224,7 @@ const Ecosystem = (props) => {
             justify-content: flex-start;
           }
           .ecosystem-text {
-            color: #b3b3b3;
+            color: white;
             height: auto;
             font-size: 2em;
             font-style: normal;
@@ -317,7 +317,7 @@ const Ecosystem = (props) => {
             height: 63px;
           }
           .ecosystem-text1 {
-            color: #989898;
+            color: white;
             height: auto;
             align-self: center;
             font-style: normal;
