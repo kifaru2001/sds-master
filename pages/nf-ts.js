@@ -191,7 +191,7 @@ const NFTs = (props) => {
             text-align: left;
           }
           .nf-ts-text05 {
-            color: rgb(208, 208, 208);
+            color: gray;
             width: 661px;
             height: 90px;
             font-size: 1.5em;

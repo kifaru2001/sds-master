@@ -252,7 +252,7 @@ const Tokens = (props) => {
             text-align: left;
           }
           .tokens-text4 {
-            color: rgb(208, 208, 208);
+            color: gray;
             width: 661px;
             height: 90px;
             font-size: 1.5em;
