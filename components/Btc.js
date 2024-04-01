@@ -6,7 +6,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <div style={{display: "flex", width: "auto", justifyContent: "center"}} className="column">
+    <div style={{display: "flex", width: "auto", justifyContent: "center", zIndex: "100"}} className="column">
     <CryptoTracker cryptoName="bitcoin" />
     </div>
 

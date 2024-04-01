@@ -66,6 +66,7 @@ const Nav2 = (props: { rootClassName: any }) => {
             justify-content: center;
             background-color: #010101;
             font-family: consolas;
+            z-index: 110;
           }
           .nav2-link {
             display: contents;

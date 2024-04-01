@@ -18,6 +18,7 @@ import { useEffect } from "react";
 
 import { contractAddress } from "../const/yourDetails";
 import { coreBlockchain } from "@thirdweb-dev/chains"
+import Intro from '../components/intro'
 
 const Home = (props) => {
 
@@ -37,6 +38,7 @@ const Home = (props) => {
   }
   return (
     <>
+     <Intro />
       <div className="home-container">
         <Head>
           <title>RareBay - Crazy-Fast! secure! Rare! Decentralized Exchange</title>
@@ -58,6 +60,7 @@ const Home = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name"></Nav>
+       
         <div className="home-container1"></div>
         <Nav2 rootClassName="nav2-root-class-name"></Nav2>
       </div>

@@ -628,7 +628,7 @@ useEffect(() => {
             width: 100%;
             height: 58px;
             display: flex;
-            z-index: 2;
+            z-index: 200;
             position: fixed;
             align-items: center;
             flex-direction: column;

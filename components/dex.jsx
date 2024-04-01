@@ -554,6 +554,7 @@ style={{background: "transparent", textAlign: "end"}}
             align-items: center;
             flex-direction: column;
             justify-content: flex-start;
+          
           }
           .dex-container01 {
             width: auto;
@@ -566,6 +567,7 @@ style={{background: "transparent", textAlign: "end"}}
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
             justify-content: center;
+            z-index: 100;
           }
           .dex-container02 {
             width: 100%;

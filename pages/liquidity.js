@@ -219,6 +219,7 @@ const Liquidity = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            z-index: 100;
           }
           .liquidity-container01 {
             width: 100%;
