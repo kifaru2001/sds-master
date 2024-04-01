@@ -673,7 +673,7 @@ useEffect(() => {
             object-fit: cover;
           }
           .nav-text {
-            color: #818181;
+            color: rgba(200, 200, 200, 0.8);
             font-size: 24px;
             font-family: 'Arial';
             font-weight: 900;

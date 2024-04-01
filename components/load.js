@@ -27,7 +27,7 @@ const AppComponent = (props) => {
             backdrop-filter: blur(100px);
             justify-content: center;
             min-height: 100vh;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.7);
           }
           .app-component-image {
             width: auto;

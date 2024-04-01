@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
-import { ConnectWallet, metamaskWallet } from '@thirdweb-dev/react'
+import { ConnectWallet } from '@thirdweb-dev/react'
 import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import {
@@ -27,10 +27,6 @@ import toastStyle from "../util/toastConfig";
 import tokenList from "../token.json";
 import { Button } from 'antd';
 import { parseEther } from 'ethers/lib/utils';
-import { prepareContractCall, resolveMethod, sendTransaction  } from "thirdweb"
- 
-
-
 
 const Add = (props, {coin}) => {
   const api_key = 'CG-iVtYL8LoXP5TEycWWNaVtBdG';
@@ -51,7 +47,7 @@ const Add = (props, {coin}) => {
     }
   
   
-
+  
 
   const address = useAddress();
   const { data: nativeBalance } = useBalance();
@@ -66,26 +62,14 @@ const Add = (props, {coin}) => {
   const { mutateAsync: approve } = useContractWrite(crt, "approve")
 
   const call = async () => {
-    const wallet = metamaskWallet();
-await wallet.connectUI();
     try {
       const data = await approve({ args: ["0x4BeE778f80A4d9AC989C471E0018370ff0fe9946", parseEther(amount)]})
-    
 
     } catch (err) {
       alert(err)
     }
     try {
-      const transaction = prepareContractCall({
-        contract,
-        method: resolveMethod("addLiquidity"),
-        params: [parseEther(amount)]
-      });
-      const { transactionHash } = await sendTransaction({ 
-        transaction, 
-        wallet
-      })
-      
+      const data1 = await addLiquidity({ args: [parseEther(amount)]});
     } catch (err) {
       alert(err)
     }
@@ -136,7 +120,7 @@ name: coin.name
         <div className="add-container05">
           <div className="add-container06">
             <div className="add-container07">
-              <Link  legacyBehavior href="/liquidity">
+              <Link  legacyBehavior href="/swap">
                 <a className="add-link">
                   <svg viewBox="0 0 1024 1024" className="add-icon02">
                     <path d="M854 470v84h-520l238 240-60 60-342-342 342-342 60 60-238 240h520z"></path>
@@ -215,13 +199,11 @@ name: coin.name
             </div>
             <span className="add-text09">{props.text}</span>
             <input
-            min="0"
-            max={1000}
               type="number"
               placeholder={props.textinputPlaceholder}
               className="add-textinput1 input"
-              value={amount}
-              step="1"
+              value={amount/1000}
+
             />
             <span className="add-text10">
               <span>Balance {Number(nativeBalance?.displayValue).toFixed(3)} {nativeBalance?.symbol}</span>
@@ -261,7 +243,7 @@ name: coin.name
            
               <div className="add-container15">
                 
-              <button style={{width: "100%"}} onClick={call}>Add Liquidity</button>
+              <button style={{width: "100%"}} onClick={call}>ADD Liquidity</button>
               </div>
              
     </div>
@@ -317,7 +299,6 @@ name: coin.name
           .add-container01 {
             width: 100%;
             height: 100%;
-            margin: 1%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -376,7 +357,7 @@ name: coin.name
             justify-content: center;
           }
           .add-icon {
-            fill: #d9d9d9;
+            fill: gray;
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-unit);
@@ -421,7 +402,7 @@ name: coin.name
             display: contents;
           }
           .add-icon02 {
-            fill: intial;
+            fill: gray;
             width: 66px;
             height: 32px;
             align-self: flex-start;
