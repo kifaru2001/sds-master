@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Sliders from '../components/sliders'
 
 const Users = (props) => {
   return (
@@ -18,7 +17,7 @@ const Users = (props) => {
           />
           <meta
             property="og:title"
-            content="Users - Fast! secure! Rare! Decentralized Exchange"
+            content="Users - Crazy-Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"
@@ -79,7 +78,120 @@ const Users = (props) => {
                 </animate-on-reveal>
               </div>
             </div>
-           <Sliders />
+            <div className="users-container06">
+              <div
+                data-thq="slider"
+                data-loop="true"
+                data-autoplay="true"
+                data-navigation="false"
+                data-pagination="false"
+                data-autoplay-delay="1500"
+                className="users-slider swiper"
+              >
+                <div data-thq="slider-wrapper" className="swiper-wrapper">
+                  <div
+                    data-thq="slider-slide"
+                    className="users-slider-slide swiper-slide"
+                  >
+                    <div className="users-container07">
+                      <img
+                        alt="image"
+                        src="/image-200h.webp"
+                        className="users-image"
+                      />
+                      <img
+                        alt="image"
+                        src="/images%20(4)-200h.webp"
+                        className="users-image01"
+                      />
+                    </div>
+                    <div className="users-container08">
+                      <img
+                        alt="image"
+                        src="/images%20(10)-200h.webp"
+                        className="users-image02"
+                      />
+                      <img
+                        alt="image"
+                        src="/images%20(5)-200h.webp"
+                        className="users-image03"
+                      />
+                    </div>
+                    <div className="users-container09">
+                      <img
+                        alt="image"
+                        src="/images%20(8)-200h.webp"
+                        className="users-image04"
+                      />
+                      <img
+                        alt="image"
+                        src="/images%20(9)-200h.webp"
+                        className="users-image05"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    className="users-slider-slide1 swiper-slide"
+                  >
+                    <div className="users-container10">
+                      <img
+                        alt="image"
+                        src="/images-200h.webp"
+                        className="users-image06"
+                      />
+                      <img
+                        alt="image"
+                        src="/images%20(1)-200h.webp"
+                        className="users-image07"
+                      />
+                    </div>
+                    <div className="users-container11">
+                      <img
+                        alt="image"
+                        src="/rand4_free-200h.webp"
+                        className="users-image08"
+                      />
+                      <img
+                        alt="image"
+                        src="/image-200h.webp"
+                        className="users-image09"
+                      />
+                    </div>
+                    <div className="users-container12">
+                      <img
+                        alt="image"
+                        src="/images%20(6)-200h.webp"
+                        className="users-image10"
+                      />
+                      <img
+                        alt="image"
+                        src="/images%20(3)-200h.webp"
+                        className="users-image11"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-thq="slider-pagination"
+                  className="users-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                >
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    className="swiper-pagination-bullet"
+                  ></div>
+                </div>
+                <div
+                  data-thq="slider-button-prev"
+                  className="users-slider-button-prev swiper-button-prev"
+                ></div>
+                <div
+                  data-thq="slider-button-next"
+                  className="users-slider-button-next swiper-button-next"
+                ></div>
+              </div>
+            </div>
+          </div>
           <div id="table" className="users-container13">
             <div className="users-container14">
               <svg viewBox="0 0 1024 1024" className="users-icon2">
@@ -88,7 +200,6 @@ const Users = (props) => {
                 <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
               </svg>
             </div>
-            OOPS! No Items!
           </div>
         </div>
       </div>
@@ -102,6 +213,11 @@ const Users = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-image: radial-gradient(
+              circle at center,
+              rgba(21, 21, 21, 0.98) 3%,
+              rgba(0, 0, 0, 0.97) 83%
+            );
           }
           .users-container01 {
             width: 100%;
