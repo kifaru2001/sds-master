@@ -2,9 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
-import Nav2 from '../components/nav2'
 import Add from '../components/add'
-import App from '../components/App'
 import Ap from "../components/App" 
 import Ap2 from "../components/Btc" 
 
