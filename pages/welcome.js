@@ -57,7 +57,7 @@ const Welcome = (props) => {
             >
               <div data-thq="thq-navbar-nav" className="welcome-desktop-menu">
                 <nav className="welcome-links">
-                  <span className="welcome-text002">Docs</span>
+                  <a href="/Documentation" className="welcome-text002">Docs</a>
                   <Link legacyBehavior href="/mining">
                     <a className="welcome-link01">
                       <span>Mining</span>
