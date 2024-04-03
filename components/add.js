@@ -234,8 +234,7 @@ name: coin.name
             />
             <span className="add-text15">Balance {Number(tokenBalance?.displayValue).toFixed(3)} {tokenBalance?.symbol}</span>
           </div>
-          <div >
-            <div style={{width: "100%"}}>
+       
            {address ? (
             <>
             <div style={{display: "flex", flexDirection: "row", gap: "5px", width: "100%"}}>
@@ -279,9 +278,6 @@ name: coin.name
            ) }
             </div>
           </div>
-         
-        </div>
-      </div>
       <style jsx>
         {`
           .add-container {
