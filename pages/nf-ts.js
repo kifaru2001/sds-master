@@ -386,7 +386,7 @@ const NFTs = (props) => {
             .nf-ts-text {
               width: 100%;
               height: auto;
-              font-size: 80px;
+              font-size: 60px;
               align-self: center;
             }
             .nf-ts-text03 {

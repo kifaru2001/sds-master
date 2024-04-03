@@ -102,6 +102,7 @@ const Users = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .users-container1 {
             width: 100%;
@@ -172,7 +173,7 @@ const Users = (props) => {
             text-align: left;
           }
           .users-text06 {
-            color: #4c4c4c;
+            color: initial;
             width: 661px;
             height: 90px;
             font-size: 1.5em;
@@ -181,7 +182,7 @@ const Users = (props) => {
             margin-top: var(--dl-space-space-unit);
             text-align: left;
             font-family: 'Noto Sans';
-            font-weight: 100;
+            font-weight: 400;
           }
           .users-container5 {
             width: 510px;
