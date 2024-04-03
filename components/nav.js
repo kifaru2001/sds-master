@@ -9,6 +9,7 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 import { Blockie } from 'web3uikit';
 
+
 const dark = { background: "white" };
 const light = { background: "black" };
 
