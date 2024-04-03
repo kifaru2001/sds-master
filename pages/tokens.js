@@ -32,19 +32,10 @@ const Tokens = (props) => {
         <div className="tokens-container01"></div>
         <div className="tokens-container02">
           <div className="tokens-container03">
-            <animate-on-reveal
-              animation="bounceIn"
-              duration="5s"
-              delay="0s"
-              direction="normal"
-              easing="ease"
-              iteration="1"
-            >
-              <h1 data-thq-animate-on-reveal="true" className="tokens-text">
-                <span>SWAP FAST!</span>
-                <br></br>
-              </h1>
-            </animate-on-reveal>
+            <h1 className="tokens-text">
+              <span>SWAP FAST!</span>
+              <br></br>
+            </h1>
             <h1 className="tokens-text03">
               <span>Lightspeed transactions! Anywhere, anytime.</span>
               <br></br>
@@ -56,14 +47,7 @@ const Tokens = (props) => {
               </span>
               <br></br>
             </h1>
-            <animate-on-reveal
-              animation="pulse"
-              duration="3000ms"
-              delay="3s"
-              direction="normal"
-              easing="ease"
-              iteration="1"
-            >
+    
               <div
                 data-thq-animate-on-reveal="true"
                 className="tokens-container04"
@@ -74,7 +58,7 @@ const Tokens = (props) => {
                   <path d="M928 512c0 229.75-186.25 416-416 416-123.020 0-233.542-53.418-309.694-138.306l149.694-149.694h-352v352l134.32-134.32c93.608 102.216 228.154 166.32 377.68 166.32 282.77 0 512-229.23 512-512h-96z"></path>
                 </svg>
               </div>
-            </animate-on-reveal>
+
           </div>
           <div className="tokens-container05">
             <div
@@ -519,6 +503,7 @@ const Tokens = (props) => {
             }
             .tokens-container03 {
               height: 276px;
+              padding-left: 0px;
             }
             .tokens-text {
               height: auto;
@@ -537,27 +522,33 @@ const Tokens = (props) => {
           @media (max-width: 479px) {
             .tokens-container02 {
               width: 100%;
-              height: 547px;
+              height: 794px;
               flex-direction: column;
             }
             .tokens-container03 {
               width: 100%;
-              height: 280px;
-              padding-left: var(--dl-space-space-unit);
+              height: 533px;
+              padding-left: 0px;
             }
             .tokens-text {
               width: 100%;
               height: auto;
-              font-size: 80px;
+              font-size: 60px;
               align-self: center;
+              animation-name: bounceIn;
+              animation-delay: 0s;
+              animation-duration: 5s;
+              animation-direction: normal;
+              animation-iteration-count: 1;
+              animation-timing-function: ease;
             }
             .tokens-text03 {
               width: 100%;
-              height: 154px;
+              height: 293px;
             }
             .tokens-text06 {
               width: 100%;
-              height: 51px;
+              height: 135px;
             }
             .tokens-container04 {
               width: 100%;
@@ -570,14 +561,16 @@ const Tokens = (props) => {
             }
             .tokens-container05 {
               width: 100%;
-              height: 232px;
+              height: 533px;
+              justify-content: flex-end;
             }
             .tokens-slider {
               width: 100%;
+              height: auto;
             }
             .tokens-slider-slide {
               width: 100%;
-              height: 231px;
+              height: auto;
               align-items: center;
             }
             .tokens-container06 {

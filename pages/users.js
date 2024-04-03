@@ -172,7 +172,7 @@ const Users = (props) => {
             text-align: left;
           }
           .users-text06 {
-            color: gray;
+            color: #4c4c4c;
             width: 661px;
             height: 90px;
             font-size: 1.5em;
@@ -181,7 +181,7 @@ const Users = (props) => {
             margin-top: var(--dl-space-space-unit);
             text-align: left;
             font-family: 'Noto Sans';
-            font-weight: 400;
+            font-weight: 100;
           }
           .users-container5 {
             width: 510px;
@@ -252,11 +252,13 @@ const Users = (props) => {
             }
             .users-container3 {
               width: 100%;
-              height: 739px;
+              height: 930px;
               flex-direction: column;
             }
             .users-container4 {
-              height: 266px;
+              width: 100%;
+              height: 702px;
+              padding-left: 0px;
             }
             .users-text {
               height: auto;
@@ -264,11 +266,13 @@ const Users = (props) => {
             }
             .users-text03 {
               width: 100%;
+              height: 148px;
             }
             .users-text06 {
               width: 100%;
             }
             .users-container5 {
+              width: 100%;
               align-self: center;
             }
             .users-icon {
@@ -287,34 +291,35 @@ const Users = (props) => {
             }
             .users-container3 {
               width: 100%;
-              height: 983px;
+              height: auto;
               flex-direction: column;
             }
             .users-container4 {
               width: 100%;
-              height: 563px;
-              padding-left: var(--dl-space-space-unit);
+              height: auto;
+              padding-left: 0px;
             }
             .users-text {
-              width: 100%;
+              width: auto;
               height: auto;
-              font-size: 80px;
+              font-size: 60px;
               align-self: center;
             }
             .users-text03 {
               width: 100%;
-              height: 311px;
+              height: auto;
             }
             .users-text06 {
               width: 100%;
-              height: 215px;
+              height: auto;
             }
             .users-container5 {
               width: 100%;
             }
             .users-text09 {
+              width: 100%;
               font-size: 25px;
-              text-align: left;
+              text-align: center;
             }
             .users-container6 {
               width: 100%;

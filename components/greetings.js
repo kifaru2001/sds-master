@@ -360,7 +360,7 @@ const Greetings = (props, coin) => {
               position: static;
               font-size: 1.5em;
               text-align: left;
-              padding-left: var(--dl-space-space-twounits);
+              padding-left: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-unit);
             }
           }
