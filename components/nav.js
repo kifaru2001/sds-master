@@ -50,16 +50,16 @@ useEffect(() => {
             <a className="nav-link">
               <div className="nav-container02">
                 <div className="nav-container03">
-                <Link  legacyBehavior  href="/welcome" style={{cursor: "hover"}}>
+                <Link  legacyBehavior  href="/welcome" style={{cursor: "pointer"}}>
                   <img
                     alt={props.imageAlt}
                     src={props.imageSrc}
                     className="nav-image"
                   />
-                
+                  </Link>
                   <span className="nav-text">{props.text}</span>
                   <span className="nav-text01">{props.text1}</span>
-                  </Link>
+              
                 </div>
           
               </div>
