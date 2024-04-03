@@ -2699,13 +2699,13 @@ const Welcome = (props) => {
           }
           @media (max-width: 479px) {
             .welcome-text063 {
-              font-size: 50px;
+              font-size: 40px;
             }
             .welcome-text064 {
-              font-size: 50px;
+              font-size: 40px;
             }
             .welcome-text065 {
-              font-size: 50px;
+              font-size: 40px;
             }
             .welcome-container01 {
               width: 100%;
