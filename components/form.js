@@ -40,7 +40,7 @@ const Form = (props) => {
             <span className="form-text1">{props.text1}</span>
           </div>
           <div className="form-container2 button">
-            <button type="submit" className="button">
+            <button type="submit" style={{background: "transparent"}}>
               {props.button}
             </button>
           </div>

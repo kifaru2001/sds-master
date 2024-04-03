@@ -64,7 +64,7 @@ const Form1 = (props) => {
             <span className="form1-text2">{props.text11}</span>
           </div>
           <div className="form1-container2 button">
-            <button type="submit" className="button">
+            <button type="submit" className="button" style={{background: "transparent"}}>
               {props.button}
             </button>
           </div>
