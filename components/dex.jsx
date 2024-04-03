@@ -598,7 +598,7 @@ style={{background: "transparent", textAlign: "end"}}
           }
 
           .dex-text {
-            color: initial;
+            color: white;
             font-family: 'Arial Black';
           }
           .dex-container04 {
@@ -618,7 +618,7 @@ style={{background: "transparent", textAlign: "end"}}
           }
 
           .dex-text01 {
-            color: initial;
+            color: white;
             font-family: 'Arial Black';
           }
           .dex-container05 {
@@ -638,7 +638,7 @@ style={{background: "transparent", textAlign: "end"}}
           }
 
           .dex-text02 {
-            color: initial;
+            color: white;
             font-family: 'Arial Black';
           }
           .dex-thq-dropdown {
@@ -1155,7 +1155,7 @@ margin-top: 1%;
               padding: var(--dl-space-space-unit);
             }
             .dex-text {
-              color: initial;
+              color: white;
             }
             .dex-container04 {
               width: auto;
@@ -1163,7 +1163,7 @@ margin-top: 1%;
               padding: var(--dl-space-space-unit);
             }
             .dex-text01 {
-              color: initial;
+              color: white;
             }
             .dex-container05 {
               width: auto;
@@ -1171,7 +1171,7 @@ margin-top: 1%;
               padding: var(--dl-space-space-unit);
             }
             .dex-text02 {
-              color: initial;
+              color: white;
             }
             .dex-dropdown-toggle {
               width: 49px;
