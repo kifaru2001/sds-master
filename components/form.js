@@ -165,12 +165,10 @@ const Form = (props) => {
             width: 100%;
             height: 35px;
             display: flex;
-            padding-left: 5%;
-            padding-right: 5%;
+     
             margin-top: var(--dl-space-space-threeunits);
             align-items: center;
-            border-color: rgba(52, 52, 52, 0.65);
-            border-width: 1px;
+ 
             border-radius: var(--dl-radius-radius-radius8);
             justify-content: center;
             text-decoration: none;
