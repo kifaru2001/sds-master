@@ -55,7 +55,7 @@ const Documentation = (props) => {
                 </a>
               </Link>
             </div>
-            <div id="top" className="documentation-container06"></div>
+            <div className="documentation-container06"></div>
             <div className="documentation-container07">
               <Link legacyBehavior href="/documentation">
                 <a className="documentation-link02">
@@ -90,11 +90,7 @@ const Documentation = (props) => {
                   className="documentation-desktop-menu"
                 >
                   <nav className="documentation-links">
-                    <span>About</span>
-                    <span className="documentation-text011">Features</span>
-                    <span className="documentation-text012">Pricing</span>
-                    <span className="documentation-text013">Team</span>
-                    <span className="documentation-text014">Blog</span>
+                  
                   </nav>
                   <div className="documentation-buttons"></div>
                 </div>
@@ -237,8 +233,7 @@ const Documentation = (props) => {
                         className="documentation-dropdown-toggle03"
                       >
                         <span className="documentation-text036">
-                          <span>Rarit</span>
-                          <span>y</span>
+                          <span>Rarity</span>
                           <br></br>
                         </span>
                       </div>
