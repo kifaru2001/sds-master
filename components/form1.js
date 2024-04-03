@@ -204,6 +204,8 @@ const Form1 = (props) => {
             height: 35px;
             display: flex;
             margin-top: var(--dl-space-space-threeunits);
+            padding-left: 5%;
+            padding-right: 5%;
             align-items: center;
             border-color: rgba(52, 52, 52, 0.65);
             border-width: 1px;
