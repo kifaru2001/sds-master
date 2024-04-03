@@ -41,7 +41,7 @@ const AppComponent = (props) => {
             animation-timing-function: ease;
           }
           .app-component-text {
-            color: initial;
+            color: white;
             font-size: 1em;
             animation-name: pulse;
             animation-delay: 0s;
