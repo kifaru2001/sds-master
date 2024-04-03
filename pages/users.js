@@ -173,7 +173,7 @@ const Users = (props) => {
             text-align: left;
           }
           .users-text06 {
-            color: initial;
+            color: white;
             width: 661px;
             height: 90px;
             font-size: 1.5em;
