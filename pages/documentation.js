@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import ReactThemeToggleButton from '../components/toggle'
 import {useTheme} from "next-themes";
+import { useState } from 'react';
 
 
 const Documentation = (props) => {
