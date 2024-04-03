@@ -110,7 +110,6 @@ const Intro = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: flex-start;
-            z-index: -1;
             background-image: linear-gradient(
                 180deg,
                 rgba(0, 0, 0, 0.68) 0%,
