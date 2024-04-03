@@ -54,7 +54,7 @@ const CryptoTracker = ({ cryptoName }) => {
   const { symbol, market_data: marketData } = data;
 
   return (
-    <div className={`card ${isExpanded ? "expanded" : "collapsed"}`}>
+    <div className={`card ${isExpanded ? "expanded" : "collapsed"}`} style={{color: "white"}}>
       {!isExpanded && <button onClick={onCardClick} className="hitzone" />}
       <div className="card-inner">
         {isExpanded && (
@@ -64,7 +64,7 @@ const CryptoTracker = ({ cryptoName }) => {
         )}
         <div className="top-data">
           <h4 className="crypto-price">
-            <p style={{color: "white", textShadow: "1px 1px 10px"}}> {symbol.toUpperCase()}  </p>
+            <p style={{color: "rgba(180, 100, 0, 0.8)", textShadow: "1px 1px 10px"}}> {symbol.toUpperCase()}  </p>
             {formatPrice(marketData?.current_price?.usd)} USD
             {formatPlusMinus(marketData?.price_change_percentage_24h)}
           </h4>
