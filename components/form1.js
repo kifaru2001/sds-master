@@ -64,7 +64,7 @@ const Form1 = (props) => {
             <span className="form1-text2">{props.text11}</span>
           </div>
           <div className="form1-container2 button">
-            <button type="submit" className="form1-button button">
+            <button type="submit" className="button">
               {props.button}
             </button>
           </div>
