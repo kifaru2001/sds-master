@@ -42,6 +42,7 @@ const Swap = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .swap-container1 {
             width: 100%;
