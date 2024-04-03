@@ -550,7 +550,7 @@ useEffect(() => {
                         data-thq="thq-dropdown"
                         className="nav-dropdown26 list-item"
                       >
-                           <Link  legacyBehavior  href="/portfolio">
+                           <Link  legacyBehavior  href="/tokens">
                           <a>
                             <div
                               data-thq="thq-dropdown-toggle"

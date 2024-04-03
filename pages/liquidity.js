@@ -38,7 +38,7 @@ const Liquidity = (props) => {
             <div className="liquidity-container04">
               <h1 className="liquidity-text">Positions</h1>
               <div className="liquidity-container05">
-                <span className="liquidity-text01">V2</span>
+                <span className="liquidity-text01">V1</span>
                 <svg viewBox="0 0 1024 1024" className="liquidity-icon">
                   <path d="M298 426h428l-214 214z"></path>
                 </svg>
@@ -121,7 +121,7 @@ const Liquidity = (props) => {
               </svg>
               <h1 className="liquidity-text06">Your Positions</h1>
               <span className="liquidity-text07">
-                V2 liquidity positions will show up here
+                V1 liquidity positions will show up here
               </span>
             </div>
             <div
