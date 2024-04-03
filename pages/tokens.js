@@ -33,22 +33,23 @@ const Tokens = (props) => {
         <div className="tokens-container02">
           <div className="tokens-container03">
             <animate-on-reveal
-              animation="wobble"
-              duration="3s"
-              delay="2s"
+              animation="bounceIn"
+              duration="5s"
+              delay="0s"
               direction="normal"
               easing="ease"
               iteration="1"
             >
               <h1 data-thq-animate-on-reveal="true" className="tokens-text">
-                TRADE TOKENS
+                <span>SWAP FAST!</span>
+                <br></br>
               </h1>
             </animate-on-reveal>
-            <h1 className="tokens-text1">
+            <h1 className="tokens-text03">
               <span>Lightspeed transactions! Anywhere, anytime.</span>
               <br></br>
             </h1>
-            <h1 className="tokens-text4">
+            <h1 className="tokens-text06">
               <span>
                 RareBay is super-fast. Swap, trade, explore everything faster
                 than you can say Rare.
@@ -67,7 +68,7 @@ const Tokens = (props) => {
                 data-thq-animate-on-reveal="true"
                 className="tokens-container04"
               >
-                <span className="tokens-text7">Swap Now</span>
+                <span className="tokens-text09">Swap Now</span>
                 <svg viewBox="0 0 1024 1024" className="tokens-icon">
                   <path d="M889.68 166.32c-93.608-102.216-228.154-166.32-377.68-166.32-282.77 0-512 229.23-512 512h96c0-229.75 186.25-416 416-416 123.020 0 233.542 53.418 309.696 138.306l-149.696 149.694h352v-352l-134.32 134.32z"></path>
                   <path d="M928 512c0 229.75-186.25 416-416 416-123.020 0-233.542-53.418-309.694-138.306l149.694-149.694h-352v352l134.32-134.32c93.608 102.216 228.154 166.32 377.68 166.32 282.77 0 512-229.23 512-512h-96z"></path>
@@ -195,7 +196,7 @@ const Tokens = (props) => {
             <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
             <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
           </svg>
-          <span className="tokens-text8">Oops! No Items!</span>
+          <span className="tokens-text10">Oops! No Items!</span>
         </div>
       </div>
       <style jsx>
@@ -208,6 +209,7 @@ const Tokens = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .tokens-container01 {
             width: 100%;
@@ -236,14 +238,30 @@ const Tokens = (props) => {
             justify-content: flex-start;
           }
           .tokens-text {
-            color: #e0e0e0;
-            width: 661px;
-            height: 90px;
-            font-size: 4em;
-            align-self: center;
-            text-align: left;
+            cursor: pointer;
+            font-size: 100px;
+            background: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              #7aec8d 53%,
+              blue 91%
+            );
+            transition: 0.3s;
+            background-image: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              rgb(122, 236, 141) 53%,
+              rgba(0, 100, 200, 0.6) 91%
+            );
+            -webkit-text-stroke: 4px transparent;
+            color: transparent;
+            -webkit-background-clip: text;
           }
-          .tokens-text1 {
+          .tokens-text:hover {
+            -webkit-text-stroke: 4px transparent;
+            color: rgba(0, 0, 0, 0.9);
+          }
+          .tokens-text03 {
             color: rgb(165, 165, 165);
             width: 661px;
             height: 185px;
@@ -251,8 +269,8 @@ const Tokens = (props) => {
             align-self: center;
             text-align: left;
           }
-          .tokens-text4 {
-            color: gray;
+          .tokens-text06 {
+            color: rgb(208, 208, 208);
             width: 661px;
             height: 90px;
             font-size: 1.5em;
@@ -278,7 +296,7 @@ const Tokens = (props) => {
             justify-content: center;
             background-color: #2d2d2d;
           }
-          .tokens-text7 {
+          .tokens-text09 {
             color: #c6c6c6;
             font-size: 28px;
             text-align: center;
@@ -477,7 +495,7 @@ const Tokens = (props) => {
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .tokens-text8 {
+          .tokens-text10 {
             color: rgb(214, 214, 214);
           }
           @media (max-width: 1200px) {
@@ -503,13 +521,13 @@ const Tokens = (props) => {
               height: 276px;
             }
             .tokens-text {
-              width: 100%;
-              height: 100%;
+              height: auto;
+              font-size: 80px;
             }
-            .tokens-text1 {
+            .tokens-text03 {
               width: 100%;
             }
-            .tokens-text4 {
+            .tokens-text06 {
               width: 100%;
             }
             .tokens-container04 {
@@ -529,22 +547,22 @@ const Tokens = (props) => {
             }
             .tokens-text {
               width: 100%;
-              height: 87px;
-              font-size: 2.5em;
-              font-family: Arial Black;
+              height: auto;
+              font-size: 80px;
+              align-self: center;
             }
-            .tokens-text1 {
+            .tokens-text03 {
               width: 100%;
               height: 154px;
             }
-            .tokens-text4 {
+            .tokens-text06 {
               width: 100%;
               height: 51px;
             }
             .tokens-container04 {
               width: 100%;
             }
-            .tokens-text7 {
+            .tokens-text09 {
               color: rgb(188, 188, 188);
               font-size: 16px;
               font-family: Arial Black;

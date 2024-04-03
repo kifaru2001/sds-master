@@ -32,25 +32,26 @@ const NFTs = (props) => {
           <div className="nf-ts-container3">
             <div className="nf-ts-container4">
               <animate-on-reveal
-                animation="wobble"
-                duration="3s"
-                delay="2s"
+                animation="bounceIn"
+                duration="5s"
+                delay="0s"
                 direction="normal"
                 easing="ease"
                 iteration="1"
               >
                 <h1 data-thq-animate-on-reveal="true" className="nf-ts-text">
-                  Ready Sell NFTs
+                  <span>NFT Liquidity!</span>
+                  <br></br>
                 </h1>
               </animate-on-reveal>
-              <h1 className="nf-ts-text01">
-                <span className="nf-ts-text02">
+              <h1 className="nf-ts-text03">
+                <span className="nf-ts-text04">
                   Never worry about Floor Price. with NFT! Liquidity
                 </span>
                 <br></br>
                 <br></br>
               </h1>
-              <h1 className="nf-ts-text05">
+              <h1 className="nf-ts-text07">
                 <span>
                   RareBay implements a new kind of NFT that can be sold directly
                   at a fixed price.
@@ -58,7 +59,7 @@ const NFTs = (props) => {
                 <br></br>
               </h1>
               <div className="nf-ts-container5">
-                <span className="nf-ts-text08">Coming Soon</span>
+                <span className="nf-ts-text10">Coming Soon</span>
                 <animate-on-reveal
                   animation="shakeX"
                   duration="1000ms"
@@ -123,7 +124,7 @@ const NFTs = (props) => {
               <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
               <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
             </svg>
-            <span className="nf-ts-text09">Oops! No Items!</span>
+            <span className="nf-ts-text11">Oops! No Items!</span>
           </div>
         </div>
       </div>
@@ -137,7 +138,7 @@ const NFTs = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.68);
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .nf-ts-container1 {
             width: 100%;
@@ -175,14 +176,30 @@ const NFTs = (props) => {
             justify-content: flex-start;
           }
           .nf-ts-text {
-            color: rgb(105, 105, 105);
-            width: 661px;
-            height: 90px;
-            font-size: 4em;
-            align-self: center;
-            text-align: left;
+            cursor: pointer;
+            font-size: 100px;
+            background: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              #7aec8d 53%,
+              blue 91%
+            );
+            transition: 0.3s;
+            background-image: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              rgb(122, 236, 141) 53%,
+              rgba(0, 100, 200, 0.6) 91%
+            );
+            -webkit-text-stroke: 4px transparent;
+            color: transparent;
+            -webkit-background-clip: text;
           }
-          .nf-ts-text01 {
+          .nf-ts-text:hover {
+            -webkit-text-stroke: 4px transparent;
+            color: rgba(0, 0, 0, 0.9);
+          }
+          .nf-ts-text03 {
             color: rgb(161, 161, 161);
             width: 661px;
             height: 90px;
@@ -190,8 +207,8 @@ const NFTs = (props) => {
             align-self: center;
             text-align: left;
           }
-          .nf-ts-text05 {
-            color: gray;
+          .nf-ts-text07 {
+            color: rgb(208, 208, 208);
             width: 661px;
             height: 90px;
             font-size: 1.5em;
@@ -224,7 +241,7 @@ const NFTs = (props) => {
             justify-content: center;
             background-color: rgba(34, 34, 34, 0.5);
           }
-          .nf-ts-text08 {
+          .nf-ts-text10 {
             color: rgb(188, 188, 188);
             font-size: 30px;
             text-align: center;
@@ -295,7 +312,7 @@ const NFTs = (props) => {
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .nf-ts-text09 {
+          .nf-ts-text11 {
             color: rgb(214, 214, 214);
           }
           @media (max-width: 1200px) {
@@ -322,12 +339,13 @@ const NFTs = (props) => {
               height: 342px;
             }
             .nf-ts-text {
+              height: auto;
+              font-size: 80px;
+            }
+            .nf-ts-text03 {
               width: 100%;
             }
-            .nf-ts-text01 {
-              width: 100%;
-            }
-            .nf-ts-text05 {
+            .nf-ts-text07 {
               width: 100%;
             }
             .nf-ts-container5 {
@@ -366,24 +384,25 @@ const NFTs = (props) => {
               height: 602px;
             }
             .nf-ts-text {
-              color: #dbdbdb;
               width: 100%;
-              height: 174px;
+              height: auto;
+              font-size: 80px;
+              align-self: center;
             }
-            .nf-ts-text01 {
+            .nf-ts-text03 {
               width: 100%;
               height: 206px;
             }
-            .nf-ts-text02 {
+            .nf-ts-text04 {
               width: 100%;
             }
-            .nf-ts-text05 {
+            .nf-ts-text07 {
               width: 100%;
             }
             .nf-ts-container5 {
               width: 100%;
             }
-            .nf-ts-text08 {
+            .nf-ts-text10 {
               font-size: 25px;
             }
             .nf-ts-container6 {

@@ -12,7 +12,7 @@ const Liquidity = (props) => {
       <div className="liquidity-container">
         <Head>
           <title>
-            Liquidity - Fast! secure! Rare! Decentralized Exchange
+            Swap - Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -259,7 +259,7 @@ const Liquidity = (props) => {
             justify-content: space-between;
           }
           .liquidity-text {
-
+color: white;
           }
           .liquidity-container05 {
             width: 57px;
@@ -272,7 +272,7 @@ const Liquidity = (props) => {
             background-color: rgba(64, 64, 64, 0.61);
           }
           .liquidity-text01 {
-            color: #b5b5b5;
+            color: white;
             align-self: center;
             font-style: normal;
             text-align: center;
@@ -312,6 +312,7 @@ const Liquidity = (props) => {
             background-color: #373737;
           }
           .liquidity-text02 {
+            color: white;
             font-size: 14px;
             font-style: normal;
             text-align: center;
@@ -378,6 +379,7 @@ const Liquidity = (props) => {
           }
           .liquidity-text03 {
             width: 100%;
+            color: white;
             cursor: pointer;
             display: flex;
             font-size: 14px;
@@ -415,7 +417,7 @@ const Liquidity = (props) => {
             height: 24px;
           }
           .liquidity-text04 {
-            color: white
+            color: white;
             width: 100%;
             cursor: pointer;
             display: flex;
@@ -445,7 +447,7 @@ const Liquidity = (props) => {
             height: 24px;
           }
           .liquidity-text05 {
-          
+            color: white;
             margin-left: var(--dl-space-space-unit);
           }
           .liquidity-container08 {
@@ -466,7 +468,7 @@ const Liquidity = (props) => {
         
           }
           .liquidity-text07 {
-     
+            color: white;
           }
           .liquidity-thq-dropdown1 {
             cursor: pointer;
@@ -492,6 +494,7 @@ const Liquidity = (props) => {
             font-weight: 500;
             margin-right: 4px;
             vertical-align: middle;
+            color: white;
           }
           .liquidity-dropdown-arrow1 {
             transition: 0.3s;
@@ -553,6 +556,7 @@ const Liquidity = (props) => {
           .liquidity-text09 {
             width: 100%;
             cursor: pointer;
+            color: white;
             display: flex;
             font-size: 14px;
             font-style: normal;
@@ -591,6 +595,7 @@ const Liquidity = (props) => {
           .liquidity-text10 {
             width: 100%;
             cursor: pointer;
+            color: white;
             display: flex;
             font-size: 14px;
             font-style: normal;
@@ -631,7 +636,7 @@ const Liquidity = (props) => {
             justify-content: center;
           }
           .liquidity-text11 {
-      
+            color: white;
             width: 323px;
             height: 30px;
             font-size: 1.5em;
@@ -645,7 +650,7 @@ const Liquidity = (props) => {
             height: 24px;
           }
           .liquidity-text12 {
-      
+            color: white;
             width: 100%;
             padding-left: var(--dl-space-space-twounits);
           }
@@ -677,7 +682,7 @@ const Liquidity = (props) => {
             justify-content: center;
           }
           .liquidity-text13 {
-  
+            color: white;
             width: 323px;
             height: 30px;
             font-size: 1.5em;
@@ -691,7 +696,7 @@ const Liquidity = (props) => {
             height: 24px;
           }
           .liquidity-text14 {
-   
+            color: white;
             width: 100%;
             padding-left: var(--dl-space-space-twounits);
           }
@@ -769,6 +774,7 @@ const Liquidity = (props) => {
             }
             .liquidity-text06 {
               font-size: 1.2em;
+              color: white;
             }
             .liquidity-dropdown-toggle3 {
               display: inline-flex;

@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
+import Sliders from '../components/sliders'
 
 const Users = (props) => {
   return (
@@ -29,37 +30,38 @@ const Users = (props) => {
           />
         </Head>
         <Nav rootClassName="nav-root-class-name6"></Nav>
-        <div className="users-container01"></div>
-        <div className="users-container02">
-          <div className="users-container03">
-            <div className="users-container04">
+        <div className="users-container1"></div>
+        <div className="users-container2">
+          <div className="users-container3">
+            <div className="users-container4">
               <animate-on-reveal
-                animation="wobble"
-                duration="3s"
-                delay="2s"
+                animation="bounceIn"
+                duration="5s"
+                delay="0s"
                 direction="normal"
                 easing="ease"
                 iteration="1"
               >
                 <h1 data-thq-animate-on-reveal="true" className="users-text">
-                  3,100 RAR31ONES
+                  <span>3100 FOREVER!</span>
+                  <br></br>
                 </h1>
               </animate-on-reveal>
-              <h1 className="users-text1">
+              <h1 className="users-text03">
                 <span>
                   RareBay utility NFT is a membership ticket for users.
                 </span>
                 <br></br>
               </h1>
-              <h1 className="users-text4">
+              <h1 className="users-text06">
                 <span>
                   NFT owners are eligible for KYC verification. Verified members
                   can list tokens, mine RareCoin and ready sell on Dex.
                 </span>
                 <br></br>
               </h1>
-              <div className="users-container05">
-                <span className="users-text7">Coming Soon</span>
+              <div className="users-container5">
+                <span className="users-text09">Coming Soon</span>
                 <animate-on-reveal
                   animation="shakeX"
                   duration="1000ms"
@@ -78,129 +80,16 @@ const Users = (props) => {
                 </animate-on-reveal>
               </div>
             </div>
-            <div className="users-container06">
-              <div
-                data-thq="slider"
-                data-loop="true"
-                data-autoplay="true"
-                data-navigation="false"
-                data-pagination="false"
-                data-autoplay-delay="1500"
-                className="users-slider swiper"
-              >
-                <div data-thq="slider-wrapper" className="swiper-wrapper">
-                  <div
-                    data-thq="slider-slide"
-                    className="users-slider-slide swiper-slide"
-                  >
-                    <div className="users-container07">
-                      <img
-                        alt="image"
-                        src="/image-200h.webp"
-                        className="users-image"
-                      />
-                      <img
-                        alt="image"
-                        src="/images%20(4)-200h.webp"
-                        className="users-image01"
-                      />
-                    </div>
-                    <div className="users-container08">
-                      <img
-                        alt="image"
-                        src="/images%20(10)-200h.webp"
-                        className="users-image02"
-                      />
-                      <img
-                        alt="image"
-                        src="/images%20(5)-200h.webp"
-                        className="users-image03"
-                      />
-                    </div>
-                    <div className="users-container09">
-                      <img
-                        alt="image"
-                        src="/images%20(8)-200h.webp"
-                        className="users-image04"
-                      />
-                      <img
-                        alt="image"
-                        src="/images%20(9)-200h.webp"
-                        className="users-image05"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    data-thq="slider-slide"
-                    className="users-slider-slide1 swiper-slide"
-                  >
-                    <div className="users-container10">
-                      <img
-                        alt="image"
-                        src="/images-200h.webp"
-                        className="users-image06"
-                      />
-                      <img
-                        alt="image"
-                        src="/images%20(1)-200h.webp"
-                        className="users-image07"
-                      />
-                    </div>
-                    <div className="users-container11">
-                      <img
-                        alt="image"
-                        src="/rand4_free-200h.webp"
-                        className="users-image08"
-                      />
-                      <img
-                        alt="image"
-                        src="/image-200h.webp"
-                        className="users-image09"
-                      />
-                    </div>
-                    <div className="users-container12">
-                      <img
-                        alt="image"
-                        src="/images%20(6)-200h.webp"
-                        className="users-image10"
-                      />
-                      <img
-                        alt="image"
-                        src="/images%20(3)-200h.webp"
-                        className="users-image11"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-thq="slider-pagination"
-                  className="users-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
-                >
-                  <div
-                    data-thq="slider-pagination-bullet"
-                    className="swiper-pagination-bullet"
-                  ></div>
-                </div>
-                <div
-                  data-thq="slider-button-prev"
-                  className="users-slider-button-prev swiper-button-prev"
-                ></div>
-                <div
-                  data-thq="slider-button-next"
-                  className="users-slider-button-next swiper-button-next"
-                ></div>
-              </div>
-            </div>
+            <Sliders rootClassName="sliders-root-class-name1"></Sliders>
           </div>
-          <div id="table" className="users-container13">
-            <div className="users-container14">
-              <svg viewBox="0 0 1024 1024" className="users-icon2">
-                <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
-                <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
-                <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
-              </svg>
-            </div>
-          </div>
+        </div>
+        <div className="users-container6">
+          <svg viewBox="0 0 1024 1024" className="users-icon2">
+            <path d="M1016.988 652.010l-256-320c-6.074-7.592-15.266-12.010-24.988-12.010h-448c-9.72 0-18.916 4.418-24.988 12.010l-256 320c-4.538 5.674-7.012 12.724-7.012 19.99v288c0 35.346 28.654 64 64 64h896c35.348 0 64-28.654 64-64v-288c0-7.266-2.472-14.316-7.012-19.99zM960 704h-224l-128 128h-192l-128-128h-224v-20.776l239.38-299.224h417.24l239.38 299.224v20.776z"></path>
+            <path d="M736 512h-448c-17.672 0-32-14.328-32-32s14.328-32 32-32h448c17.674 0 32 14.328 32 32s-14.326 32-32 32z"></path>
+            <path d="M800 640h-576c-17.672 0-32-14.326-32-32s14.328-32 32-32h576c17.674 0 32 14.326 32 32s-14.326 32-32 32z"></path>
+          </svg>
+          <span className="users-text10">Oops! No Items!</span>
         </div>
       </div>
       <style jsx>
@@ -213,20 +102,15 @@ const Users = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-image: radial-gradient(
-              circle at center,
-              rgba(21, 21, 21, 0.98) 3%,
-              rgba(0, 0, 0, 0.97) 83%
-            );
           }
-          .users-container01 {
+          .users-container1 {
             width: 100%;
             height: 66px;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
           }
-          .users-container02 {
+          .users-container2 {
             width: 100%;
             height: auto;
             display: flex;
@@ -235,34 +119,51 @@ const Users = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .users-container03 {
+          .users-container3 {
             width: 100%;
-            height: 487px;
+            height: 465px;
             display: flex;
             position: relative;
             align-items: center;
             flex-direction: row;
             justify-content: center;
           }
-          .users-container04 {
-            width: 667px;
-            height: 336px;
+          .users-container4 {
+            width: auto;
+            height: 500px;
             margin: var(--dl-space-space-halfunit);
             display: flex;
             align-items: flex-start;
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
           }
           .users-text {
-            color: #8c8c8c;
-            width: 661px;
-            height: 90px;
-            font-size: 4em;
-            align-self: center;
-            text-align: left;
+            cursor: pointer;
+            height: auto;
+            font-size: 70px;
+            background: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              #7aec8d 53%,
+              blue 91%
+            );
+            transition: 0.3s;
+            background-image: -webkit-linear-gradient(
+              -86deg,
+              orange 5%,
+              rgb(122, 236, 141) 53%,
+              rgba(0, 100, 200, 0.6) 91%
+            );
+            -webkit-text-stroke: 4px transparent;
+            color: transparent;
+            -webkit-background-clip: text;
           }
-          .users-text1 {
+          .users-text:hover {
+            -webkit-text-stroke: 4px transparent;
+            color: rgba(0, 0, 0, 0.9);
+          }
+          .users-text03 {
             color: rgb(165, 165, 165);
             width: 661px;
             height: 90px;
@@ -270,8 +171,8 @@ const Users = (props) => {
             align-self: center;
             text-align: left;
           }
-          .users-text4 {
-            color: rgb(208, 208, 208);
+          .users-text06 {
+            color: gray;
             width: 661px;
             height: 90px;
             font-size: 1.5em;
@@ -280,9 +181,9 @@ const Users = (props) => {
             margin-top: var(--dl-space-space-unit);
             text-align: left;
             font-family: 'Noto Sans';
-            font-weight: 100;
+            font-weight: 400;
           }
-          .users-container05 {
+          .users-container5 {
             width: 510px;
             cursor: pointer;
             height: 66px;
@@ -298,7 +199,7 @@ const Users = (props) => {
             justify-content: center;
             background-color: rgba(34, 34, 34, 0.5);
           }
-          .users-text7 {
+          .users-text09 {
             color: rgb(188, 188, 188);
             font-size: 30px;
             text-align: center;
@@ -313,191 +214,14 @@ const Users = (props) => {
             transition: 0.3s;
           }
 
-          .users-container06 {
-            width: 590px;
-            height: 336px;
-            margin: var(--dl-space-space-halfunit);
+          .users-container6 {
+            width: 1419px;
+            height: 340px;
             display: flex;
-            align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
-            flex-direction: column;
-            justify-content: center;
-          }
-          .users-slider {
-            width: 500px;
-            height: 300px;
-            display: inline-block;
-          }
-          .users-slider-slide {
-            width: 501px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-          }
-          .users-container07 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-          }
-          .users-image {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image01 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-container08 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .users-image02 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image03 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-container09 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .users-image04 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image05 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-slider-slide1 {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-          }
-          .users-container10 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-          }
-          .users-image06 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image07 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-container11 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .users-image08 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image09 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-container12 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .users-image10 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-image11 {
-            width: auto;
-            height: var(--dl-size-size-medium);
-            margin: var(--dl-space-space-twounits);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-round);
-          }
-          .users-slider-pagination {
-            display: none;
-          }
-          .users-slider-button-prev {
-            color: #fbfbfb;
-            display: none;
-          }
-          .users-slider-button-next {
-            color: #ffffff;
-            display: none;
-          }
-          .users-container13 {
-            width: auto;
-            height: auto;
-            display: flex;
+            padding: var(--dl-space-space-threeunits);
             align-self: center;
             align-items: center;
-            border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            justify-content: center;
-          }
-          .users-container14 {
-            flex: 0 0 auto;
-            width: 213px;
-            height: 100px;
-            display: flex;
-            align-items: center;
             justify-content: center;
           }
           .users-icon2 {
@@ -506,45 +230,45 @@ const Users = (props) => {
             height: 82px;
             margin-bottom: var(--dl-space-space-unit);
           }
+          .users-text10 {
+            color: rgb(214, 214, 214);
+          }
           @media (max-width: 1200px) {
-            .users-container03 {
+            .users-container3 {
               width: 100%;
               padding: var(--dl-space-space-oneandhalfunits);
             }
-            .users-container04 {
+            .users-container4 {
               width: auto;
               padding-left: var(--dl-space-space-twounits);
             }
-            .users-container06 {
-              width: auto;
-            }
-            .users-container13 {
+            .users-container6 {
               width: 100%;
             }
           }
           @media (max-width: 767px) {
-            .users-container02 {
+            .users-container2 {
               height: 1600px;
             }
-            .users-container03 {
+            .users-container3 {
               width: 100%;
               height: 739px;
               flex-direction: column;
             }
-            .users-container04 {
+            .users-container4 {
               height: 266px;
             }
             .users-text {
-              width: 100%;
-              height: 100%;
+              height: auto;
+              font-size: 80px;
             }
-            .users-text1 {
-              width: 100%;
-            }
-            .users-text4 {
+            .users-text03 {
               width: 100%;
             }
-            .users-container05 {
+            .users-text06 {
+              width: 100%;
+            }
+            .users-container5 {
               align-self: center;
             }
             .users-icon {
@@ -555,119 +279,46 @@ const Users = (props) => {
               animation-iteration-count: 1;
               animation-timing-function: ease;
             }
-            .users-container13 {
-              width: 100%;
-              height: 569px;
-            }
           }
           @media (max-width: 479px) {
-            .users-container02 {
+            .users-container2 {
               height: auto;
               padding: 0px;
             }
-            .users-container03 {
+            .users-container3 {
               width: 100%;
               height: 983px;
               flex-direction: column;
             }
-            .users-container04 {
+            .users-container4 {
               width: 100%;
               height: 563px;
               padding-left: var(--dl-space-space-unit);
             }
             .users-text {
               width: 100%;
-              height: 178px;
-              font-size: 2.5em;
-              font-family: Arial Black;
+              height: auto;
+              font-size: 80px;
+              align-self: center;
             }
-            .users-text1 {
+            .users-text03 {
               width: 100%;
               height: 311px;
             }
-            .users-text4 {
+            .users-text06 {
               width: 100%;
               height: 215px;
             }
-            .users-container05 {
+            .users-container5 {
               width: 100%;
             }
-            .users-text7 {
+            .users-text09 {
               font-size: 25px;
               text-align: left;
             }
-            .users-container06 {
+            .users-container6 {
               width: 100%;
-              height: 232px;
-            }
-            .users-slider {
-              width: 100%;
-            }
-            .users-slider-slide {
-              width: 100%;
-              height: 332px;
-              align-items: center;
-            }
-            .users-container07 {
-              width: 62px;
-            }
-            .users-image {
-              height: var(--dl-size-size-small);
-            }
-            .users-image01 {
-              height: var(--dl-size-size-small);
-            }
-            .users-container08 {
-              width: 72px;
-            }
-            .users-image02 {
-              height: var(--dl-size-size-small);
-            }
-            .users-image03 {
-              height: var(--dl-size-size-small);
-            }
-            .users-container09 {
-              width: 64px;
-            }
-            .users-image04 {
-              height: var(--dl-size-size-small);
-            }
-            .users-image05 {
-              height: var(--dl-size-size-small);
-            }
-            .users-slider-slide1 {
-              width: 409px;
-            }
-            .users-container10 {
-              width: 62px;
-            }
-            .users-image06 {
-              height: var(--dl-size-size-small);
-            }
-            .users-image07 {
-              height: var(--dl-size-size-small);
-            }
-            .users-container11 {
-              width: 72px;
-            }
-            .users-image08 {
-              height: var(--dl-size-size-small);
-            }
-            .users-image09 {
-              height: var(--dl-size-size-small);
-            }
-            .users-container12 {
-              width: 64px;
-            }
-            .users-image10 {
-              height: var(--dl-size-size-small);
-            }
-            .users-image11 {
-              height: var(--dl-size-size-small);
-            }
-            .users-container13 {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
+              height: 100%;
             }
           }
         `}

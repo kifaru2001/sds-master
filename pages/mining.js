@@ -9,7 +9,7 @@ const Mining = (props) => {
       <div className="mining-container">
         <Head>
           <title>
-            mining - Fast! secure! Rare! Decentralized Exchange
+            mining - Crazy-Fast! secure! Rare! Decentralized Exchange
           </title>
           <meta
             name="description"
@@ -17,7 +17,7 @@ const Mining = (props) => {
           />
           <meta
             property="og:title"
-            content="mining - Fast! secure! Rare! Decentralized Exchange"
+            content="mining - Crazy-Fast! secure! Rare! Decentralized Exchange"
           />
           <meta
             property="og:description"
@@ -71,17 +71,17 @@ const Mining = (props) => {
           <div className="mining-container13">
             <animate-on-reveal
               animation="flash"
-              duration="30s"
+              duration="10s"
               delay="1s"
               direction="normal"
               easing="ease"
               iteration="84000"
             >
               <h1 data-thq-animate-on-reveal="true" className="mining-text04">
-                🟢Mining...
+                🔴inActive rig...
               </h1>
             </animate-on-reveal>
-            <h1 className="mining-text05">0.001 RC/Hr</h1>
+            <h1 className="mining-text05">0.00 RC/Hr</h1>
           </div>
           <div className="mining-container14">
             <div className="mining-container15">
@@ -129,7 +129,7 @@ const Mining = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            background-color: rgba(0, 0, 0, 0.68);
+            background-color: rgba(0, 0, 0, 0.76);
           }
           .mining-container01 {
             color: var(--dl-color-gray-900);
@@ -231,7 +231,7 @@ const Mining = (props) => {
             justify-content: center;
           }
           .mining-container07 {
-            width: 304px;
+            width: auto;
             height: 257px;
             display: flex;
             position: relative;
@@ -239,22 +239,23 @@ const Mining = (props) => {
             justify-content: center;
           }
           .mining-container08 {
-            top: 35px;
-            left: 60px;
+            top: 31px;
+            left: 0px;
+            right: 0px;
             width: 185px;
             border: 2px dashed rgba(120, 120, 120, 0.4);
             height: 185px;
+            margin: auto;
             display: flex;
             position: absolute;
             align-items: center;
-            border-color: rgba(49, 46, 46, 0.41);
+            border-color: #1898ff;
             border-style: outset;
             border-width: 8px;
             border-radius: 100%;
             animation-name: rotateIn;
             animation-delay: 0s;
             justify-content: center;
-            background-color: rgba(12, 12, 12, 0.48);
             animation-duration: 10s;
             animation-direction: normal;
             animation-iteration-count: 84000;
@@ -264,8 +265,9 @@ const Mining = (props) => {
             width: 215px;
             height: 215px;
             display: flex;
+            align-self: center;
             align-items: center;
-            border-color: rgba(47, 47, 47, 0.95);
+            border-color: #ff7b00;
             border-style: inset;
             border-width: 10px;
             border-radius: 100%;
@@ -284,14 +286,14 @@ const Mining = (props) => {
             display: flex;
             position: relative;
             align-items: center;
-            border-color: rgba(65, 65, 65, 0.98);
+            border-color: rgba(0, 0, 0, 0.98);
             border-style: solid;
             border-width: 10px;
             border-radius: 100%;
             animation-name: rotateIn;
             animation-delay: 0s;
             justify-content: center;
-            animation-duration: 5s;
+            animation-duration: 10s;
             animation-direction: normal;
             animation-iteration-count: 100;
             animation-timing-function: ease;
