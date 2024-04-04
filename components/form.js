@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 const Form = (props) => {
   return (
     <>
+    
       <div className={`form-container ${props.rootClassName} `}>
         <form enctype="application/x-www-form-urlencoded" className="form-form">
           <h1 className="form-text">{props.heading}</h1>
@@ -44,7 +45,7 @@ const Form = (props) => {
               {props.button}
             </button>
           </div>
-          <Link href="/step-two">
+          <Link legacyBehavior href="/step-two">
             <a className="form-link">
               <div className="form-container3">
                 <h1 className="form-text2">{props.heading1}</h1>

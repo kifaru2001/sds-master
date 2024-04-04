@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
+import { ConnectWallet } from '@thirdweb-dev/react'
 
 const Gating = (props) => {
   return (
@@ -27,15 +28,18 @@ const Gating = (props) => {
           </div>
           <div className="gating-container6">
             <span className="gating-text3">{props.text}</span>
+            <ConnectWallet />
           </div>
+         
           <div className="gating-container7">
+            
             <button type="button" className="gating-button button">
               <span className="gating-text4">{props.text3}</span>
               <svg viewBox="0 0 1024 1024" className="gating-icon4">
                 <path d="M237.254 877.254l530.746-530.744v229.49c0 35.346 28.654 64 64 64s64-28.654 64-64v-384c0-25.884-15.594-49.222-39.508-59.126-7.924-3.284-16.242-4.84-24.492-4.838v-0.036h-384c-35.346 0-64 28.654-64 64 0 35.348 28.654 64 64 64h229.49l-530.744 530.746c-12.498 12.496-18.746 28.876-18.746 45.254s6.248 32.758 18.746 45.254c24.992 24.994 65.516 24.994 90.508 0z"></path>
               </svg>
             </button>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="gating-link button">
                 <span className="gating-text5">{props.text2}</span>
                 <svg viewBox="0 0 1024 1024" className="gating-icon6">

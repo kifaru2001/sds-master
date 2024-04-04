@@ -3,6 +3,20 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
+import {
+  ConnectWallet,
+  MediaRenderer,
+  useContract,
+  useContractMetadata,
+  useUser,
+} from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { getUser } from "../auth.config";
+import { contractAddress } from "../const/yourDetails";
+
+import checkBalance from "../util/checkBalance";
 
 const Verify = (props) => {
   return (
@@ -75,13 +89,13 @@ const Verify = (props) => {
                           >
                             <path d="M1024 320l-512-256-512 256 512 256 512-256zM512 148.97l342.058 171.030-342.058 171.030-342.058-171.030 342.058-171.030zM921.444 460.722l102.556 51.278-512 256-512-256 102.556-51.278 409.444 204.722zM921.444 652.722l102.556 51.278-512 256-512-256 102.556-51.278 409.444 204.722z"></path>
                           </svg>
-                          <span className="verify-text02">V3 Liquidity</span>
+                          <span className="verify-text02">V1 Liquidity</span>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <Link legacyBehavior href="/setp-one">
+                <Link legacyBehavior href="/step-one">
                   <a className="verify-link">
                     <div className="verify-container07">
                       <svg viewBox="0 0 1024 1024" className="verify-icon05">
@@ -732,3 +746,62 @@ const Verify = (props) => {
 }
 
 export default Verify
+
+// This gets called on every request
+export async function getServerSideProps(context) {
+  const user = await getUser(context.req);
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
+  const secretKey = process.env.TW_SECRET_KEY;
+
+  if (!secretKey) {
+    console.log("Missing env var: TW_SECRET_KEY");
+    throw new Error("Missing env var: TW_SECRET_KEY");
+  }
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("You need to add an PRIVATE_KEY environment variable.");
+  }
+
+  // Instantiate our SDK
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    'core-blockchain',
+    { secretKey }
+  );
+
+  // Check to see if the user has an NFT
+  const hasNft = await checkBalance(sdk, user.address);
+
+  // If they don't have an NFT, redirect them to the login page
+  if (!hasNft) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  } else {
+    return {
+      redirect: {
+        destination: "/step-one",
+        permanent: true,
+      },
+    };
+  }
+
+  // Finally, return the props
+  return {
+    props: {},
+  };
+}

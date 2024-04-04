@@ -68,7 +68,7 @@ const Form1 = (props) => {
               {props.button}
             </button>
           </div>
-          <Link href="/status">
+          <Link legacyBehavior href="/status">
             <a className="form1-link">
               <div className="form1-container3">
                 <h1 className="form1-text3">{props.heading11}</h1>
