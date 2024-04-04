@@ -28,7 +28,29 @@ const Gating = (props) => {
           </div>
           <div className="gating-container6">
             <span className="gating-text3">{props.text}</span>
-            <ConnectWallet />
+            <ConnectWallet
+        theme={({
+          colors: {
+            modalBg: "rgba(0, 0, 0, 0.5)",
+            primaryButtonText: "white",
+            selectedTextColor: "#d9d9d9",
+            separatorLine: "transparent",
+            secondaryText: "white",
+            secondaryButtonText: "#c2c2c7",
+            primaryText: "#cccccc",
+            borderColor: "rgba(100, 100, 100, 0.3)",
+          },
+        })}
+        modalTitle={"RareBay Connect"}
+        auth={{ loginOptional: false }}
+        switchToActiveChain={true}
+        modalSize={"compact"}
+        modalTitleIconUrl={
+          "https://rarebay.xyz/fav.ico"
+        }
+        showThirdwebBranding={false}
+        style={{color: "white"}}
+      />
           </div>
          
           <div className="gating-container7">

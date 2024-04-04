@@ -40,7 +40,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
     clientId="678d5b0199cde588796872ea22804505"
     activeChain={NETWORK}
     authConfig={{
-      domain: ["rarebay.xyz", "127.0.0.1:3000"],
+      domain: ["127.0.0.1:3000"],
       authUrl: "/api/auth",
     }}
     supportedWallets={
