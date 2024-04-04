@@ -6,6 +6,9 @@ import {useTheme} from "next-themes";
 import { useState } from 'react';
 
 
+const light = { background: "white" };
+const dark = { background: "black" };
+
 const Documentation = (props) => {
   const [ isDark, setDark ] = useState(true)
 
