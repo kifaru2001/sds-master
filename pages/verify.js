@@ -34,7 +34,7 @@ const Verify = (props) => {
 
   useEffect(() => {
     if (nfts?.length >= 1) {
-      toast(`ADDRESS DOES NOT OWN RAR31ONE`, {
+      toast(`You need to Own a RAR310NE NFT to proceed`, {
         icon: "⚡",
         style: toastStyle,
         position: "bottom-center",
@@ -136,7 +136,7 @@ const Verify = (props) => {
               <div className="verify-container08">
                
                 {
-                  !nfts?.legnth ? (
+                  nfts?.legnth ? (
                     <>
                      <svg
                   viewBox="0 0 1165.165714285714 1024"
@@ -221,7 +221,7 @@ const Verify = (props) => {
             <div className="verify-container09">
               <div className="verify-container10">
                 <div className="verify-container11">
-                  <h1 className="verify-text10">About Veification</h1>
+                  <h1 className="verify-text10">About Verification</h1>
                   <svg viewBox="0 0 1024 1024" className="verify-icon14">
                     <path d="M298.667 341.333h323.669l-353.835 353.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l353.835-353.835v323.669c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-426.667c0-5.803-1.152-11.307-3.243-16.341s-5.163-9.728-9.216-13.781c-0.043-0.043-0.043-0.043-0.085-0.085-3.925-3.925-8.619-7.083-13.781-9.216-5.035-2.091-10.539-3.243-16.341-3.243h-426.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
@@ -613,7 +613,7 @@ const Verify = (props) => {
             color: rgb(212, 212, 212);
             width: 323px;
             height: 30px;
-            font-size: 1.5em;
+            font-size: 1em;
             text-align: left;
             margin-left: var(--dl-space-space-unit);
             margin-right: var(--dl-space-space-twounits);
@@ -800,3 +800,36 @@ const Verify = (props) => {
 
 export default Verify
 
+export async function getServerSideProps(context) {
+  const user = await getUser(context.req);
+
+  if (!user) {
+    return {
+      props: {},
+    };
+  }
+
+  const secretKey = process.env.TW_SECRET_KEY;
+
+  if (!secretKey) {
+    console.log("Missing env var: TW_SECRET_KEY");
+    throw new Error("Missing env var: TW_SECRET_KEY");
+  }
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("You need to add an PRIVATE_KEY environment variable.");
+  }
+
+  // Instantiate our SDK
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    CoreBlockchain,
+    { secretKey }
+  );
+
+  return {
+    props: {},
+  };
+}

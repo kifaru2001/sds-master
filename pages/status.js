@@ -3,11 +3,50 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Nav from '../components/nav'
+import Form1 from '../components/form1'
+import {
+  ConnectWallet,
+  MediaRenderer,
+  useAddress,
+  useContract,
+  useContractMetadata,
+  useOwnedNFTs,
+  useUser,
+} from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { getUser } from "../auth.config";
+import { contractAddress } from "../const/yourDetails";
+import checkBalance from "../util/checkBalance";
+import CoreBlockchain from "@thirdweb-dev/chains"
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+
 
 const Status = (props) => {
+  const { contract } = useContract(contractAddress);
+  const { data: contractMetadata, isLoading: contractLoading } =
+    useContractMetadata(contract);
+  const address = useAddress();
+  const { data: nfts } = useOwnedNFTs(contract, address);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!nfts?.length) {
+      toast(`You Details have been submitted, check back later`, {
+        icon: "⚡",
+        style: toastStyle,
+        position: "bottom-center",
+      });
+      router.push("/");
+    }
+  }, [nfts, router, address]);
+  
   return (
     <>
       <div className="status-container">
+      <Toaster position="bottom-center" reverseOrder={false} />
         <Head>
           <title>
             Status - Crazy-Fast! secure! Rare! Decentralized Exchange
@@ -81,7 +120,7 @@ const Status = (props) => {
                     </ul>
                   </div>
                 </div>
-                <Link legacyBehavior href="/setp-one">
+                <Link legacyBehavior href="/step-one">
                   <a className="status-link">
                     <div className="status-container07">
                       <svg viewBox="0 0 1024 1024" className="status-icon05">
@@ -759,3 +798,37 @@ const Status = (props) => {
 }
 
 export default Status
+
+export async function getServerSideProps(context) {
+  const user = await getUser(context.req);
+
+  if (!user) {
+    return {
+      props: {},
+    };
+  }
+
+  const secretKey = process.env.TW_SECRET_KEY;
+
+  if (!secretKey) {
+    console.log("Missing env var: TW_SECRET_KEY");
+    throw new Error("Missing env var: TW_SECRET_KEY");
+  }
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("You need to add an PRIVATE_KEY environment variable.");
+  }
+
+  // Instantiate our SDK
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    CoreBlockchain,
+    { secretKey }
+  );
+
+  return {
+    props: {},
+  };
+}
