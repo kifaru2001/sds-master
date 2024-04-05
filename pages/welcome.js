@@ -833,7 +833,7 @@ const Welcome = (props) => {
           .welcome-container05 {
             flex: 0 0 auto;
             width: 1083px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
+            border: none;
             display: flex;
             z-index: 100;
             align-items: flex-start;

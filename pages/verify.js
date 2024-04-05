@@ -156,9 +156,24 @@ const Verify = (props) => {
               <div className="verify-container08">
                
                 {
-                  !nfts?.legnth ? (
+                  (!nfts?.length <= 0 || "")  ? (
                     <>
-                     <svg
+       <svg viewBox="0 0 1024 1024" className="verified-icon07" style={{fill: "rgba(100, 200, 100, 0.8)"}}>
+                  <path d="M960 608l-288 288-96-96-64 64 160 160 352-352z"></path>
+                  <path d="M448 768h320v-115.128c-67.22-39.2-156.308-66.11-256-74.26v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h448v-64z"></path>
+                </svg>
+                <h1 className="verify-text04" style={{color: "rgb(100, 200, 100)"}}>Verified</h1>
+
+<span className="verify-text05">
+
+  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is verified. You are eligible to mine RareCoin.
+</span>
+                    </>
+                  ) : (
+                    <>
+                  
+
+<svg
                   viewBox="0 0 1165.165714285714 1024"
                   className="verify-icon07"
                 >
@@ -170,21 +185,33 @@ const Verify = (props) => {
 
   Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is not verified. Buy RAR31ONE NFT on NFT marketplace to start verification.
 </span>
+<div>
+<ConnectWallet
+        theme={({
+          colors: {
+            modalBg: "rgba(0, 0, 0, 0.5)",
+            primaryButtonText: "white",
+            selectedTextColor: "#d9d9d9",
+            separatorLine: "transparent",
+            secondaryText: "white",
+            secondaryButtonText: "#c2c2c7",
+            primaryText: "#cccccc",
+            borderColor: "rgba(100, 100, 100, 0.3)",
+          },
+        })}
+        modalTitle={"RareBay Connect"}
+        auth={{ loginOptional: false }}
+        switchToActiveChain={true}
+        modalSize={"compact"}
+        modalTitleIconUrl={
+          "https://rarebay.xyz/fav.ico"
+        }
+        showThirdwebBranding={false}
+        style={{color: "white"}}
+      />
+</div>
                     </>
-                  ) : (
-                    <>
-                     <svg viewBox="0 0 1024 1024" className="verified-icon07" style={{fill: "rgba(100, 200, 100, 0.8)"}}>
-                  <path d="M960 608l-288 288-96-96-64 64 160 160 352-352z"></path>
-                  <path d="M448 768h320v-115.128c-67.22-39.2-156.308-66.11-256-74.26v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h448v-64z"></path>
-                </svg>
-                <h1 className="verify-text04" style={{color: "rgb(100, 200, 100)"}}>Verified</h1>
-
-<span className="verify-text05">
-
-  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is now verified. You are eligible to mine RareCoin.
-</span>
-                    </>
-                  )
+                  ) 
                   
                 }
               
@@ -679,7 +706,7 @@ const Verify = (props) => {
             color: rgb(212, 212, 212);
             width: 323px;
             height: 30px;
-            font-size: 1.5em;
+            font-size: 1em;
             text-align: left;
           }
           .verify-icon16 {
