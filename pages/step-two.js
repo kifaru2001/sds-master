@@ -2,8 +2,36 @@ import React from 'react'
 import Head from 'next/head'
 
 import Form1 from '../components/form1'
+import {
+  ConnectWallet,
+  MediaRenderer,
+  useAddress,
+  useContract,
+  useContractMetadata,
+  useOwnedNFTs,
+  useUser,
+} from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { getUser } from "../auth.config";
+import { contractAddress } from "../const/yourDetails";
 
+import checkBalance from "../util/checkBalance";
+import CoreBlockchain from "@thirdweb-dev/chains"
 const StepTwo = (props) => {
+  const { contract } = useContract(contractAddress);
+  const { data: contractMetadata, isLoading: contractLoading } =
+    useContractMetadata(contract);
+  const address = useAddress();
+  const { data: nfts } = useOwnedNFTs(contract, address);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!nfts?.length) {
+      router.push("/verify");
+    }
+  }, [nfts, router, address]);
   return (
     <>
       <div className="step-two-container">

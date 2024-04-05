@@ -142,7 +142,7 @@ export async function getServerSideProps(context) {
   if (hasNft) {
     return {
       redirect: {
-        destination: "/verify",
+        destination: "/",
         permanent: false,
       },
     };
