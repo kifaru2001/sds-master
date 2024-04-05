@@ -20,7 +20,9 @@ import { contractAddress } from "../const/yourDetails";
 
 import checkBalance from "../util/checkBalance";
 import CoreBlockchain from "@thirdweb-dev/chains"
-
+import truncateEthAddress from 'truncate-eth-address';
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
 
 const Verify = (props) => {
   const { contract } = useContract(contractAddress);
@@ -32,13 +34,21 @@ const Verify = (props) => {
 
   useEffect(() => {
     if (nfts?.length >= 1) {
+      toast(`ADDRESS DOES NOT OWN RAR31ONE`, {
+        icon: "⚡",
+        style: toastStyle,
+        position: "bottom-center",
+      });
       router.push("/step-one");
     }
   }, [nfts, router, address]);
 
+
+
   return (
     <>
       <div className="verify-container">
+      <Toaster position="bottom-center" reverseOrder={false} />
         <Head>
           <title>
             Verify - Fast! secure! Rare! Decentralized Exchange
@@ -124,16 +134,40 @@ const Verify = (props) => {
                 </Link>
               </div>
               <div className="verify-container08">
-                <svg
+               
+                {
+                  !nfts?.legnth ? (
+                    <>
+                     <svg
                   viewBox="0 0 1165.165714285714 1024"
                   className="verify-icon07"
                 >
                   <path d="M402.286 512c-121.143 0-219.429-98.286-219.429-219.429s98.286-219.429 219.429-219.429 219.429 98.286 219.429 219.429-98.286 219.429-219.429 219.429zM1017.714 694.857l142.286 142.286c3.429 3.429 5.143 8 5.143 13.143 0 4.571-1.714 9.143-5.143 12.571l-77.714 77.714c-3.429 3.429-8 5.143-12.571 5.143-5.143 0-9.714-1.714-13.143-5.143l-142.286-142.286-142.286 142.286c-3.429 3.429-8 5.143-13.143 5.143-4.571 0-9.143-1.714-12.571-5.143l-77.714-77.714c-3.429-3.429-5.143-8-5.143-12.571 0-5.143 1.714-9.714 5.143-13.143l142.286-142.286-142.286-142.286c-3.429-3.429-5.143-8-5.143-13.143 0-4.571 1.714-9.143 5.143-12.571l77.714-77.714c3.429-3.429 8-5.143 12.571-5.143 5.143 0 9.714 1.714 13.143 5.143l142.286 142.286 142.286-142.286c3.429-3.429 8-5.143 13.143-5.143 4.571 0 9.143 1.714 12.571 5.143l77.714 77.714c3.429 3.429 5.143 8 5.143 12.571 0 5.143-1.714 9.714-5.143 13.143zM733.143 694.857l-103.429 103.429c-13.714 13.714-21.143 32.571-21.143 52 0 18.857 7.429 37.714 21.143 51.429l47.429 47.429c-8 1.143-16.571 1.714-25.143 1.714h-499.429c-91.429 0-152.571-54.857-152.571-148 0-129.143 30.286-327.429 197.714-327.429 9.143 0 15.429 4 22.286 9.714 54.857 43.429 110.857 69.714 182.286 69.714s127.429-26.286 182.286-69.714c6.857-5.714 13.143-9.714 22.286-9.714 10.857 0 21.714 1.143 32.571 3.429-18.857 18.286-30.857 33.143-30.857 60.571 0 19.429 7.429 38.286 21.143 52z"></path>
                 </svg>
-                <h1 className="verify-text04">Unverified</h1>
-                <span className="verify-text05">
-                  Your Address is not verified. Hold RAR31ONE NFT to Start.
-                </span>
+                      <h1 className="verify-text04">Unverified</h1>
+
+<span className="verify-text05">
+
+  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is not verified. Buy RAR31ONE NFT on NFT marketplace to start verification.
+</span>
+                    </>
+                  ) : (
+                    <>
+                     <svg viewBox="0 0 1024 1024" className="verified-icon07">
+                  <path d="M960 608l-288 288-96-96-64 64 160 160 352-352z"></path>
+                  <path d="M448 768h320v-115.128c-67.22-39.2-156.308-66.11-256-74.26v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h448v-64z"></path>
+                </svg>
+                <h1 className="verify-text04" style={{color: "rgb(100, 200, 100)"}}>Verified</h1>
+
+<span className="verify-text05">
+
+  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is now verified. You are eligible to mine RareCoin.
+</span>
+                    </>
+                  )
+                  
+                }
+              
               </div>
               <div
                 data-thq="thq-dropdown"
@@ -428,9 +462,12 @@ const Verify = (props) => {
           .verify-text04 {
             color: rgb(255, 26, 26);
             font-size: 1.2em;
+            margin-bottom: 1%;
           }
           .verify-text05 {
             color: rgb(194, 194, 194);
+            display: flex;
+            gap: 4px;
           }
           .verify-thq-dropdown1 {
             cursor: pointer;

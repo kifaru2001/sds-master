@@ -62,7 +62,7 @@
     "sats-connect": "2.1.0",
     "styled-components": "^6.1.1",
     "thirdweb": "^5.0.3",
-    "truncate-eth-address": "^1.0.2",
+    "truncate-eth-address": "latest",
     "typescript": "^4.9.5",
     "victory": "35.4.13",
     "wagmi": "^1.4.7",
