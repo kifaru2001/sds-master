@@ -6,7 +6,7 @@ export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
   domain: domainName,
   wallet: new PrivateKeyWallet(process.env.THIRDWEB_AUTH_PRIVATE_KEY || ""),
   cookieOptions: {
-    domain: "rarebay.xyz",
+    domain: "localhost",
     path: "/api",
     sameSite: "strict" // or "lax" or "none"
   }

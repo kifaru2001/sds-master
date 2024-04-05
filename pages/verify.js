@@ -123,7 +123,7 @@ const Verify = (props) => {
                   </div>
                 </div>
                 {
-                    !nfts?.legnth ? (
+                     (nfts?.length <= 0 || "") ? (
                       <>
                        <Link legacyBehavior href="/step-one">
                   <a className="verify-link">
