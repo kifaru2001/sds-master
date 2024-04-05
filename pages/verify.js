@@ -33,13 +33,13 @@ const Verify = (props) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (nfts?.length >= 1) {
+    if (!nfts?.length >= 1) {
       toast(`You need to Own a RAR310NE NFT to proceed`, {
         icon: "⚡",
         style: toastStyle,
         position: "bottom-center",
       });
-      router.push("/step-one");
+  
     }
   }, [nfts, router, address]);
 
@@ -122,7 +122,10 @@ const Verify = (props) => {
                     </ul>
                   </div>
                 </div>
-                <Link legacyBehavior href="/step-one">
+                {
+                    !nfts?.legnth ? (
+                      <>
+                       <Link legacyBehavior href="/step-one">
                   <a className="verify-link">
                     <div className="verify-container07">
                       <svg viewBox="0 0 1024 1024" className="verify-icon05">
@@ -132,11 +135,28 @@ const Verify = (props) => {
                     </div>
                   </a>
                 </Link>
+                      </>
+                    ) : (
+                      <>
+                      <Link legacyBehavior href="/mining">
+                  <a className="verify-link">
+                    <div className="verify-container07">
+                      <svg viewBox="0 0 1024 1024" className="verify-icon05">
+                        <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+                      </svg>
+                      <span className="verify-text03">Mine</span>
+                    </div>
+                  </a>
+                </Link>
+                      </>
+                    ) 
+                }
+               
               </div>
               <div className="verify-container08">
                
                 {
-                  nfts?.legnth ? (
+                  !nfts?.legnth ? (
                     <>
                      <svg
                   viewBox="0 0 1165.165714285714 1024"
@@ -153,7 +173,7 @@ const Verify = (props) => {
                     </>
                   ) : (
                     <>
-                     <svg viewBox="0 0 1024 1024" className="verified-icon07">
+                     <svg viewBox="0 0 1024 1024" className="verified-icon07" style={{fill: "rgba(100, 200, 100, 0.8)"}}>
                   <path d="M960 608l-288 288-96-96-64 64 160 160 352-352z"></path>
                   <path d="M448 768h320v-115.128c-67.22-39.2-156.308-66.11-256-74.26v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h448v-64z"></path>
                 </svg>
