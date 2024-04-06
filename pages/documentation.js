@@ -89,10 +89,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     placeholder="Search Docs"
                     className="documentation-textinput input"
                   />
-                  <svg viewBox="0 0 1024 1024" className="documentation-icon">
+ <svg viewBox="0 0 1024 1024" className="documentation-icon">
                     <path d="M684.416 676.523c-1.451 1.109-2.859 2.347-4.224 3.712s-2.56 2.731-3.712 4.224c-53.675 51.755-126.677 83.541-207.147 83.541-82.475 0-157.099-33.365-211.2-87.467s-87.467-128.725-87.467-211.2 33.365-157.099 87.467-211.2 128.725-87.467 211.2-87.467 157.099 33.365 211.2 87.467 87.467 128.725 87.467 211.2c0 80.469-31.787 153.472-83.584 207.189zM926.165 865.835l-156.8-156.8c52.523-65.707 83.968-149.035 83.968-239.701 0-106.027-43.008-202.069-112.469-271.531s-165.504-112.469-271.531-112.469-202.069 43.008-271.531 112.469-112.469 165.504-112.469 271.531 43.008 202.069 112.469 271.531 165.504 112.469 271.531 112.469c90.667 0 173.995-31.445 239.701-83.968l156.8 156.8c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
-                  </svg>
+                  </svg>                     
                 </div>
+      
               </div>
               <header
                 data-thq="thq-navbar"
@@ -111,11 +112,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   data-thq="thq-burger-menu"
                   className="documentation-burger-menu"
                 >
-                               <ReactThemeToggleButton
-                     invertedIconLogic
-        isDark={isDark}
-        onChange={() => setDark((prev) => !prev)}
-        />  
+         
                 </div>
                 <div
                   data-thq="thq-mobile-menu"
@@ -165,12 +162,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
               </header>
               <div id="menu" className="documentation-container10">
-                <svg
-                  viewBox="0 0 843.4102857142857 1024"
-                  className="documentation-icon06"
-                >
-                  <path d="M721.143 744.571c-20.571 3.429-41.714 5.143-62.857 5.143-212 0-384-172-384-384 0-72.571 21.143-143.429 59.429-204-152 45.143-260.571 184.571-260.571 350.286 0 201.714 164 365.714 365.714 365.714 110.286 0 213.714-50.286 282.286-133.143zM837.143 696c-71.429 154.857-228 254.857-398.286 254.857-241.714 0-438.857-197.143-438.857-438.857 0-237.143 185.714-429.714 422.286-438.286 16-0.571 29.143 8.571 34.857 22.286 6.286 14.286 2.286 30.857-8.571 41.143-65.143 59.429-101.143 140.571-101.143 228.571 0 171.429 139.429 310.857 310.857 310.857 45.143 0 88.571-9.714 130.286-29.143 14.286-6.286 30.286-3.429 41.143 7.429s13.714 27.429 7.429 41.143z"></path>
-                </svg>
+              <ReactThemeToggleButton
+                     invertedIconLogic
+        isDark={isDark}
+        onChange={() => setDark((prev) => !prev)}
+        />  
               </div>
             </div>
           </div>
@@ -880,7 +876,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: flex-start;
             flex-direction: row;
             justify-content: center;
-            background-color: #161616;
+            background-color: rgba(0, 0, 0, 0.8);
           }
           .documentation-container01 {
             width: 100%;

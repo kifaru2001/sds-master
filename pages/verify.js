@@ -125,7 +125,8 @@ const Verify = (props) => {
                 {
                      (!nfts?.length <= 0 || "") ? (
                       <>
-                     <Link legacyBehavior href="/mining">
+                      <div style={{gap: 5, display: "flex"}}>
+                      <Link legacyBehavior href="/mining">
                   <a className="verify-link">
                     <div className="verify-container07">
                       <svg viewBox="0 0 1024 1024" className="verify-icon05">
@@ -135,6 +136,18 @@ const Verify = (props) => {
                     </div>
                   </a>
                 </Link>
+                <Link legacyBehavior href="/step-one">
+                  <a className="verify-link">
+                    <div className="verify-container07">
+                      <svg viewBox="0 0 1024 1024" className="verify-icon05">
+                        <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+                      </svg>
+                      <span className="verify-text03">Verify</span>
+                    </div>
+                  </a>
+                </Link>
+                      </div>
+                   
                       </>
                     ) : (
                       <>
@@ -184,7 +197,7 @@ const Verify = (props) => {
 
 <span className="verify-text05">
 
-  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is not verified. Buy RAR31ONE NFT on NFT marketplace to start verification.
+  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is not verified or signed in. Buy RAR31ONE NFT on NFT marketplace then sign in to start verification.
 </span>
 <div>
 <ConnectWallet
