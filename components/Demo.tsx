@@ -13,7 +13,7 @@ const ImageDemo = (): JSX.Element => {
 
   return (
     <div>
-      <div style={{ width: '200px', height: '200px', position: 'relative' }}>
+      <div style={{ width: '150px', height: '150px', position: 'relative' }}>
         {boundingBox.map((box, index) => (
           <div
             key={`${index + 1}`}

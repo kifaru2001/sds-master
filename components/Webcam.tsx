@@ -6,7 +6,7 @@ import ImageDemo from './Demo';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 
-const width = 450;
+const width = 350;
 const height = 530;
 
 const WebcamDemo = (): JSX.Element => {
@@ -46,11 +46,13 @@ if(detected){
 ) : (
   <>
   <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%"}}>
-  <p>Face Not Detected</p>
+  <p style={{textAlign: "center"}}>Face Not Detected</p>
   </div>
   </>
 )}
-<p>{`Face Detected: ${detected}`}</p>
+  <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%", textAlign: "center"}}>
+  <p style={{textAlign: "center"}}>{`Face Detected: ${detected}`}</p>
+  </div>
 </div>
     
       <div style={{ width, height, position: 'relative' }} className='bd'>
@@ -74,10 +76,14 @@ if(detected){
           
           style={{
             height: 'auto',
-            border: 'double 10px lightgray',
+            border: 'double 10px white',
             width: 300,
             borderRadius: '50%',
-
+            animationName: "pulse",
+            animationDuration: "0s",
+            animationDirection: "pulse",
+            animationIterationCount: "100",
+            animationTimingFunction: "ease"
           }}
         />
       </div>
