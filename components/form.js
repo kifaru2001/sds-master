@@ -2,7 +2,10 @@ import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 import React, { useState } from "react";
-
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+import { useRouter } from "next/router";
+import { useAddress } from '@thirdweb-dev/react';
 
 const Form = (props) => {
   const [FirstName, setFirstName] = useState("");
@@ -17,26 +20,45 @@ const Form = (props) => {
   const handleInputChange1 = (event) => {
     setLastName(event.target.value); // Update state
   };
+  const router = useRouter();
+  const address = useAddress();
   async function onSubmit(event) {
     event.preventDefault()
  
     const formData = new FormData(event.target)
-    const response = await fetch('/api/add-user', {
+     toast(`Successfully submited Step 1`, {
+        icon: "⚡",
+        style: toastStyle,
+        position: "bottom-center",
+      });
+    const response = await fetch(`/api/add-user?FirstName=${FirstName}&LastName=${LastName}&address=${address}`, {
       method: 'POST',
       body: formData,
     })
- 
+    router.push("/step-two");
     // Handle response if necessary
     const data = await response.json()
+
     // ...
   }
- 
+
   return (
     <>
-    
+      <Toaster position="bottom-center" reverseOrder={false} />
       <div className={`form-container ${props.rootClassName} `}>
         <form enctype="application/x-www-form-urlencoded" className="form-form" onSubmit={onSubmit}>
           <h1 className="form-text">{props.heading}</h1>
+          <input
+            type="text"
+            name="address"
+            required="true"
+            autoFocus="true"
+            placeholder={address}
+            disabled="true"
+            className="hide input"
+            value={address}
+          
+          />
           <input
             type="text"
             name="FirstName"
@@ -51,7 +73,7 @@ const Form = (props) => {
             type="text"
             name="LastName"
             required="true"
-            autoFocus="true"
+    
             placeholder="Last Name"
             className="form-textinput1 input"
             value={LastName}
@@ -79,20 +101,14 @@ const Form = (props) => {
               {props.button}
             </button>
           </div>
-          <Link legacyBehavior href="/step-two">
-            <a className="form-link">
-              <div className="form-container3">
-                <h1 className="form-text2">{props.heading1}</h1>
-                <svg viewBox="0 0 1024 1024" className="form-icon2">
-                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                </svg>
-              </div>
-            </a>
-          </Link>
+        
         </form>
       </div>
       <style jsx>
         {`
+        .hide{
+          display: none;
+        }
           .form-container {
             width: 100%;
             height: 100%;

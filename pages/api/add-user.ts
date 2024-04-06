@@ -8,12 +8,14 @@ export default async function handler(
   try {
     const FirstName = request.query.FirstName as string;
     const LastName = request.query.LastName as string;
+    const address = request.query.address as string;
+    
     if (!FirstName || !LastName) throw new Error('Both Names are Required');
-    await sql`INSERT INTO KYC (FirstName, LastName) VALUES (${FirstName}, ${LastName});`;
+    await sql`INSERT INTO Members (FirstName, LastName, address) VALUES (${FirstName}, ${LastName}, ${address});`;
   } catch (error) {
     return response.status(500).json({ error });
   }
  
-  const user = await sql`SELECT * FROM KYC;`;
+  const user = await sql`SELECT * FROM Members;`;
   return response.status(200).json({ user });
 }
