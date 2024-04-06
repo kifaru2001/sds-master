@@ -15,6 +15,7 @@ const WebcamDemo = (): JSX.Element => {
   const { webcamRef, boundingBox, isLoading, detected, facesDetected } = useFaceDetection({
     faceDetectionOptions: {
       model: 'short',
+      minDetectionConfidence: 1
     },
     faceDetection: new FaceDetection.FaceDetection({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/${file}`,
@@ -68,6 +69,7 @@ if(detected){
         <Webcam
           ref={webcamRef}
           forceScreenshotSourceSize
+          
           style={{
             height: 'auto',
             border: 'double 10px lightgray',
@@ -77,6 +79,7 @@ if(detected){
           }}
         />
       </div>
+      <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
       <ImageDemo />
     </div>
   );
