@@ -128,7 +128,7 @@ const Form = (props) => {
         contentLabel="FACE VERIFICATION"
       >
         <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "1px 1px 5px", }}>FACE VERIFICATION</h1>
-        
+        <WebcamDemo />
         <div>
         <div style={{height: "10px", width: "80%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
         <button onClick={closeModal}>X</button>
@@ -142,7 +142,7 @@ const Form = (props) => {
             </svg>
             <span className="form-text1">Face Verification</span>
           </div>
-          <WebcamDemo />
+      
           <div className="form-container2 button">
             <button type="submit" style={{background: "transparent"}}>
               {props.button}
