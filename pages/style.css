@@ -646,3 +646,34 @@ button {
   font-weight: 300;
   color: #51596f;
 }
+.cont {
+  border: solid 1px gray;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+      border: none;
+      width: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px;
+  }
+}
+
+.title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}

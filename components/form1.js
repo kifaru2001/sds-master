@@ -1,88 +1,115 @@
-import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+import { useRouter } from "next/router";
+import { useAddress } from '@thirdweb-dev/react';
 
-const Form1 = (props) => {
+const Form = (props) => {
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [gender, setGender] = useState("");
+  const handleInputChange = (event) => {
+    setFirstName(event.target.value); // Update state
+  };
+  const handleInputChange2 = (event) => {
+    setGender(event.target.value); // Update state
+  };
+  const handleInputChange1 = (event) => {
+    setLastName(event.target.value); // Update state
+  };
+  const router = useRouter();
+  const address = useAddress();
+  async function onSubmit(event) {
+    event.preventDefault()
+ 
+    const formData = new FormData(event.target)
+     toast(`Successfully submited Step 2`, {
+        icon: "⚡",
+        style: toastStyle,
+        position: "bottom-center",
+      });
+    const response = await fetch(`/api/add-user?FirstName=${FirstName}&LastName=${LastName}&address=${address}`, {
+      method: 'POST',
+      body: formData,
+    })
+    router.push("/complete");
+    // Handle response if necessary
+    const data = await response.json()
+
+    // ...
+  }
+
   return (
     <>
-      <div className={`form1-container ${props.rootClassName} `}>
-        <form
-          enctype="application/x-www-form-urlencoded"
-          className="form1-form"
-        >
-          <h1 className="form1-text">{props.heading}</h1>
+      <Toaster position="bottom-center" reverseOrder={false} />
+      <div className={`form-container ${props.rootClassName} `}>
+        <form enctype="application/x-www-form-urlencoded" className="form-form" onSubmit={onSubmit}>
+          <h1 className="form-text">Step 2</h1>
           <input
             type="text"
-            name="First Name"
+            name="address"
+            required="true"
+            autoFocus="true"
+            placeholder={address}
             disabled="true"
+            className="hide input"
+            value={address}
+          
+          />
+          <input
+            type="text"
+            name="Country"
             required="true"
             autoFocus="true"
             placeholder="Country"
-            className="form1-textinput input"
-          />
-          <input
-            type="email"
-            id="eml"
-            name="Email"
-            disabled="true"
-            required="true"
-            autoFocus="true"
-            maxlength="14"
-            minlength="10"
-            placeholder="example@email.com"
-            className="form1-textinput1 input"
+            className="form-textinput input"
+            value={FirstName}
+            onChange={handleInputChange}
           />
           <input
             type="tel"
-            id="tel"
-            name="Phone Number"
-            disabled="true"
+            name="Phone"
             required="true"
-            autoFocus="true"
-            maxlength="14"
-            minlength="10"
-            placeholder="+ 123-456-789"
-            className="form1-textinput2 input"
+    
+            placeholder="Phone Number"
+            className="form-textinput1 input"
+            value={LastName}
+            onChange={handleInputChange1}
           />
-          <select disabled="true" required="true" className="form1-select">
-            <option value="Identity Document" className="form1-option">
-              Identity Document
+          <select className="form-select"
+           value={gender}
+           onChange={handleInputChange2}
+          >
+            <option value="Male" className="form-option">
+            Identity Document
             </option>
-            <option value="Driving License" className="form1-option1">
-              Driving License
-            </option>
-            <option value="Passport" className="form1-option2">
-              Passport
+            <option value="Female" className="form-option1">
+              Driving Licesence
             </option>
           </select>
-          <div className="form1-container1">
-            <svg viewBox="0 0 877.7142857142857 1024" className="form1-icon">
-              <path d="M838.857 217.143c21.143 21.143 38.857 63.429 38.857 93.714v658.286c0 30.286-24.571 54.857-54.857 54.857h-768c-30.286 0-54.857-24.571-54.857-54.857v-914.286c0-30.286 24.571-54.857 54.857-54.857h512c30.286 0 72.571 17.714 93.714 38.857zM585.143 77.714v214.857h214.857c-3.429-9.714-8.571-19.429-12.571-23.429l-178.857-178.857c-4-4-13.714-9.143-23.429-12.571zM804.571 950.857v-585.143h-237.714c-30.286 0-54.857-24.571-54.857-54.857v-237.714h-438.857v877.714h731.429zM731.429 694.857v182.857h-585.143v-109.714l109.714-109.714 73.143 73.143 219.429-219.429zM256 585.143c-60.571 0-109.714-49.143-109.714-109.714s49.143-109.714 109.714-109.714 109.714 49.143 109.714 109.714-49.143 109.714-109.714 109.714z"></path>
+          <div className="form-container1">
+            <svg viewBox="0 0 1024 1024" className="form-icon">
+              <path d="M1024 810.667v-469.333c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504h-147.84l-72.661-109.013c-7.765-11.52-20.736-18.987-35.499-18.987h-256c-13.909 0.085-27.307 6.741-35.499 18.987l-72.661 109.013h-147.84c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v469.333c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504h768c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496zM938.667 810.667c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501h-768c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-469.333c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h170.667c14.763 0 27.733-7.467 35.499-18.987l72.661-109.013h210.347l72.661 109.013c8.192 12.245 21.589 18.901 35.499 18.987h170.667c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165zM725.333 554.667c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464-112.299 23.936-150.869 62.464-62.464 91.989-62.464 150.869 23.936 112.299 62.464 150.869 91.989 62.464 150.869 62.464 112.299-23.936 150.869-62.464 62.464-91.989 62.464-150.869zM640 554.667c0 35.371-14.293 67.285-37.504 90.496s-55.125 37.504-90.496 37.504-67.285-14.293-90.496-37.504-37.504-55.125-37.504-90.496 14.293-67.285 37.504-90.496 55.125-37.504 90.496-37.504 67.285 14.293 90.496 37.504 37.504 55.125 37.504 90.496z"></path>
             </svg>
-            <span className="form1-text1">{props.text1}</span>
-            <span className="form1-text2">{props.text11}</span>
+            <span className="form-text1">Front Side</span>
           </div>
-          <div className="form1-container2 button">
-            <button type="submit" className="button" style={{background: "transparent"}}>
+          <div className="form-container2 button">
+            <button type="submit" style={{background: "transparent"}}>
               {props.button}
             </button>
           </div>
-          <Link legacyBehavior href="/status">
-            <a className="form1-link">
-              <div className="form1-container3">
-                <h1 className="form1-text3">{props.heading11}</h1>
-                <svg viewBox="0 0 1024 1024" className="form1-icon2">
-                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                </svg>
-              </div>
-            </a>
-          </Link>
+        
         </form>
       </div>
       <style jsx>
         {`
-          .form1-container {
+        .hide{
+          display: none;
+        }
+          .form-container {
             width: 100%;
             height: 100%;
             display: flex;
@@ -91,7 +118,7 @@ const Form1 = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .form1-form {
+          .form-form {
             gap: var(--dl-space-space-halfunit);
             width: 301px;
             height: 100%;
@@ -100,74 +127,60 @@ const Form1 = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .form1-text {
+          .form-text {
             color: #bdbdbd;
             font-size: 1em;
             align-self: flex-start;
             text-align: left;
           }
-          .form1-textinput {
+          .form-textinput {
             color: rgba(234, 234, 234, 0.52);
             width: 100%;
             height: 48px;
             background-color: rgba(0, 0, 0, 0.52);
           }
-          .form1-textinput1 {
+          .form-textinput1 {
             color: #e2e2e2;
             width: 100%;
             height: 48px;
             background-color: rgba(0, 0, 0, 0.52);
           }
-          .form1-textinput2 {
-            color: #e2e2e2;
-            width: 100%;
-            height: 48px;
-            background-color: rgba(0, 0, 0, 0.52);
-          }
-          .form1-select {
+          .form-select {
             color: var(--dl-color-gray-white);
             width: 100%;
             padding: var(--dl-space-space-halfunit);
             background: transparent;
           }
-          .form1-option {
+          .form-option {
             color: var(--dl-color-gray-500);
             background: black;
           }
-          .form1-option1 {
+          .form-option1 {
             color: var(--dl-color-gray-700);
             background: black;
           }
-          .form1-option2 {
-            color: var(--dl-color-gray-700);
-            background: black;
-          }
-          .form1-container1 {
+          .form-container1 {
+            flex: 0 0 auto;
             width: 100%;
             cursor: pointer;
-            height: 124px;
+            height: 100px;
             display: flex;
             align-items: center;
             border-color: rgba(60, 60, 60, 0.51);
             border-width: 1px;
             border-radius: 16px;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
           }
-          .form1-icon {
+          .form-icon {
             fill: #d9d9d9;
             width: 24px;
             height: 24px;
-            margin: var(--dl-space-space-unit);
           }
-          .form1-text1 {
+          .form-text1 {
             color: #d0d0d0;
           }
-          .form1-text2 {
-            color: #797979;
-            font-size: 12px;
-          }
-          .form1-container2 {
+          .form-container2 {
             width: 100%;
             cursor: pointer;
             height: 45px;
@@ -189,49 +202,47 @@ const Form1 = (props) => {
             animation-iteration-count: 1;
             animation-timing-function: ease;
           }
-          .form1-container2:hover {
+          .form-container2:hover {
             background: rgba(35, 41, 41, 0.7);
           }
-          .form1-button {
+          .form-button {
             color: #bbbbbb;
           }
-          .form1-link {
+          .form-link {
             display: contents;
           }
-          .form1-container3 {
+          .form-container3 {
             gap: var(--dl-space-space-sixunits);
             width: 100%;
             height: 35px;
             display: flex;
+     
             margin-top: var(--dl-space-space-threeunits);
-            padding-left: 5%;
-            padding-right: 5%;
             align-items: center;
-
+ 
             border-radius: var(--dl-radius-radius-radius8);
             justify-content: center;
             text-decoration: none;
           }
-          .form1-text3 {
+          .form-text2 {
             color: #e6e6e6;
             font-size: 1em;
           }
-          .form1-icon2 {
+          .form-icon2 {
             fill: #d9d9d9;
             width: 24px;
             height: 24px;
           }
-          .form1-root-class-name {
+          .form-root-class-name {
+            align-self: center;
             background-color: transparent;
           }
           @media (max-width: 479px) {
-            .form1-container {
+            .form-form {
+              width: 100%;
               padding: var(--dl-space-space-unit);
             }
-            .form1-form {
-              width: 100%;
-            }
-            .form1-container2 {
+            .form-container2 {
               width: 100%;
             }
           }
@@ -241,22 +252,20 @@ const Form1 = (props) => {
   )
 }
 
-Form1.defaultProps = {
-  heading11: 'Complete',
+Form.defaultProps = {
+  heading: 'Step 2',
+  heading1: 'Step 2',
+  text1: 'Take a Selfie',
   rootClassName: '',
   button: 'Submit',
-  text1: 'Drop File',
-  text11: 'png, jpeg, pdf.',
-  heading: 'Step 2',
 }
 
-Form1.propTypes = {
-  heading11: PropTypes.string,
+Form.propTypes = {
+  heading: PropTypes.string,
+  heading1: PropTypes.string,
+  text1: PropTypes.string,
   rootClassName: PropTypes.string,
   button: PropTypes.string,
-  text1: PropTypes.string,
-  text11: PropTypes.string,
-  heading: PropTypes.string,
 }
 
-export default Form1
+export default Form

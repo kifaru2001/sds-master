@@ -180,7 +180,7 @@ const Verify = (props) => {
 
 <span className="verify-text05">
 
-  Congratulations🎉 your address ⇢<p style={{color: "rgb(200, 150, 50)"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is eligible to mine RareCoin.
+  Congratulations🎉 your address ⇢<p style={{color: "rgb(200, 150, 50)"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is eligible for verification.
 </span>
                     </>
                   ) : (
