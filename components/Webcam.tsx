@@ -2,6 +2,7 @@ import Webcam from 'react-webcam';
 import { CameraOptions, useFaceDetection } from 'react-use-face-detection';
 import FaceDetection from '@mediapipe/face_detection';
 import { Camera } from '@mediapipe/camera_utils';
+import ImageDemo from './Demo';
 
 const width = 500;
 const height = 500;
@@ -23,7 +24,7 @@ const WebcamDemo = (): JSX.Element => {
   });
 
   return (
-    <div>
+    <div className='container'>
       <p>{`Loading: ${isLoading}`}</p>
       <p>{`Face Detected: ${detected}`}</p>
       <p>{`Number of faces detected: ${facesDetected}`}</p>
@@ -46,12 +47,15 @@ const WebcamDemo = (): JSX.Element => {
           ref={webcamRef}
           forceScreenshotSourceSize
           style={{
-            height,
-            width,
-            position: 'absolute',
+            height: 'auto',
+            border: 'double 10px black',
+            width: 300,
+            borderRadius: '50%',
+
           }}
         />
       </div>
+      <ImageDemo />
     </div>
   );
 };
