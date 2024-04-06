@@ -3,11 +3,15 @@ import { CameraOptions, useFaceDetection } from 'react-use-face-detection';
 import FaceDetection from '@mediapipe/face_detection';
 import { Camera } from '@mediapipe/camera_utils';
 import ImageDemo from './Demo';
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+
 
 const width = 500;
 const height = 500;
 
 const WebcamDemo = (): JSX.Element => {
+
   const { webcamRef, boundingBox, isLoading, detected, facesDetected } = useFaceDetection({
     faceDetectionOptions: {
       model: 'short',
@@ -20,20 +24,38 @@ const WebcamDemo = (): JSX.Element => {
         onFrame,
         width,
         height,
-      }),
+      })
   });
-
+if(detected){
+  toast(`Face detected, Please close the Window`, {
+    icon: "⚡",
+    style: toastStyle,
+    position: "bottom-center",
+  });
+}
   return (
-    <div className='container'>
-      <p>{`Loading: ${isLoading}`}</p>
-      <p>{`Face Detected: ${detected}`}</p>
-      <p>{`Number of faces detected: ${facesDetected}`}</p>
-      <div style={{ width, height, position: 'relative' }}>
+    <div className='cont'>
+            <Toaster position="bottom-center" reverseOrder={false} />
+
+<div className='info'>
+{isLoading ? (
+  <>
+  <div className='spinn' />
+  </>
+) : (
+  <>
+  <p>...</p>
+  </>
+)}
+<p>{`Face Detected: ${detected}`}</p>
+</div>
+    
+      <div style={{ width, height, position: 'relative' }} className='bd'>
         {boundingBox.map((box, index) => (
           <div
             key={`${index + 1}`}
             style={{
-              border: '4px solid red',
+              border: '10px double green',
               position: 'absolute',
               top: `${box.yCenter * 100}%`,
               left: `${box.xCenter * 100}%`,
@@ -48,7 +70,7 @@ const WebcamDemo = (): JSX.Element => {
           forceScreenshotSourceSize
           style={{
             height: 'auto',
-            border: 'double 10px black',
+            border: 'double 10px lightgray',
             width: 300,
             borderRadius: '50%',
 

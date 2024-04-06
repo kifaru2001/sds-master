@@ -114,6 +114,16 @@ input:focus-visible{
   border: none;
 }
 @media only screen and (max-width: 600px) {
+  .cont {
+    border: none;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    z-index: 200;
+}
 .hide{
   display: none;
 }
@@ -647,7 +657,6 @@ button {
   color: #51596f;
 }
 .cont {
-  border: solid 1px gray;
   width: 550px;
   display: flex;
   justify-content: center;
@@ -660,21 +669,26 @@ button {
   width: 200px;
   height: 200px;
 }
-
-@media only screen and (max-width: 600px) {
-  .container {
-      border: none;
-      width: 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      border-radius: 10px;
-      z-index: 200;
-  }
+.bd{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
 }
+
 
 .title {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
+}
+.info{
+  color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 16px;
+  margin-top: 10%;
+  font-family: consolas;
+  gap: 10;
 }
