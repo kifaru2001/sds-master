@@ -1,32 +1,66 @@
-import React from 'react'
 import Link from 'next/link'
 
 import PropTypes from 'prop-types'
+import React, { useState } from "react";
+
 
 const Form = (props) => {
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [gender, setGender] = useState("");
+  const handleInputChange = (event) => {
+    setFirstName(event.target.value); // Update state
+  };
+  const handleInputChange2 = (event) => {
+    setGender(event.target.value); // Update state
+  };
+  const handleInputChange1 = (event) => {
+    setLastName(event.target.value); // Update state
+  };
+  async function onSubmit(event) {
+    event.preventDefault()
+ 
+    const formData = new FormData(event.target)
+    const response = await fetch('/api/add-user', {
+      method: 'POST',
+      body: formData,
+    })
+ 
+    // Handle response if necessary
+    const data = await response.json()
+    // ...
+  }
+ 
   return (
     <>
     
       <div className={`form-container ${props.rootClassName} `}>
-        <form enctype="application/x-www-form-urlencoded" className="form-form">
+        <form enctype="application/x-www-form-urlencoded" className="form-form" onSubmit={onSubmit}>
           <h1 className="form-text">{props.heading}</h1>
           <input
             type="text"
-            name="First Name"
+            name="FirstName"
             required="true"
             autoFocus="true"
             placeholder="First Name"
             className="form-textinput input"
+            value={FirstName}
+            onChange={handleInputChange}
           />
           <input
             type="text"
-            name="Last Name"
+            name="LastName"
             required="true"
             autoFocus="true"
             placeholder="Last Name"
             className="form-textinput1 input"
+            value={LastName}
+            onChange={handleInputChange1}
           />
-          <select className="form-select">
+          <select className="form-select"
+           value={gender}
+           onChange={handleInputChange2}
+          >
             <option value="Male" className="form-option">
               Male
             </option>
