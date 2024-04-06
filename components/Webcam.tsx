@@ -41,7 +41,7 @@ if(detected){
 <div className='info'>
 {isLoading ? (
   <>
-  <div className='spinn' />
+  <div className='spinn' style={{margin: "2%"}} />
   </>
 ) : (
   <>
@@ -78,9 +78,10 @@ if(detected){
 
           }}
         />
+              <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
+              <ImageDemo />
       </div>
-      <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
-      <ImageDemo />
+
     </div>
   );
 };
