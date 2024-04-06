@@ -6,9 +6,8 @@ import ImageDemo from './Demo';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 
-
-const width = 500;
-const height = 500;
+const width = 450;
+const height = 530;
 
 const WebcamDemo = (): JSX.Element => {
 
@@ -33,19 +32,22 @@ if(detected){
     style: toastStyle,
     position: "bottom-center",
   });
-}
+} 
+
   return (
     <div className='cont'>
             <Toaster position="bottom-center" reverseOrder={false} />
 
 <div className='info'>
 {isLoading ? (
-  <>
-  <div className='spinn' style={{margin: "2%"}} />
-  </>
+  <div  style={{margin: "1%", display: "flex", alignContent: "center", justifyContent: "center",  width: "100%"}}>
+  <div className='spinn' />
+  </div>
 ) : (
   <>
-  <p>...</p>
+  <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%"}}>
+  <p>Face Not Detected</p>
+  </div>
   </>
 )}
 <p>{`Face Detected: ${detected}`}</p>
@@ -78,10 +80,9 @@ if(detected){
 
           }}
         />
-              <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
-              <ImageDemo />
       </div>
-
+      <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
+      <ImageDemo />
     </div>
   );
 };

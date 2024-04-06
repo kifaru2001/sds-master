@@ -663,6 +663,7 @@ button {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
+  height: 100%;
 }
 
 .img {
@@ -688,8 +689,9 @@ width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   font-size: 16px;
-  margin-top: 10%;
+  margin-top: 2%;
   font-family: consolas;
   gap: 10;
-  width: 200px;
+  width: 300px;
+  padding: 1%;
 }

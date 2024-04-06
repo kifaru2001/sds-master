@@ -127,15 +127,16 @@ const Form = (props) => {
         style={customStyles}
         contentLabel="FACE VERIFICATION"
       >
+          <div style={{height: "10px", width: "80%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
+        <button onClick={closeModal}>X</button>
+        </div>
         <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "1px 1px 5px", }}>FACE VERIFICATION</h1>
         <div className='bd'>
         <WebcamDemo />
         </div>
        
         <div>
-        <div style={{height: "10px", width: "80%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
-        <button onClick={closeModal}>X</button>
-        </div>
+      
 
         </div>
        
