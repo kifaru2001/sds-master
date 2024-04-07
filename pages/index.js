@@ -91,28 +91,21 @@ const Welcome = (props) => {
                     </div>
                   </div>
                   <nav className="welcome-links1">
-                    <Link legacyBehavior href="/nf-ts">
-                      <a className="welcome-link03">NFTs</a>
+                    <Link legacyBehavior href="/documentation">
+                      <a className="welcome-link03">Docs</a>
                     </Link>
-                    <Link legacyBehavior href="/nf-ts">
-                      <a className="welcome-link04">Tokens</a>
+                    <Link legacyBehavior href="/verify">
+                      <a className="welcome-link04">Verify</a>
                     </Link>
-                    <Link legacyBehavior href="/users">
-                      <a className="welcome-link05">Members</a>
-                    </Link>
-                    <Link legacyBehavior href="/nf-ts">
-                      <a className="welcome-link06">Mine</a>
-                    </Link>
-                    <Link legacyBehavior href="/nf-ts">
-                      <a className="welcome-link07">Governance</a>
-                    </Link>
-                    <Link legacyBehavior href="/nf-ts">
-                      <a className="welcome-link08">Mine</a>
+                    <Link legacyBehavior href="/mining">
+                      <a className="welcome-link05">Mining</a>
                     </Link>
                   </nav>
+                  <Link href="/app">
                   <button className="welcome-register1 button">
                     Launch App
                   </button>
+                  </Link>
                 </div>
               </div>
             </header>
