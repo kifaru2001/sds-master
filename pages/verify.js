@@ -24,6 +24,8 @@ import truncateEthAddress from 'truncate-eth-address';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 import AppComponent from '../components/load';
+import {Shield} from '@web3uikit/icons'
+
 
 const Verify = (props) => {
   const { contract } = useContract(contractAddress);
@@ -79,7 +81,10 @@ return(
           <div className="verify-container03">
             <div className="verify-container04">
               <div className="verify-container05">
-                <h1 className="verify-text">RAREKYC</h1>
+              <Shield fontSize='30px' style={{color: "white"}}/>
+                <h1 className="verify-text">
+             
+                  RAREKYC</h1>
                 <div className="verify-container06">
                   <div
                     data-thq="thq-dropdown"

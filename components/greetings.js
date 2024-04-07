@@ -30,13 +30,13 @@ const Greetings = (props, coin) => {
     fontSize: 35,
   }
   if (hours < 12) {
-    timeOfDay = 'GM';
+    timeOfDay = 'Good Morning😎';
     styles.color = "#D90000";
   } else if (hours >= 12 && hours < 17) {
     timeOfDay = 'Good afternoon';
     styles.color = "#04733F";
   } else {
-  timeOfDay ="GN";
+  timeOfDay ="Good Night🌝";
     styles.color = "#04756F";
   }
   const address = useAddress();
