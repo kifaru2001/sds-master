@@ -7,10 +7,7 @@ import toastStyle from "../util/toastConfig";
 import { useRouter } from "next/router";
 import { useAddress } from '@thirdweb-dev/react';
 import Modal from 'react-modal';
-import Webcam from 'react-webcam';
-import { CameraOptions, useFaceDetection } from 'react-use-face-detection';
-import FaceDetection from '@mediapipe/face_detection';
-import { Camera } from '@mediapipe/camera_utils';
+import WebcamDemo from './Webcam';
 import ImageDemo from './Demo';
 
 const customStyles = {
@@ -60,7 +57,7 @@ const Form = (props) => {
     event.preventDefault()
  
     const formData = new FormData(event.target)
-     toast(`Successfully submited Step 1`, {
+     toast(`Successfully submited`, {
         icon: "⚡",
         style: toastStyle,
         position: "bottom-center",
@@ -69,7 +66,7 @@ const Form = (props) => {
       method: 'POST',
       body: formData,
     })
-    router.push("/step-two");
+
     // Handle response if necessary
     const data = await response.json()
 
@@ -116,7 +113,11 @@ const Form = (props) => {
             value={LastName}
             onChange={handleInputChange1}
           />
-       
+        <div className="form-container2 button">
+            <button type="submit" style={{background: "transparent"}}>
+              {props.button}
+            </button>
+          </div>
           <div className="form-container1" onClick={openModal}>
           <Modal
         isOpen={modalIsOpen}
@@ -124,9 +125,7 @@ const Form = (props) => {
         style={customStyles}
         contentLabel="FACE VERIFICATION"
       >
-          <div style={{height: "10px", width: "90%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
-        <button onClick={closeModal}>X</button>
-        </div>
+          
         <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "1px 1px 5px", }}>FACE VERIFICATION</h1>
         <div className='bd'>
         <WebcamDemo />
@@ -144,11 +143,7 @@ const Form = (props) => {
             <span className="form-text1">Face Verification</span>
           </div>
       
-          <div className="form-container2 button">
-            <button type="submit" style={{background: "transparent"}}>
-              {props.button}
-            </button>
-          </div>
+         
         
         </form>
       </div>

@@ -28,11 +28,12 @@ const WebcamDemo = (): JSX.Element => {
       })
   });
 if(detected){
-  toast(`Face detected, Please close the Window`, {
+  toast(`Face detected, Proceeding to step 2`, {
     icon: "⚡",
     style: toastStyle,
     position: "bottom-center",
   });
+  router.push("/step-two");
 } 
 
   return (
