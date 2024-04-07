@@ -20,7 +20,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     height: "100%",
     overflow: "hidden",
-    background: "rgba(0, 0, 0, 0.84)",
+    background: "rgba(0, 0, 0, 0.94)",
     backdropFilter: "blur(10px)",
     color:  "white",
     overflowX: "hidden",
@@ -77,17 +77,20 @@ const Form = (props) => {
       <Toaster position="bottom-center" reverseOrder={false} />
       <div className={`form-container ${props.rootClassName} `}>
         <form enctype="application/x-www-form-urlencoded" className="form-form" onSubmit={onSubmit}>
-          <h1 className="form-text">{props.heading}</h1>
-          <input
+        <h1 className="form-text">KYC Step 1</h1>
+   <p style={{color: "white", marginBottom: "-6%", fontWeight: "900"}}>
+    Address To Verify:
+   </p>
+        <input
             type="text"
             name="address"
             required="true"
             autoFocus="true"
             placeholder={address}
             disabled="true"
-            className="hide input"
+            className="form-textinput12 input"
             value={address}
-          
+          title='address'
           />
           <input
             type="text"
@@ -109,17 +112,7 @@ const Form = (props) => {
             value={LastName}
             onChange={handleInputChange1}
           />
-          <select className="form-select"
-           value={gender}
-           onChange={handleInputChange2}
-          >
-            <option value="Male" className="form-option">
-              Male
-            </option>
-            <option value="Female" className="form-option1">
-              Female
-            </option>
-          </select>
+       
           <div className="form-container1" onClick={openModal}>
           <Modal
         isOpen={modalIsOpen}
@@ -127,7 +120,7 @@ const Form = (props) => {
         style={customStyles}
         contentLabel="FACE VERIFICATION"
       >
-          <div style={{height: "10px", width: "80%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
+          <div style={{height: "10px", width: "90%", justifyContent: "end", position: "fixed", display: "flex", alignItems: "end", marginRight: "5%"}}>
         <button onClick={closeModal}>X</button>
         </div>
         <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "1px 1px 5px", }}>FACE VERIFICATION</h1>
@@ -190,6 +183,14 @@ const Form = (props) => {
             height: 48px;
             background-color: rgba(0, 0, 0, 0.52);
           }
+          .form-textinput12 {
+            color: rgb(200, 150, 50);
+            width: 100%;
+            font-weight: 400;
+            height: 48px;
+            background-color: transparent;
+            font-size: 12px;
+          }
           .form-textinput1 {
             color: #e2e2e2;
             width: 100%;
@@ -237,7 +238,6 @@ const Form = (props) => {
             cursor: pointer;
             height: 45px;
             display: flex;
-            z-index: 100;
             box-shadow: 5px 5px 10px 0px #0a0a0a;
             transition: 0.3s;
             align-items: center;

@@ -6,8 +6,8 @@ import ImageDemo from './Demo';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 
-const width = 350;
-const height = 530;
+const width = 300;
+const height = 300;
 
 const WebcamDemo = (): JSX.Element => {
 
@@ -40,17 +40,27 @@ if(detected){
 
 <div className='info'>
 {isLoading ? (
-  <div  style={{margin: "1%", display: "flex", alignContent: "center", justifyContent: "center",  width: "100%"}}>
+  <div  style={{margin: "1%", display: "flex", alignContent: "center", justifyContent: "center",  width: "100%", height: "auto"}}>
   <div className='spinn' />
   </div>
 ) : (
   <>
-  <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%"}}>
-  <p style={{textAlign: "center"}}>Face Not Detected</p>
+  {detected ? (
+<>
+<div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%"}}>
+  <p style={{textAlign: "center", color: "green"}}>Face Detected</p>
   </div>
+</>
+  ) : (
+<>
+<div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%"}}>
+  <p style={{textAlign: "center", color: "red"}}>Face Not Detected</p>
+  </div>
+</>
+  )}
   </>
 )}
-  <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%", textAlign: "center"}}>
+  <div style={{display: "flex", alignContent: "center", justifyContent: "center", width: "100%", textAlign: "center", gap: 10, flexDirection: "column"}}>
   <p style={{textAlign: "center"}}>{`Face Detected: ${detected}`}</p>
   </div>
 </div>
@@ -75,20 +85,20 @@ if(detected){
           forceScreenshotSourceSize
           
           style={{
-            height: 'auto',
+            height: 300,
             border: 'double 10px white',
-            width: 300,
+            width: "100%",
             borderRadius: '50%',
             animationName: "pulse",
             animationDuration: "0s",
             animationDirection: "pulse",
             animationIterationCount: "100",
-            animationTimingFunction: "ease"
+            animationTimingFunction: "ease",
           }}
         />
       </div>
-      <div className='info'>Place Your Face at the center of the Circle to Detect face</div>
       <ImageDemo />
+      <p style={{textAlign: "center", color: "white"}}>Place Your Face at the center of the circle until face is detected</p>
     </div>
   );
 };
