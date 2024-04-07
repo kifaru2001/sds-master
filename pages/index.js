@@ -33,7 +33,7 @@ const Welcome = (props) => {
         </Head>
         <div className="welcome-container01">
           <div className="welcome-container02">
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href="/swap">
               <a className="welcome-link">
                 <div className="welcome-container03">
                   <div className="welcome-container04">
@@ -68,7 +68,7 @@ const Welcome = (props) => {
                   <span className="welcome-text005">FAQ</span>
                 </nav>
                 <div className="welcome-buttons">
-                  <Link legacyBehavior href="/">
+                  <Link legacyBehavior href="/simple">
                     <a className="welcome-link02 button">Launch App</a>
                   </Link>
                 </div>
