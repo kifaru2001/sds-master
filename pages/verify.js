@@ -79,7 +79,7 @@ return(
           <div className="verify-container03">
             <div className="verify-container04">
               <div className="verify-container05">
-                <h1 className="verify-text">KYC Verification</h1>
+                <h1 className="verify-text">RAREKYC</h1>
                 <div className="verify-container06">
                   <div
                     data-thq="thq-dropdown"
@@ -174,15 +174,14 @@ return(
                 {
                   (!nfts?.length <= 0 || "")  ? (
                     <>
-       <svg viewBox="0 0 1024 1024" className="verified-icon07" style={{fill: "rgba(200, 150, 50, 0.8)"}}>
+       <svg viewBox="0 0 1024 1024" className="verified-icon07" style={{fill: "rgba(200, 150, 50, 0.8)", height: "30px"}}>
                   <path d="M960 608l-288 288-96-96-64 64 160 160 352-352z"></path>
                   <path d="M448 768h320v-115.128c-67.22-39.2-156.308-66.11-256-74.26v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h448v-64z"></path>
                 </svg>
                 <h1 className="verify-text04" style={{color: "rgb(200, 150, 50)"}}>Eligible</h1>
 
 <span className="verify-text05">
-
-  Congratulations🎉 your address ⇢<p style={{color: "rgb(200, 150, 50)"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is eligible for verification.
+  <p style={{color: "rgb(200, 150, 50)"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p>
 </span>
                     </>
                   ) : (
@@ -198,8 +197,7 @@ return(
                       <h1 className="verify-text04">Unverified</h1>
 
 <span className="verify-text05">
-
-  Address <p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p> is not verified or signed in. Buy RAR31ONE NFT on NFT marketplace then sign in to start verification.
+<p style={{color: "orange"}}>{address?.slice(0, 6)}...{address?.slice(address.length - 6)}</p>
 </span>
 <div>
 <ConnectWallet
@@ -223,7 +221,7 @@ return(
           "https://rarebay.xyz/fav.ico"
         }
         showThirdwebBranding={false}
-        style={{color: "white"}}
+        style={{color: "white", borderBottom: "solid 3px gray", borderRadius: "0px", padding: "-10px"}}
       />
 </div>
                     </>
@@ -342,17 +340,18 @@ return(
           }
           .verify-container03 {
             width: 100%;
-            height: 560px;
+            height: auto;
             display: flex;
             padding: var(--dl-space-space-unit);
             position: relative;
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            gap: 20;
           }
           .verify-container04 {
             width: 1000px;
-            height: 217px;
+            height: auto;
             display: flex;
             padding: var(--dl-space-space-unit);
             align-items: center;
@@ -530,7 +529,8 @@ return(
           .verify-text05 {
             color: rgb(194, 194, 194);
             display: flex;
-            gap: 4px;
+            flex-direction: column;
+            gap: 1px;
           }
           .verify-thq-dropdown1 {
             cursor: pointer;
@@ -638,6 +638,7 @@ return(
             color: #52b5ff;
             cursor: pointer;
             text-decoration: none;
+            margin: 2%;
           }
           .verify-container09 {
             width: 1000px;
