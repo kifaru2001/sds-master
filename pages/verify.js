@@ -52,7 +52,7 @@ return(
 {!address ?
   (
     <>
-    <div className='cont'>
+    <div className='verify-container'>
     <ConnectWallet
         theme={({
           colors: {
