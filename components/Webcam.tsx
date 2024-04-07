@@ -5,12 +5,13 @@ import { Camera } from '@mediapipe/camera_utils';
 import ImageDemo from './Demo';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
+import { useRouter } from "next/router";
 
 const width = 300;
 const height = 300;
 
 const WebcamDemo = (): JSX.Element => {
-
+  const router = useRouter();
   const { webcamRef, boundingBox, isLoading, detected, facesDetected } = useFaceDetection({
     faceDetectionOptions: {
       model: 'short',
@@ -68,7 +69,7 @@ if(detected){
       <div style={{ width, height, position: 'relative' }} className='bd'>
         {boundingBox.map((box, index) => (
           <div
-            key={`${index + 1}`}
+            key={`${index}`}
             style={{
               border: '10px double green',
               position: 'absolute',
@@ -77,6 +78,7 @@ if(detected){
               width: `${box.width * 100}%`,
               height: `${box.height * 100}%`,
               zIndex: 1,
+              borderRadius: '50%',
             }}
           />
         ))}

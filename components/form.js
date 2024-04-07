@@ -7,7 +7,11 @@ import toastStyle from "../util/toastConfig";
 import { useRouter } from "next/router";
 import { useAddress } from '@thirdweb-dev/react';
 import Modal from 'react-modal';
-import WebcamDemo from "./Webcam"
+import Webcam from 'react-webcam';
+import { CameraOptions, useFaceDetection } from 'react-use-face-detection';
+import FaceDetection from '@mediapipe/face_detection';
+import { Camera } from '@mediapipe/camera_utils';
+import ImageDemo from './Demo';
 
 const customStyles = {
   content: {
