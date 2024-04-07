@@ -23,6 +23,7 @@ import CoreBlockchain from "@thirdweb-dev/chains"
 import truncateEthAddress from 'truncate-eth-address';
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
+import AppComponent from '../components/load';
 
 const Verify = (props) => {
   const { contract } = useContract(contractAddress);
@@ -43,9 +44,41 @@ const Verify = (props) => {
 
   }, [nfts, router, address]);
 
-
-
-  return (
+if (contractLoading) {
+  return <AppComponent />
+}
+{!address ?
+  (
+    <>
+    <div className='cont'>
+    <ConnectWallet
+        theme={({
+          colors: {
+            modalBg: "rgba(0, 0, 0, 0.5)",
+            primaryButtonText: "white",
+            selectedTextColor: "#d9d9d9",
+            separatorLine: "transparent",
+            secondaryText: "white",
+            secondaryButtonText: "#c2c2c7",
+            primaryText: "#cccccc",
+            borderColor: "rgba(100, 100, 100, 0.3)",
+          },
+        })}
+        modalTitle={"RareBay Connect"}
+        auth={{ loginOptional: false }}
+        switchToActiveChain={true}
+        modalSize={"compact"}
+        modalTitleIconUrl={
+          "https://rarebay.xyz/fav.ico"
+        }
+        showThirdwebBranding={false}
+        style={{color: "white"}}
+      />
+    </div>
+    </>
+  )
+  :
+  (
     <>
       <div className="verify-container">
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -856,7 +889,7 @@ const Verify = (props) => {
         `}
       </style>
     </>
-  )
+  )}
 }
 
 export default Verify
