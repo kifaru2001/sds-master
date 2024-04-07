@@ -47,6 +47,8 @@ const Verify = (props) => {
 if (contractLoading) {
   return <AppComponent />
 }
+return(
+  <>
 {!address ?
   (
     <>
@@ -890,6 +892,8 @@ if (contractLoading) {
       </style>
     </>
   )}
+  </>
+  )
 }
 
 export default Verify

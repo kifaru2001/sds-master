@@ -42,7 +42,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         </Head>
         <div className="documentation-container01">
           <div className="documentation-container02">
-            <Link legacyBehavior href="/welcome">
+            <Link legacyBehavior href="/">
               <a className="documentation-link">
                 <div className="documentation-container03">
                   <div className="documentation-container04">
