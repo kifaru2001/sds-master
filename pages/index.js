@@ -68,7 +68,7 @@ const Welcome = (props) => {
                   <span className="welcome-text005">FAQ</span>
                 </nav>
                 <div className="welcome-buttons">
-                  <Link legacyBehavior href="/simple">
+                  <Link legacyBehavior href="/app">
                     <a className="welcome-link02 button">Launch App</a>
                   </Link>
                 </div>
