@@ -74,7 +74,7 @@ return(
           "https://rarebay.xyz/fav.ico"
         }
         showThirdwebBranding={false}
-        style={{color: "white"}}
+        style={{color: "gray"}}
       />
     </div>
     </>
