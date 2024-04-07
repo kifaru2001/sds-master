@@ -48,39 +48,6 @@ if (contractLoading) {
   return <AppComponent />
 }
 return(
-  <>
-{!address ?
-  (
-    <>
-    <div className='verify-container'>
-    <ConnectWallet
-        theme={({
-          colors: {
-            modalBg: "rgba(0, 0, 0, 0.5)",
-            primaryButtonText: "white",
-            selectedTextColor: "#d9d9d9",
-            separatorLine: "transparent",
-            secondaryText: "white",
-            secondaryButtonText: "#c2c2c7",
-            primaryText: "#cccccc",
-            borderColor: "rgba(100, 100, 100, 0.3)",
-          },
-        })}
-        modalTitle={"RareBay Connect"}
-        auth={{ loginOptional: false }}
-        switchToActiveChain={true}
-        modalSize={"compact"}
-        modalTitleIconUrl={
-          "https://rarebay.xyz/fav.ico"
-        }
-        showThirdwebBranding={false}
-        style={{color: "gray"}}
-      />
-    </div>
-    </>
-  )
-  :
-  (
     <>
       <div className="verify-container">
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -891,8 +858,6 @@ return(
         `}
       </style>
     </>
-  )}
-  </>
   )
 }
 
