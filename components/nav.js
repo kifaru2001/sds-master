@@ -50,7 +50,7 @@ useEffect(() => {
         
             <a className="nav-link">
               <div className="nav-container02">
-              <Link  legacyBehavior  href="/welcome" >
+              <Link  legacyBehavior  href="/" >
                 <div className="nav-container03" style={{cursor: "pointer"}}>
                 
                   <img
