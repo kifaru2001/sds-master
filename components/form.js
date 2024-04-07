@@ -66,7 +66,7 @@ const Form = (props) => {
       method: 'POST',
       body: formData,
     })
-
+setIsOpen(true)
     // Handle response if necessary
     const data = await response.json()
 
