@@ -20,6 +20,8 @@ import {
 import { ChakraProvider } from '@chakra-ui/react'
 import Snowfall from 'react-snowfall'
 import {BannerStrip } from "web3uikit"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query' 
 import { WagmiProvider } from 'wagmi'
@@ -76,8 +78,8 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       <Component className="body" {...pageProps} />
    
       </NextThemesProvider>
-   
-   
+   <SpeedInsights/>  
+      <Analytics />
   </ThirdwebProvider>
 
   </ChakraProvider>
