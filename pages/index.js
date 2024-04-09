@@ -69,7 +69,7 @@ const Welcome = (props) => {
               <div data-thq="thq-navbar-nav" className="welcome-desktop-menu">
                 <nav className="welcome-links">
                   <Link legacyBehavior href="/documentation"><a  className="welcome-text002">Docs</a></Link>
-                  <Link legacyBehavior href="/verify" className="welcome-text002">Verify</Link>
+                  <Link legacyBehavior href="/verify"  className="welcome-text002">Verify</Link>
                   <Link legacyBehavior href="/mining">
                     <a className="welcome-link01">
                       <span>Mining</span>
@@ -468,16 +468,18 @@ const Welcome = (props) => {
                       rewards on weekly basis. Verified members can also create
                       and list new tokens on RareBay.
                     </h1>
+                        <Link className="welcome-text058" legacyBehavior href="/verify">
                     <button
                       id="kyc"
                       disabled="true"
                       className="welcome-register3 button"
                     >
                       <span>
-                        <Link className="welcome-text058" href="/verify">Verify</Link>
+                        Verify
                         <br></br>
                       </span>
                     </button>
+                        </Link>
                   </div>
                   <div className="welcome-container63"></div>
                 </div>
