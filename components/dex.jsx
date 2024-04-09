@@ -503,7 +503,7 @@ style={{background: "transparent", textAlign: "end"}}
         switchToActiveChain={true}
         modalSize={"compact"}
         modalTitleIconUrl={
-          "https://rarebay.xyz/fav.ico"
+          "https://rarebay.xyz/favicon-200h.webp"
         }
         showThirdwebBranding={false}
         style={{color: "white"}}
