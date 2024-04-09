@@ -474,7 +474,7 @@ const Welcome = (props) => {
                       className="welcome-register3 button"
                     >
                       <span>
-                        <span className="welcome-text058">Coming Soon</span>
+                        <Link className="welcome-text058" href="/verify">Verify</Link>
                         <br></br>
                       </span>
                     </button>
