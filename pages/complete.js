@@ -32,7 +32,7 @@ const Complete = (props) => {
 
   useEffect(() => {
     if (!nfts?.length >= 1) {
-      toast(`You need to make payment to complete`, {
+      toast(`You need to pay a fee of 5 CORE complete`, {
         icon: "⚡",
         style: toastStyle,
         position: "bottom-center",
@@ -109,14 +109,14 @@ const Complete = (props) => {
         }}
         onError={(error) => {
           toast(`Error! while making Payment. Please retry`, {
-            icon: "⚡",
+            icon: "❌",
             style: toastStyle,
             position: "bottom-center",
           });
         }}
         style={{color: "gray", height: "20px", background: "transparent", border: "none"}}
       >
-        Pay 5 CORE<img height={20} src='/core-200w.webp' style={{marginLeft: "1%"}} />
+        Pay 5 CORE<img height="20px" width="20px" src='/core-200w.webp' style={{marginLeft: "1%"}} />
       </Web3Button>
               </button>
             </div>
