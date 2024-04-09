@@ -108,11 +108,15 @@ const Complete = (props) => {
           router.push("/status");
         }}
         onError={(error) => {
-          alert(error);
+          toast(`Error! while making Payment. Please retry`, {
+            icon: "⚡",
+            style: toastStyle,
+            position: "bottom-center",
+          });
         }}
-        style={{color: "white", height: "20px", background: "transparent", border: "none"}}
+        style={{color: "gray", height: "20px", background: "transparent", border: "none"}}
       >
-        Pay 5 CORE
+        Pay 5 CORE<img height={20} src='/core-200w.webp' style={{marginLeft: "1%"}} />
       </Web3Button>
               </button>
             </div>
