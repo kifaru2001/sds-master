@@ -149,7 +149,31 @@ const Mining = (props) => {
             </div>
             <div className="mining-container22">
               <div className="mining-container23">
-                <span className="mining-text10">Connect Wallet</span>
+                <span className="mining-text10">
+                    <ConnectWallet
+        theme={({
+          colors: {
+            modalBg: "rgba(0, 0, 0, 0.5)",
+            primaryButtonText: "white",
+            selectedTextColor: "#d9d9d9",
+            separatorLine: "transparent",
+            secondaryText: "white",
+            secondaryButtonText: "#c2c2c7",
+            primaryText: "#cccccc",
+            borderColor: "rgba(100, 100, 100, 0.3)",
+          },
+        })}
+        modalTitle={"RareBay Connect"}
+        auth={{ loginOptional: false }}
+        switchToActiveChain={true}
+        modalSize={"compact"}
+        modalTitleIconUrl={
+          "https://rarebay.xyz/favicon-200h.webp"
+        }
+        showThirdwebBranding={false}
+        style={{color: "white"}}
+      />
+                </span>
               </div>
               <div className="mining-container24">
                 <span className="mining-text11">Withdraw Funds</span>
