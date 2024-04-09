@@ -116,7 +116,7 @@ const Complete = (props) => {
         }}
         style={{color: "gray", height: "20px", background: "transparent", border: "none"}}
       >
-        Pay 5 CORE<img height="20px" width="20px" src='/core-200w.webp' style={{marginLeft: "1%"}} />
+        Pay 5 CORE<img height="20px" width="20px" src='/core-200w.webp' style={{marginLeft: "2%"}} />
       </Web3Button>
               </button>
             </div>
