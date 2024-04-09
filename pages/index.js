@@ -4,6 +4,8 @@ import Head from 'next/head'
 
 import Sliders from '../components/sliders'
 import Intro from '../components/intro1'
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Welcome = (props) => {
   return (
@@ -42,7 +44,16 @@ const Welcome = (props) => {
                       src="/favicon-200h.webp"
                       className="welcome-image"
                     />
-                    <span className="welcome-text">Rare</span>
+                    <span className="welcome-text">
+                    <TypeAnimation
+      sequence={[
+        'Rare',
+        1000, 
+      ]}
+      wrapper="span"
+      speed={50}
+    />
+                    </span>
                     <span className="welcome-text001">Bay</span>
                     <svg viewBox="0 0 1127.424 1024" className="welcome-icon">
                       <path d="M489.714 310.857v66.857c0 9.714-8.571 17.714-18.286 17.714h-170.286v464c0 10.286-8 18.286-17.714 18.286h-77.143c-10.286 0-18.286-8-18.286-18.286v-464h-169.714c-10.286 0-18.286-8-18.286-17.714v-66.857c0-10.286 8-18.286 18.286-18.286h453.143c9.714 0 18.286 8 18.286 18.286zM1082.857 309.143l44 549.143c0.571 5.143-1.143 9.714-4.571 13.714-3.429 3.429-8 5.714-13.143 5.714h-76.571c-9.143 0-17.143-7.429-17.714-16.571l-26.286-336-108 242.857c-2.857 6.857-9.143 10.857-16.571 10.857h-68.571c-6.857 0-13.143-4-16.571-10.857l-107.429-244-25.714 337.143c-0.571 9.143-8.571 16.571-17.714 16.571h-77.143c-5.143 0-9.714-2.286-13.143-5.714-3.429-4-5.143-8.571-5.143-13.714l44.571-549.143c0.571-9.143 8.571-16.571 17.714-16.571h81.143c7.429 0 13.714 4.571 16.571 10.857l125.714 297.143c4 9.143 8 19.429 11.429 29.143 4-9.714 7.429-20 11.429-29.143l126.286-297.143c2.857-6.286 9.143-10.857 16.571-10.857h80.571c9.714 0 17.714 7.429 18.286 16.571z"></path>
@@ -121,33 +132,30 @@ const Welcome = (props) => {
                   <span className="welcome-text008">Bay </span>
                   <br></br>
                 </h1>
-                <animate-on-reveal
-                  animation="pulse"
-                  duration="3s"
-                  delay="6s"
-                  direction="normal"
-                  easing="ease"
-                  iteration="1"
-                >
-                  <h1
-                    data-thq-animate-on-reveal="true"
-                    className="welcome-text012"
-                  >
-                    <span className="welcome-text013">Crazy-Fast!</span>
-                    <span className="welcome-text014"> </span>
-                    <span className="welcome-text015">secure! </span>
-                    <span className="welcome-text016">
-                      Rare! Decentralized 
-                    </span>
-                    <span className="welcome-text017">Exchange</span>
-                    <br className="welcome-text018"></br>
-                  </h1>
-                </animate-on-reveal>
+                <div style={{ fontSize: '30px', display: 'inline-block', fontFamily: "Pixel Nes", marginBottom: "2%", color: "white", textShadow: "0px 0px 10px rgba(100, 100, 100, 0.5)" }}>
+                <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Welcome to Rareville',
+        1000,
+        'Welcome to Rareville. Fast!',
+        1000,
+        'Welcome to Rareville. Secure!',
+        1000,
+        'Welcome to Rareville. Rare!',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      
+      repeat={Infinity}
+    />
+                </div>
+               
                 <h1 className="welcome-text019">
                   <span>
-                    Verify, Mine, Stake, Trade, Swap, Track, Inscribe, Farm,
-                    Earn, Borrow, Lend, play! faster than ever, seamlessly
-                    anywhere anytime. 
+                  You Just made it into the Rarest, fastest and most secure DEX yet.
+                  Mine RareCoin by Interaction with POI(ProofOfInteraction). Stake, Trade and Track Rare Bitcoin Sats.
                   </span>
                   <br></br>
                 </h1>
@@ -890,9 +898,8 @@ const Welcome = (props) => {
           }
           .welcome-text006 {
             color: rgb(188, 188, 188);
-            font-size: 80px;
+            font-size: 90px;
             align-self: flex-start;
-            font-style: italic;
             font-family: 'Arial Black';
             font-weight: 900;
             margin-bottom: var(--dl-space-space-unit);
@@ -946,7 +953,6 @@ const Welcome = (props) => {
             height: 151px;
             font-size: 30px;
             align-self: flex-start;
-            font-style: italic;
             font-family: 'Exo 2';
             font-weight: 500;
             text-shadow: black 2px 2px 10px;

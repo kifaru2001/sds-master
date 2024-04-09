@@ -9,6 +9,7 @@ import {
   useContractMetadata,
   useOwnedNFTs,
   useUser,
+  Web3Button
 } from "@thirdweb-dev/react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useRouter } from "next/router";
@@ -44,6 +45,7 @@ const Complete = (props) => {
   return (
     <>
       <div className="complete-container">
+      <Toaster position="bottom-center" reverseOrder={false} />
         <Head>
           <title>
             complete - Crazy-Fast! secure! Rare! Decentralized Exchange
@@ -94,7 +96,24 @@ const Complete = (props) => {
             </span>
             <div className="complete-container4 button">
               <button type="submit" className="complete-button">
-                PAY 5.0 CORE
+              <Web3Button
+        contractAddress={"0x35d3d457E18600697A47d96A87829d9C944de6E5"}
+        action={(contract) => contract.erc721.claim(1)}
+        onSuccess={() => {
+          toast(`Successfully made payment`, {
+            icon: "⚡",
+            style: toastStyle,
+            position: "bottom-center",
+          });
+          router.push("/status");
+        }}
+        onError={(error) => {
+          alert(error);
+        }}
+        style={{color: "white", height: "20px", background: "transparent", border: "none"}}
+      >
+        Pay 5 CORE
+      </Web3Button>
               </button>
             </div>
           </div>
