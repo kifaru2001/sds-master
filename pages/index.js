@@ -5,9 +5,10 @@ import Head from 'next/head'
 import Sliders from '../components/sliders'
 import Intro from '../components/intro1'
 import { TypeAnimation } from 'react-type-animation';
-
+import { useRouter } from 'next/router'
 
 const Welcome = (props) => {
+  const router = useRouter()
   return (
     <>
     <Intro rootClassName="intro-root-class-name1"></Intro>
@@ -470,10 +471,15 @@ const Welcome = (props) => {
                     </h1>
                     <button
                       id="kyc"
-                      disabled="true"
+                    onClick={
+                        function next(){
+                          router.push("/verify")
+                        }
+                        }
                       className="welcome-register3 button"
                     >
                       <span>
+                        
                         <Link className="welcome-text058" href="/verify">Verify</Link>
                         <br></br>
                       </span>
